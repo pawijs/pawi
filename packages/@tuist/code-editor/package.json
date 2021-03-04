@@ -1,7 +1,7 @@
 {
   "name": "@tuist/code-editor",
   "version": "0.0.0",
-  "description": "wrapper around codemirror for lucidity",
+  "description": "wrapper around codemirror for tuist",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -10,7 +10,6 @@
   },
   "author": "Maia Taewana <maia@tuitui.st>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
     "postbuild": "cp package.json ../../node_modules/@tuist/code-editor",
