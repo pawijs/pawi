@@ -21,7 +21,6 @@ script:
       npm run checkdeps
       # npm run lint
       # npm run test
-      npm run build
     fi
 after_success:
   - |

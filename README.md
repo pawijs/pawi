@@ -36,7 +36,7 @@ These packages are helpers to build Overmind apps (on which the vscode editor is
 - [![NPM version][build-image]][build-npm] [@tuist/build][build-url]
   (modularity for building modular apps)
 - [![NPM version][code-editor-image]][code-editor-npm] [@tuist/code-editor][code-editor-url]
-  (code editor based on CodeMirror with scrubbing and tuist editor/vscode integration)
+  (code editor based on CodeMirror with scrubbing)
 - [![NPM version][dragdrop-image]][dragdrop-npm] [@tuist/dragdrop][dragdrop-url]
   (drag and drop support)
 - [![NPM version][editor-image]][editor-npm] [@tuist/editor][editor-url]
