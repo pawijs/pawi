@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../node_modules/@tuist/locale/dist"
+  },
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "../**/*.test.ts",
+    "../**/*.test.tsx",
+    "../src/stories"
+  ]
+}

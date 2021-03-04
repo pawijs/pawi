@@ -1,0 +1,2486 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom paragraph should render simple 1`] = `
+<div
+  className="theme-Custom-paragraph-simple"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          simple
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.c1} ...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.c1} id="c1" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-htpNat eIswBe"
+      >
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title Empty"
+                    data-ref="refe2"
+                  >
+                    ​
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragged paragraph should render Custom 1`] = `
+<div
+  className="theme-Dragged-paragraph-Custom"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          Custom
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Component sourceRef={{"_refer...
+          <div
+            className="jsx"
+          >
+            &lt;Component sourceRef={{"_reference":"test.e1"}} sourceId="bar" sourceCompId="foo" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dfVpRl BacPY"
+      >
+        <div
+          className="sc-jbKcbu sc-iELTvK gMTEEl"
+        >
+          <div
+            className="sc-jbKcbu sc-feJyhm fcHxYD"
+          >
+            <div
+              className="sc-fYxtnH hXmGQM Custom"
+              data-c="X"
+              data-ref="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+            >
+              <span
+                className="sc-jqCOkK dOIxQc DragBar"
+                contentEditable={false}
+              />
+              <div
+                contentEditable={false}
+                style={
+                  Object {
+                    "userSelect": "none",
+                  }
+                }
+              >
+                <div
+                  className="sc-kTUwUJ iBstNk"
+                >
+                  0.5
+                  <input
+                    className="sc-dqBHgY eWakGF"
+                    max={1}
+                    min={0}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    step={0.01}
+                    type="range"
+                    value={0.5}
+                  />
+                </div>
+              </div>
+              <div
+                className="sc-jnlKLf iMjBgK cursor"
+                onChange={[Function]}
+                onInput={[Function]}
+                onKeyDown={[Function]}
+              >
+                ​
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragged paragraph should render Long text 1`] = `
+<div
+  className="theme-Dragged-paragraph-Long-text"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          Long text
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Component sourceRef={{"_refer...
+          <div
+            className="jsx"
+          >
+            &lt;Component sourceRef={{"_reference":"test.e4"}} sourceId="refe10" sourceCompId="foo" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dfVpRl BacPY"
+      >
+        <div
+          className="sc-jbKcbu sc-iELTvK gMTEEl"
+        >
+          <div
+            className="sc-jbKcbu sc-feJyhm fcHxYD"
+          >
+            <p
+              className=""
+              data-ref="refe10"
+            >
+              <span
+                className="sc-jqCOkK dOIxQc DragBar"
+                contentEditable={false}
+              />
+              Cras diam lorem, sollicitudin ut velit sed, congue semper felis. Donec accumsan elit nec vestibulum sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ex nibh, vestibulum eget lacus id, commodo maximus dui. Duis facilisis, lorem eget euismod finibus, sem erat vestibulum nunc, malesuada porttitor massa mauris non arcu. Nulla dictum justo ac dui venenatis ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nec ante nibh. Duis id maximus nibh. In at sagittis ipsum. Vestibulum urna felis, dapibus sed nulla in, efficitur tristique dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render list 1`] = `
+<div
+  className="theme-Editor-list"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          list
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e7} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <p
+                    className="Group"
+                    data-ref="para1"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      className=""
+                      data-ref="span11"
+                    >
+                      You can click 
+                    </span>
+                    <a
+                      className=""
+                      data-ref="span12"
+                    >
+                      <span
+                        className=""
+                        data-ref="span121"
+                      >
+                        this 
+                      </span>
+                      <span
+                        className="strong em"
+                        data-ref="span122"
+                      >
+                        link 
+                      </span>
+                    </a>
+                    <span
+                      className=""
+                      data-ref="span13"
+                    >
+                      to view the next 
+                    </span>
+                    <span
+                      className="em"
+                      data-ref="span14"
+                    >
+                      page
+                    </span>
+                    <span
+                      className=""
+                      data-ref="span15"
+                    >
+                      .
+                    </span>
+                  </p>
+                  <p
+                    className="Group"
+                    data-ref="para2"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      className=""
+                      data-ref="span21"
+                    >
+                      This is the first 
+                    </span>
+                    <span
+                      className="strong"
+                      data-ref="span22"
+                    >
+                      message
+                    </span>
+                    <span
+                      className=""
+                      data-ref="span23"
+                    >
+                      . Hello blah bomgolo frabilou elma tec.
+                    </span>
+                  </p>
+                  <p
+                    className=""
+                    data-ref="para3"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    This is the third paragraph. My tailor types fast.
+                  </p>
+                  <ol
+                    start={1}
+                  >
+                    <li
+                      className=""
+                      data-ref="para4"
+                    >
+                      <span
+                        className="sc-jqCOkK dOIxQc DragBar"
+                        contentEditable={false}
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseMove={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <span
+                          className="sc-uJMKN eCAylh"
+                        >
+                          <div
+                            className="Groups"
+                          />
+                        </span>
+                      </span>
+                      First point.
+                    </li>
+                    <li
+                      className=""
+                      data-ref="para5"
+                    >
+                      <span
+                        className="sc-jqCOkK dOIxQc DragBar"
+                        contentEditable={false}
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseMove={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <span
+                          className="sc-uJMKN eCAylh"
+                        >
+                          <div
+                            className="Groups"
+                          />
+                        </span>
+                      </span>
+                      Second point with
+                    </li>
+                    <li
+                      className=""
+                      data-ref="para6"
+                    >
+                      <span
+                        className="sc-jqCOkK dOIxQc DragBar"
+                        contentEditable={false}
+                        onMouseDown={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseMove={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <span
+                          className="sc-uJMKN eCAylh"
+                        >
+                          <div
+                            className="Groups"
+                          />
+                        </span>
+                      </span>
+                      Third point.
+                    </li>
+                  </ol>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render many pages 1`] = `
+<div
+  className="theme-Editor-many-pages"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          many pages
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e4} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe4"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    />
+                    Hello Editor
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                  <p
+                    className=""
+                    data-ref="refe5"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu metus quis nunc commodo pharetra. Pellentesque accumsan tellus vitae tortor elementum, imperdiet lacinia metus facilisis.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe6"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Aliquam sollicitudin felis at finibus placerat. Cras sed maximus ligula, a mattis sem.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe7"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean elit nulla, fermentum nec rutrum vitae, placerat ut nibh. Nam ornare at nunc vel porta. Fusce sed porta nibh. Phasellus at leo tortor.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe8"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Morbi in placerat nisl. Aenean non metus malesuada, pulvinar nunc vitae, rhoncus ex. Suspendisse tincidunt posuere cursus. Curabitur laoreet aliquam velit vitae faucibus. Vestibulum pretium euismod tortor. Aenean hendrerit neque nibh, et posuere nisl feugiat vel.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe9"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    In hac habitasse platea dictumst. Morbi sagittis neque eget facilisis viverra. Suspendisse elit ex, cursus at odio at, tempor vestibulum lectus.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe10"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Cras diam lorem, sollicitudin ut velit sed, congue semper felis. Donec accumsan elit nec vestibulum sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ex nibh, vestibulum eget lacus id, commodo maximus dui. Duis facilisis, lorem eget euismod finibus, sem erat vestibulum nunc, malesuada porttitor massa mauris non arcu. Nulla dictum justo ac dui venenatis ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nec ante nibh. Duis id maximus nibh. In at sagittis ipsum. Vestibulum urna felis, dapibus sed nulla in, efficitur tristique dolor.
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render no composition 1`] = `
+<div
+  className="theme-Editor-no-composition"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          no composition
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e5} titlePlaceholder="New Composition" /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe2"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    />
+                    Just a title
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render no composition and no title 1`] = `
+<div
+  className="theme-Editor-no-composition-and-no-title"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          no composition and no title
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e6} titlePlaceholder="New Composition" /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title Empty"
+                    data-placeholder="New Composition"
+                    data-ref="refe2"
+                  >
+                    ​
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render no title 1`] = `
+<div
+  className="theme-Editor-no-title"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          no title
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e3} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <p
+                    className="Empty"
+                    data-ref="refe3"
+                  >
+                    ​
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render readonly 1`] = `
+<div
+  className="theme-Editor-readonly"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          readonly
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e4} readonly /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={false}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe4"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    />
+                    Hello Editor
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                  <p
+                    className=""
+                    data-ref="refe5"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu metus quis nunc commodo pharetra. Pellentesque accumsan tellus vitae tortor elementum, imperdiet lacinia metus facilisis.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe6"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Aliquam sollicitudin felis at finibus placerat. Cras sed maximus ligula, a mattis sem.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe7"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean elit nulla, fermentum nec rutrum vitae, placerat ut nibh. Nam ornare at nunc vel porta. Fusce sed porta nibh. Phasellus at leo tortor.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe8"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Morbi in placerat nisl. Aenean non metus malesuada, pulvinar nunc vitae, rhoncus ex. Suspendisse tincidunt posuere cursus. Curabitur laoreet aliquam velit vitae faucibus. Vestibulum pretium euismod tortor. Aenean hendrerit neque nibh, et posuere nisl feugiat vel.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe9"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    In hac habitasse platea dictumst. Morbi sagittis neque eget facilisis viverra. Suspendisse elit ex, cursus at odio at, tempor vestibulum lectus.
+                  </p>
+                  <p
+                    className=""
+                    data-ref="refe10"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    Cras diam lorem, sollicitudin ut velit sed, congue semper felis. Donec accumsan elit nec vestibulum sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ex nibh, vestibulum eget lacus id, commodo maximus dui. Duis facilisis, lorem eget euismod finibus, sem erat vestibulum nunc, malesuada porttitor massa mauris non arcu. Nulla dictum justo ac dui venenatis ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nec ante nibh. Duis id maximus nibh. In at sagittis ipsum. Vestibulum urna felis, dapibus sed nulla in, efficitur tristique dolor.
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render title true 1`] = `
+<div
+  className="theme-Editor-title-true"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          title true
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e2} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title Empty"
+                    data-ref="refe2"
+                  >
+                    ​
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render with children 1`] = `
+<div
+  className="theme-Editor-with-children"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          with children
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e1}&gt;
+  &lt;styled.div&gt;This is a child&lt;/styled.div&gt;
+&lt;/Editor&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm sc-ktHwxA bKjuCt Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe1"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    />
+                    Hello Editor
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                  <p
+                    className="Group"
+                    data-ref="foo"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      className=""
+                      data-ref="one"
+                    >
+                      One 
+                    </span>
+                    <span
+                      className="strong"
+                      data-ref="two"
+                    >
+                      more
+                    </span>
+                    <span
+                      className=""
+                      data-ref="three"
+                    >
+                       time.
+                    </span>
+                  </p>
+                  <div
+                    className="sc-fYxtnH hXmGQM Custom"
+                    data-c="X"
+                    data-ref="bar"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <div
+                      contentEditable={false}
+                      style={
+                        Object {
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-kTUwUJ iBstNk"
+                      >
+                        0.5
+                        <input
+                          className="sc-dqBHgY eWakGF"
+                          max={1}
+                          min={0}
+                          onChange={[Function]}
+                          onInput={[Function]}
+                          step={0.01}
+                          type="range"
+                          value={0.5}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="sc-jnlKLf iMjBgK cursor"
+                      onChange={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                    >
+                      ​
+                    </div>
+                  </div>
+                  <p
+                    className="Empty"
+                    data-ref="baz"
+                  >
+                    ​
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-gzOgki fDLdTU"
+            >
+              This is a child
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render with title 1`] = `
+<div
+  className="theme-Editor-with-title"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          with title
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e1} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe1"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    />
+                    Hello Editor
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    />
+                  </div>
+                  <p
+                    className="Group"
+                    data-ref="foo"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      className=""
+                      data-ref="one"
+                    >
+                      One 
+                    </span>
+                    <span
+                      className="strong"
+                      data-ref="two"
+                    >
+                      more
+                    </span>
+                    <span
+                      className=""
+                      data-ref="three"
+                    >
+                       time.
+                    </span>
+                  </p>
+                  <div
+                    className="sc-fYxtnH hXmGQM Custom"
+                    data-c="X"
+                    data-ref="bar"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <div
+                      contentEditable={false}
+                      style={
+                        Object {
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-kTUwUJ iBstNk"
+                      >
+                        0.5
+                        <input
+                          className="sc-dqBHgY eWakGF"
+                          max={1}
+                          min={0}
+                          onChange={[Function]}
+                          onInput={[Function]}
+                          step={0.01}
+                          type="range"
+                          value={0.5}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="sc-jnlKLf iMjBgK cursor"
+                      onChange={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                    >
+                      ​
+                    </div>
+                  </div>
+                  <p
+                    className="Empty"
+                    data-ref="baz"
+                  >
+                    ​
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Editor should render with title children 1`] = `
+<div
+  className="theme-Editor-with-title-children"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          with title children
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Editor holder={app.state.test...
+          <div
+            className="jsx"
+          >
+            &lt;Editor holder={app.state.test.e1} /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-lhVmIH kpnwGm Editor"
+        >
+          <div
+            className="sc-bYSBpT jmKVkf"
+          >
+            <div
+              className="sc-jbKcbu dvVEQc"
+              contentEditable={true}
+              data-compid="refe1"
+              id="refe1"
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onPaste={[Function]}
+              onSelect={[Function]}
+              suppressContentEditableWarning={true}
+            >
+              <div
+                className="sc-eqIVtm kfSCpQ Page"
+              >
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-caSCKo VSMjq"
+                  contentEditable={false}
+                />
+                <div
+                  className="sc-fAjcbJ sc-gisBJw jwDZfD Content"
+                >
+                  <h1
+                    className="Title"
+                    data-ref="refe1"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    />
+                    Hello Editor
+                  </h1>
+                  <div
+                    className="sc-cIShpX iRHfSf"
+                    contentEditable={false}
+                    onChange={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <div
+                      className="sc-kafWEX fcGFpX editor_titleExtra"
+                    >
+                      <div
+                        className="sc-gxMtzJ chTKlx testChild"
+                      >
+                        Some stuff in title
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    className="Group"
+                    data-ref="foo"
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      className=""
+                      data-ref="one"
+                    >
+                      One 
+                    </span>
+                    <span
+                      className="strong"
+                      data-ref="two"
+                    >
+                      more
+                    </span>
+                    <span
+                      className=""
+                      data-ref="three"
+                    >
+                       time.
+                    </span>
+                  </p>
+                  <div
+                    className="sc-fYxtnH hXmGQM Custom"
+                    data-c="X"
+                    data-ref="bar"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onDoubleClick={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onPaste={[Function]}
+                    onSelect={[Function]}
+                  >
+                    <span
+                      className="sc-jqCOkK dOIxQc DragBar"
+                      contentEditable={false}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseMove={[Function]}
+                      onMouseUp={[Function]}
+                    >
+                      <span
+                        className="sc-uJMKN eCAylh"
+                      >
+                        <div
+                          className="Groups"
+                        />
+                      </span>
+                    </span>
+                    <div
+                      contentEditable={false}
+                      style={
+                        Object {
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-kTUwUJ iBstNk"
+                      >
+                        0.5
+                        <input
+                          className="sc-dqBHgY eWakGF"
+                          max={1}
+                          min={0}
+                          onChange={[Function]}
+                          onInput={[Function]}
+                          step={0.01}
+                          type="range"
+                          value={0.5}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="sc-jnlKLf iMjBgK cursor"
+                      onChange={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                    >
+                      ​
+                    </div>
+                  </div>
+                  <p
+                    className="Empty"
+                    data-ref="baz"
+                  >
+                    ​
+                  </p>
+                </div>
+                <div
+                  className="sc-fAjcbJ bgbjlV sc-kjoXOD sc-tilXH goPzJl Footer"
+                  contentEditable={false}
+                >
+                  <div
+                    className="sc-hEsumM iagQcd"
+                  >
+                    1
+                     / 
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toolbox should render emptyParagraph 1`] = `
+<div
+  className="theme-Toolbox-emptyParagraph"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          emptyParagraph
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Toolbox holder={app.state.tes...
+          <div
+            className="jsx"
+          >
+            &lt;Toolbox holder={app.state.test.t3} compId="t3" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        id="toolbox1"
+        style={
+          Object {
+            "background": "white",
+            "height": "110px",
+            "position": "relative",
+            "width": "400px",
+          }
+        }
+      >
+        <div
+          className="sc-btzYZH biuatB emptyParagraph"
+          style={
+            Object {
+              "left": 44,
+              "top": 28,
+            }
+          }
+        >
+          <div
+            className="sc-jwKygS gkedz menu"
+          >
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                H1
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                H2
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                1.
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                *
+              </span>
+            </div>
+            <div
+              className="item selected"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Icon sc-gqjmRU sc-cmTdod gquwlR"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-paragraph fa-w-14 "
+                  data-icon="paragraph"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M448 48v32a16 16 0 0 1-16 16h-48v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V96h-32v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V352h-32a160 160 0 0 1 0-320h240a16 16 0 0 1 16 16z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Icon sc-gqjmRU sc-cmTdod gquwlR"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-video fa-w-18 "
+                  data-icon="video"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                X
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toolbox should render paragraph 1`] = `
+<div
+  className="theme-Toolbox-paragraph"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          paragraph
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Toolbox holder={app.state.tes...
+          <div
+            className="jsx"
+          >
+            &lt;Toolbox holder={app.state.test.t2} compId="t2" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        id="toolbox1"
+        style={
+          Object {
+            "background": "white",
+            "height": "110px",
+            "position": "relative",
+            "width": "400px",
+          }
+        }
+      >
+        <div
+          className="sc-btzYZH biuatB paragraph"
+          style={
+            Object {
+              "left": 44,
+              "top": 28,
+            }
+          }
+        >
+          <div
+            className="sc-jwKygS gkedz menu"
+          >
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                H1
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                H2
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                1.
+              </span>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span>
+                *
+              </span>
+            </div>
+            <div
+              className="item selected"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <span
+                className="Icon sc-gqjmRU sc-cmTdod gquwlR"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-paragraph fa-w-14 "
+                  data-icon="paragraph"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M448 48v32a16 16 0 0 1-16 16h-48v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V96h-32v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V352h-32a160 160 0 0 1 0-320h240a16 16 0 0 1 16 16z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toolbox should render selection 1`] = `
+<div
+  className="theme-Toolbox-selection"
+>
+  <div
+    className="sc-bxivhb kGrjIq"
+  >
+    <div
+      className="sc-ifAKCX BXQJS"
+    >
+      <div
+        className="sc-EHOje fpqoIO"
+      >
+        <div
+          className="sc-bwzfXH dvulrY Title"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          selection
+        </div>
+        <div
+          className="sc-bdVaJa gdMgPe"
+        >
+          &lt;Toolbox holder={app.state.tes...
+          <div
+            className="jsx"
+          >
+            &lt;Toolbox holder={app.state.test.t1} compId="t1" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        id="toolbox1"
+        style={
+          Object {
+            "background": "white",
+            "height": "110px",
+            "position": "relative",
+            "width": "400px",
+          }
+        }
+      >
+        <div
+          className="sc-btzYZH biuatB selection"
+          style={
+            Object {
+              "left": 28,
+              "top": 28,
+            }
+          }
+        >
+          <div
+            className="sc-jwKygS gkedz menu"
+          >
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <i
+                className="strong"
+              >
+                B
+              </i>
+            </div>
+            <div
+              className="item"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <i
+                className="em"
+              >
+                I
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

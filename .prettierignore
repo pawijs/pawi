@@ -1,0 +1,10 @@
+**/.cache
+**/coverage
+**/dist
+**/es
+**/generated
+**/.nyc_output
+/node_modules
+/packages/*/**/node_modules
+package.json
+package-lock.json

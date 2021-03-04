@@ -1,0 +1,13 @@
+/node_modules
+/coverage
+/setup
+/src
+/.cache
+.gitignore
+.npmignore
+.prettierrc.json
+.travis.yml
+tsconfig.json
+tslint.json
+package-lock.json
+yarn.lock

@@ -1,0 +1,35 @@
+{
+  "name": "@tuist/code-editor",
+  "version": "0.0.0",
+  "description": "wrapper around codemirror for lucidity",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuist-org/tuist.git"
+  },
+  "author": "Maia Taewana <maia@tuitui.st>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@tuist/code-editor",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@tuist/code-editor",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@tuist/code-editor/dist dist",
+    "stories": "parcel serve --port 8888 --no-autoinstall src/stories/index.html",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@tuist/build": "next",
+    "@tuist/editor": "next",
+    "@tuist/locale": "next",
+    "@tuist/theme": "next",
+    "@tuist/styled": "next",
+    "codemirror": "^5.58.0"
+  },
+  "devDependencies": {
+    "@tuist/story": "next",
+    "@types/codemirror": "0.0.98"
+  }
+}

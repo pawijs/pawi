@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DirectThemeProvider should render with provided theme 1`] = `
+<div
+  className="theme-bar"
+>
+  foobar
+</div>
+`;
+
+exports[`DirectThemeProvider should render with provided theme and default scopeName 1`] = `
+<div
+  className="theme-app"
+>
+  foobar
+</div>
+`;
+
+exports[`DirectThemeProvider should render with provided theme and scopeName 1`] = `
+<div
+  className="theme-bar"
+>
+  foobar
+</div>
+`;
+
+exports[`ThemeProvider should render children 1`] = `
+<div
+  className="theme-foo"
+>
+  foobar
+</div>
+`;

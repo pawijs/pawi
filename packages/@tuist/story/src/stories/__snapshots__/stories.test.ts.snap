@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should render simple 1`] = `
+<div
+  className="theme-actions-simple"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          simple
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;myComponent /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;myComponent /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-jrsJCI fsxnVn"
+          onClick={[Function]}
+        >
+          Mona
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`children should render simple 1`] = `
+<div
+  className="theme-children-simple"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          simple
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;ShowChildren&gt;...
+          <div
+            className="jsx"
+          >
+            &lt;ShowChildren&gt;
+  &lt;div&gt;Hello&lt;/div&gt;
+  &lt;div&gt;World&lt;/div&gt;
+&lt;/ShowChildren&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-kEqYlL jeOQdz"
+        >
+          <div>
+            Hello
+          </div>
+          <div>
+            World
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`children should render with tracking 1`] = `
+<div
+  className="theme-children-with-tracking"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          with tracking
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;ShowChildren&gt;...
+          <div
+            className="jsx"
+          >
+            &lt;ShowChildren&gt;
+  &lt;Foo /&gt;
+  &lt;div&gt;Hello&lt;/div&gt;
+  &lt;div&gt;World&lt;/div&gt;
+&lt;/ShowChildren&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-kEqYlL jeOQdz"
+        >
+          <div>
+            fool
+          </div>
+          <div>
+            Hello
+          </div>
+          <div>
+            World
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`defaults in Stories should render simple all defaults 1`] = `
+<div
+  className="theme-defaults-in-Stories-simple-all-defaults"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          simple all defaults
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;DefaultComponent name="foo" /...
+          <div
+            className="jsx"
+          >
+            &lt;DefaultComponent name="foo" /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          This is 
+          foo
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render component without name 1`] = `
+<div
+  className="theme-props-component-without-name"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          component without name
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;anon /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;anon /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div>
+          simple div
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render plain component 1`] = `
+<div
+  className="theme-props-plain-component"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          plain component
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Foo /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Foo /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div>
+          simple div
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render props as function 1`] = `
+<div
+  className="theme-props-props-as-function"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          props as function
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;component name="bar" bool cal...
+          <div
+            className="jsx"
+          >
+            &lt;component name="bar" bool callback={function callback} tag={app.state.foo.bar} number={14} /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div>
+          This is 
+          bar
+           (
+          baz
+          )
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render simple 1`] = `
+<div
+  className="theme-props-simple"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          simple
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;component name="foo" /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;component name="foo" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div>
+          This is 
+          foo
+           (
+          baz
+          )
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render state change on click 1`] = `
+<div
+  className="theme-props-state-change-on-click"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          state change on click
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;component name="bar" /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;component name="bar" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div>
+          This is 
+          bar
+           (
+          baz
+          )
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`state should render simple 1`] = `
+<div
+  className="theme-state-simple"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          simple
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;component id="difool" /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;component id="difool" /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-iqAbSa dXmjUK"
+        >
+          I am John Difool
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

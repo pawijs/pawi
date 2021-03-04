@@ -1,0 +1,48 @@
+{
+  "name": "tuist",
+  "version": "0.0.0",
+  "description": "visual coding",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuist-org/tuist.git"
+  },
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "webpack": "webpack",
+    "clean": "rimraf .cache dist coverage ../node_modules/tuist",
+    "postbuild": "cp package.json ../node_modules/tuist",
+    "prepare": "rimraf dist && cp -r ../node_modules/tuist/dist dist",
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "author": "Maia Taewana <maia@tuist.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/simple-mock": "^0.8.1",
+    "ava": "^3.15.0",
+    "css-loader": "^5.1.1",
+    "esm": "^3.2.25",
+    "rimraf": "^3.0.2",
+    "simple-mock": "^0.8.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "ava": {
+    "files": [
+      "**/*.test.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register",
+      "./src/test-browser-env.ts"
+    ]
+  }
+}

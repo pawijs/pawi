@@ -1,0 +1,17 @@
+**/node_modules
+/packages/node_modules
+/packages/@tuist/**/node_modules
+/off
+**/.cache
+**/coverage
+**/dist
+**/.env*
+**/*.log
+**/yarn.lock
+/packages/**/package-lock.json
+/packages/apps/vasudeva/**/*.db
+/packages/apps/vasudeva/**/*.pgsql
+/packages/apps/vasudeva/**/*.db-journal
+**/.vscode
+**/.DS_Store
+*.csv

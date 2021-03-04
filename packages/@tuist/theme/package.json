@@ -1,0 +1,38 @@
+{
+  "name": "@tuist/theme",
+  "version": "0.0.0",
+  "description": "Theming support.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuist-org/tuist.git"
+  },
+  "author": "Maia Taewana <maia@tuitui.st>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@tuist/theme",
+    "postbuild": "cp package.json ../../node_modules/@tuist/theme",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@tuist/theme/dist dist",
+    "stories": "parcel serve src/stories/index.html",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false",
+    "test": "jest -c setup/jest.js"
+  },
+  "dependencies": {
+    "@tuist/build": "next",
+    "overmind-react": "^26.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-test-renderer": "^16.9.3",
+    "@types/styled-components": "^4.0.1",
+    "jest-styled-components": "^7.0.3",
+    "react-test-renderer": "^16.13.1"
+  }
+}

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show state should render state changes 1`] = `
+<div
+  className="theme-Show-state-state-changes"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          state changes
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;OnlineWidget /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;OnlineWidget /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-fbIXFq dVEzPm"
+        >
+          <span
+            className="Icon sc-jrsJCI faRQEi Offline"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-circle fa-w-16 "
+              data-icon="circle"
+              data-prefix="far"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+          Offline
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Triggers hook should render changes on hook 1`] = `
+<div
+  className="theme-Triggers-hook-changes-on-hook"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          changes on hook
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;MessageWidget /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;MessageWidget /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-fbIXFq dVEzPm"
+        >
+          no message
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

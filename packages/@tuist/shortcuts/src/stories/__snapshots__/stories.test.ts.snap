@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show shorcuts should render use arrows inside and outside input 1`] = `
+<div
+  className="theme-Show-shorcuts-use-arrows-inside-and-outside-input"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          use arrows inside and outside input
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Component /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Component /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-fbIXFq cBRpSS"
+        >
+          <div
+            className="sc-dIvqjp gdOvPD sc-hHEjAm ktroRa"
+          >
+            <div
+              className="sc-bkbjAj ezzAKI"
+            >
+              <span>
+                
+              </span>
+            </div>
+          </div>
+          <div
+            className="sc-bCwgka eEsmmI"
+          >
+            <input
+              autoComplete="off"
+              className="sc-kfYqjs ipFzLI"
+              name="message"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder=""
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

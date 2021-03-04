@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragdrop should render drag & drop 1`] = `
+<div
+  className="theme-Dragdrop-drag---drop"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          drag & drop
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Component /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Component /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-kEqYlL PoEXl sc-bqGHjH hXCfcV Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group: 
+            foo
+            )
+          </h3>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          >
+            hop
+          </div>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          >
+            lala
+          </div>
+        </div>
+        <div
+          className="sc-kEqYlL PoEXl sc-bqGHjH hXCfcV Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group: 
+            bar
+            )
+          </h3>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          >
+            bar
+          </div>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          >
+            Lily
+             (is name)
+          </div>
+        </div>
+        <div
+          className="sc-ksluoS dFUTZC Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group2: 
+            baz
+            )
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragdrop should render dragging 1`] = `
+<div
+  className="theme-Dragdrop-dragging"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          dragging
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Component /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Component /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-jrsJCI cuOIAF sc-fnVYJo zlOjj"
+          style={
+            Object {
+              "left": 310,
+              "top": 80,
+            }
+          }
+        >
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onClick={[Function]}
+          >
+            dragging 
+            Lily
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragdrop should render file drop 1`] = `
+<div
+  className="theme-Dragdrop-file-drop"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          file drop
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;filedrop /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;filedrop /&gt;
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-dlnjPT cbTXiB"
+      >
+        <div
+          className="sc-fFSRdu eygdNp"
+          onDragEnter={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        >
+          FILE DROP HERE
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragdrop should render start drag 1`] = `
+<div
+  className="theme-Dragdrop-start-drag"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          start drag
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Component /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Component /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-iqAbSa hqpXQa"
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+        >
+          My name
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dragdrop should render transform 1`] = `
+<div
+  className="theme-Dragdrop-transform"
+>
+  <div
+    className="sc-hKFyIo muukU"
+  >
+    <div
+      className="sc-eCApGN doPWto"
+    >
+      <div
+        className="sc-jSFkmK euWlfV"
+      >
+        <div
+          className="sc-gtssRu QCClT"
+          style={
+            Object {
+              "cursor": "inherit",
+            }
+          }
+        >
+          transform
+        </div>
+        <div
+          className="sc-bdnylx gcNLkm"
+        >
+          &lt;Component /&gt;
+          <div
+            className="jsx"
+          >
+            &lt;Component /&gt;
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-kEqYlL PoEXl sc-bqGHjH hXCfcV Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group: 
+            foo
+            )
+          </h3>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          />
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          />
+        </div>
+        <div
+          className="sc-kEqYlL PoEXl sc-bqGHjH hXCfcV Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group: 
+            bar
+            )
+          </h3>
+          <div
+            className="sc-iqAbSa hqpXQa"
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            onMouseUp={[Function]}
+          />
+        </div>
+        <div
+          className="sc-ksluoS dFUTZC Drop"
+          onMouseLeave={[Function]}
+          onMouseMove={[Function]}
+        >
+          <h3>
+            (Group2: 
+            baz
+            )
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

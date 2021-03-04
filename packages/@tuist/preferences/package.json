@@ -1,0 +1,30 @@
+{
+  "name": "@tuist/preferences",
+  "version": "0.0.0",
+  "description": "An easy way to save and get back user preferences.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuist-org/tuist.git"
+  },
+  "author": "Maia Taewana <maia@tuitui.st>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@tuist/preferences",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@tuist/preferences/dist dist",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@tuist/preferences",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@tuist/build": "next",
+    "@tuist/hooks": "next",
+    "dexie": "^3.0.2"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^3.1.2"
+  }
+}
