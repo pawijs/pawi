@@ -41,6 +41,8 @@ These packages are helpers to build Overmind apps (on which the vscode editor is
   (drag and drop support)
 - [![NPM version][editor-image]][editor-npm] [@tuist/editor][editor-url]
   (WYSIWYG editor)
+- [![NPM version][hooks-image]][hooks-npm] [@tuist/hooks][hooks-url]
+  (hooks to trigger actions)
 - [![NPM version][locale-image]][locale-npm] [@tuist/locale][locale-url]
   (internationalization)
 - [![NPM version][preferences-image]][preferences-npm] [@tuist/preferences][preferences-url]
@@ -72,6 +74,9 @@ These packages are helpers to build Overmind apps (on which the vscode editor is
 [editor-url]: https://github.com/tuist-org/tuist/tree/next/packages/@tuist/editor
 [editor-image]: https://img.shields.io/npm/v/@tuist/editor.svg?style=flat
 [editor-npm]: https://npmjs.org/package/@tuist/editor
+[hooks-url]: https://github.com/tuist-org/tuist/tree/next/packages/@tuist/hooks
+[hooks-image]: https://img.shields.io/npm/v/@tuist/hooks.svg?style=flat
+[hooks-npm]: https://npmjs.org/package/@tuist/hooks
 [locale-url]: https://github.com/tuist-org/tuist/tree/next/packages/@tuist/locale
 [locale-image]: https://img.shields.io/npm/v/@tuist/locale.svg?style=flat
 [locale-npm]: https://npmjs.org/package/@tuist/locale

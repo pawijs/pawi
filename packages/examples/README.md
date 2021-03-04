@@ -1,4 +1,4 @@
-# Tuitui examples
+# Tuist examples
 
 Sample graphs for testing and development.
 
