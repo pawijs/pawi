@@ -17,6 +17,6 @@ npm install
 npm run serve
 ```
 
-Open http://127.0.0.1:8080/projects/ in **a modern browser** (tested on Google Chrome 88 and Safari 14.0).
+Open http://127.0.0.1:8080 in **a modern browser** (tested on Google Chrome 88 and Safari 14.0).
 
 Say hello [@maia_tae](https://twitter.com/maia_tae).

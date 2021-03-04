@@ -12,9 +12,6 @@
   "scripts": {
     "test": "ava",
     "test:watch": "ava --watch",
-    "prebuild": "rimraf ./dist && copyfiles -u 1 src/**/*.html src/**/*.css dist/",
-    "build": "tsc",
-    "build:watch": "npm run build -- --watch",
     "serve": "cd src && snowpack dev"
   },
   "author": "Maia Taewana <maia@tuist.org>",
