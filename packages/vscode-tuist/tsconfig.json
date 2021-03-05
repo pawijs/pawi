@@ -12,6 +12,7 @@
 		"sourceMap": true,
 		"rootDir": "src",
 		"strict": true,
+		"skipLibCheck": false,
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,

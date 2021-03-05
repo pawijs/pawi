@@ -17,6 +17,7 @@
     "strict": true,
     "noImplicitAny": true,
     "resolveJsonModule": true,
+    "skipLibCheck": false,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
