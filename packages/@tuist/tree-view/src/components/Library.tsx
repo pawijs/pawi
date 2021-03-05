@@ -1,9 +1,7 @@
-import * as React from 'react'
-
-import { Comp, styled, useOvermind } from '../app'
-
 import { Icon } from '@tuist/styled'
 import classnames from 'classnames'
+import * as React from 'react'
+import { Comp, styled, useOvermind } from '../app'
 
 export interface LibraryProps {
   className?: string

@@ -7,5 +7,12 @@ export const cooker = Cooker(process.argv, {
     host: 'localhost:8787, reconnect: false',
   },
   path: '.',
-  packagesGlobs: ['packages/@tuist/*', 'packages/examples', 'packages/tuist', 'other/*'],
+  packagesGlobs: [
+    'packages/@tuist/*',
+    'packages/examples',
+    'packages/tuist',
+    'packages/vscode-assets',
+    'packages/vscode-tuist',
+    'other/*'
+  ],
 })

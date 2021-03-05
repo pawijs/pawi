@@ -1,0 +1,41 @@
+{
+  "name": "@tuist/vscode-assets",
+  "version": "0.0.0",
+  "author": "Maia Taewana <maia@tuist.org>",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "clean": "rimraf .cache dist && rimraf ../vscode-tuist/assets",
+    "devtools": "npx overmind-devtools",
+    "prebuild": "npm run clean",
+    "postbuild": "cp -r dist ../vscode-tuist/assets",
+    "serve": "http-server dist",
+    "start": "webpack serve --port 1236 --mode development --hot --inline"
+  },
+  "dependencies": {
+    "@tuist/build": "next",
+    "@tuist/code-editor": "next",
+    "@tuist/editor": "next",
+    "@tuist/locale": "next",
+    "@tuist/shortcuts": "next",
+    "@tuist/styled": "next",
+    "@tuist/theme": "next",
+    "@tuist/tree-view": "next",
+    "@tuist/tree": "next"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "git-revision-webpack-plugin": "^3.0.6",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "ts-loader": "^8.0.4",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack": "^4.44.2",
+    "worker-loader": "^3.0.2"
+  }
+}
