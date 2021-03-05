@@ -1,8 +1,8 @@
-import * as actions from './actions'
-
 import { Block } from '@tuist/build'
-import { TreeConfig } from './types'
+import { hooks } from '@tuist/hooks'
+import * as actions from './actions'
 import { setup } from './setup'
+import { TreeConfig } from './types'
 
 export * from './helpers'
 export {
@@ -17,6 +17,7 @@ export {
 
 export const tree: Block<TreeConfig> = {
   name: 'tree',
+  dependencies: [hooks],
   setup,
   state: {
     tree: {

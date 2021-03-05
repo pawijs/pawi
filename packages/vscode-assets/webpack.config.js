@@ -27,12 +27,44 @@ module.exports = {
 
   output: {
     publicPath: '/',
-    path: root('dist'),
+    path: root('../vscode-tuist/assets'),
     filename: '[name].js',
     chunkFilename: '[name].js',
     // This setting is required for web workers to not use 'window'
     globalObject: 'this',
   },
+
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {},
+  },
+
+  watchOptions: {
+    aggregateTimeout: 600,
+  },
+
+  devServer: {
+    contentBase: root('dist'),
+    stats: 'errors-warnings',
+  },
+
+  plugins: [
+    new DefinePlugin({
+      APP_VERSION,
+      // Yes this is not advised by WebPack but some older
+      // libraries need this for now.
+      // FIXME: Update libs and remove.
+      process: { env: { NODE_ENV: JSON.stringify(env) } },
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      filename: 'index.html',
+      template: root('src/index.html'),
+    }),
+  ],
 
   module: {
     rules: [
@@ -65,30 +97,4 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-    alias: {},
-  },
-  devServer: {
-    contentBase: root('dist'),
-    stats: 'errors-warnings',
-  },
-
-  plugins: [
-    new DefinePlugin({
-      APP_VERSION,
-      // Yes this is not advised by WebPack but some older
-      // libraries need this for now.
-      // FIXME: Update libs and remove.
-      process: { env: { NODE_ENV: JSON.stringify(env) } },
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'body',
-      filename: 'index.html',
-      template: root('src/index.html'),
-    }),
-  ],
 }

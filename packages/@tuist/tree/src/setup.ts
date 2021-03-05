@@ -1,6 +1,5 @@
-import { TreeConfig, TreeHooks, TreeSettings } from './types'
-
 import { Setup } from '@tuist/build'
+import { TreeConfig, TreeHooks, TreeSettings } from './types'
 
 export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
   const definitions: TreeHooks = {}
@@ -13,6 +12,7 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
         definition = {
           newBlock: (ctx, args) => ({ name: 'newBlock', content: {} }),
           treeChanged: [],
+          selectNode: [],
           contentChanged: [],
           contentComponent: () => null,
         }
@@ -23,6 +23,7 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
         contentComponent,
         newBlock,
         treeChanged,
+        selectNode,
       } = setting
 
       if (contentComponent) {
@@ -31,7 +32,9 @@ export const setup: Setup<TreeConfig, TreeSettings> = (config, settings) => {
       if (newBlock) {
         definition.newBlock = newBlock
       }
-
+      if (selectNode) {
+        definition.selectNode.push(selectNode)
+      }
       if (treeChanged) {
         definition.treeChanged.push(treeChanged)
       }

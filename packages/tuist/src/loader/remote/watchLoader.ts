@@ -1,7 +1,6 @@
 import { WatchLoader, WatchLoaderObserver } from '../types'
-
-import { SocketMessage } from './types'
 import { simpleLoader } from './simpleLoader.js'
+import { SocketMessage } from './types'
 
 export function watchLoader(): WatchLoader {
   const cache = new Map<string, string>()

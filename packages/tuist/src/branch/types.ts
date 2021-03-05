@@ -1,15 +1,23 @@
 import { Loader } from '../loader/types'
 
 export interface Source {
-  // This serves as branch identification: must be unique in project
-  file: string
-  children?: string[]
+  id: string
+  name: string
+  content: {
+    file: string
+  }
+  children: string[]
 }
 export type NodeInfo = Source
 
 export interface Branch {
-  [key: string]: NodeInfo
-  main: Source
+  type: string
+  id: string
+  version: string
+  entry: string
+  blocks: {
+    [key: string]: NodeInfo
+  }
 }
 
 export interface LoadBranchOptions {

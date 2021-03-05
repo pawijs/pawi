@@ -1,8 +1,7 @@
 import { Context, NodeModule, TChild, Update } from '..'
-
 import { Branch } from '../branch/types'
-import { ChildLoader } from './types'
 import { Load } from '../loader/types'
+import { ChildLoader } from './types'
 
 function makeCacheFunction(): Context['cache'] {
   const store = new Map<string, any>()
@@ -49,15 +48,16 @@ export function childLoader<T extends {} = {}>(
   branch: Branch
 ): ChildLoader<T> {
   const caches = new Map<string, {}>()
+  const blocks = branch.blocks
 
   async function getChildren(
-    name: string,
+    id: string,
     parentContext: {}
   ): Promise<TChild<T>[]> {
-    const node = branch[name]
+    const block = blocks[id]
     const children: TChild<T>[] = []
-    if (node.children) {
-      for (const id of node.children) {
+    if (block.children) {
+      for (const id of block.children) {
         children.push(await loadChild(id, parentContext))
       }
     }
@@ -79,7 +79,7 @@ export function childLoader<T extends {} = {}>(
     id: string,
     parentContext: Partial<T> = {}
   ): Promise<TChild<T>> {
-    const path = branch[id].file
+    const path = blocks[id].content.file
     const mod: NodeModule = await load(path)
     const { init } = mod
 

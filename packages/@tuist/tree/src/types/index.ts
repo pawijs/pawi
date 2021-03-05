@@ -1,8 +1,11 @@
 import * as actions from '../actions'
-import { AddArg } from '../actions'
+import { AddArg, SelectNodeArg } from '../actions'
 import { TreeType } from './TreeType'
 
 export * from './TreeType'
+
+export const tree_selectNode = 'tree_selectNode'
+export const tree_treeChanged = 'tree_treeChanged'
 
 export interface TreeConnectArg {
   nodeId: string
@@ -11,21 +14,19 @@ export interface TreeConnectArg {
 }
 
 export interface TreeChangedHook {
-  (
-    ctx: { state: any },
-    arg: { tree: TreeType; connecting?: TreeConnectArg }
-  ): void
+  (ctx: any, arg: { tree: TreeType; connecting?: TreeConnectArg }): void
 }
 
 export interface TreeContentChangedHook<T> {
-  (
-    ctx: { state: any },
-    arg: { tree: TreeType; nodeId: string; previousContent: T }
-  ): void
+  (ctx: any, arg: { tree: TreeType; nodeId: string; previousContent: T }): void
 }
 
 export interface NewBlockHook<T> {
-  (ctx: { state: any }, arg: AddArg): { name: string; content: T }
+  (ctx: any, arg: AddArg): { name: string; content: T }
+}
+
+export interface SelectNodeHook {
+  (ctx: any, arg: SelectNodeArg): void
 }
 
 export interface TreeHooks<T = any> {
@@ -34,6 +35,7 @@ export interface TreeHooks<T = any> {
     newBlock: NewBlockHook<T>
     // Executed in block loading order.
     treeChanged: TreeChangedHook[]
+    selectNode: SelectNodeHook[]
     contentChanged: TreeContentChangedHook<T>[]
     contentComponent: any
   }
@@ -43,6 +45,7 @@ export interface TreeDefinitions<T = any> {
   [type: string]: {
     newBlock?: NewBlockHook<T>
     treeChanged?: TreeChangedHook
+    selectNode?: SelectNodeHook
     contentChanged?: TreeContentChangedHook<T>
     contentComponent?: any
   }

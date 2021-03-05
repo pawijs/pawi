@@ -1,15 +1,15 @@
-import { BranchLoader } from './types'
+import { getBranch } from '../branch/getBranch.js'
 import { Loader } from '../loader/types'
 import { childLoader } from './childLoader.js'
-import { getBranch } from '../branch/branchLoader.js'
+import { BranchLoader } from './types'
 
 export function branchLoader<T extends {} = {}>(
   loader: Loader
 ): BranchLoader<T> {
   return async function loadBranch(branchPath, parentContext = {}) {
     const cloader = loader(branchPath)
-    const branch = await getBranch(cloader, `index.js`)
+    const branch = await getBranch(cloader, `branch.tuist`)
     const loadChild = childLoader(cloader, branch)
-    return loadChild('main', parentContext)
+    return loadChild(branch.entry, parentContext)
   }
 }

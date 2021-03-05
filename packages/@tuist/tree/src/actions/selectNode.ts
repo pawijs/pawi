@@ -15,4 +15,8 @@ export const selectNode: Action<SelectNodeArg> = (ctx, arg) => {
   } else {
     tree.selected = { id, editName }
   }
+  const definition = ctx.state.tree.definitions()[tree.type]
+  if (definition) {
+    definition.selectNode.forEach(fun => fun(ctx, arg))
+  }
 }

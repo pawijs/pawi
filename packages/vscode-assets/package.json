@@ -1,5 +1,5 @@
 {
-  "name": "@tuist/vscode-assets",
+  "name": "vscode-assets",
   "version": "0.0.0",
   "author": "Maia Taewana <maia@tuist.org>",
   "private": true,
@@ -8,7 +8,6 @@
     "clean": "rimraf .cache dist && rimraf ../vscode-tuist/assets",
     "devtools": "npx overmind-devtools",
     "prebuild": "npm run clean",
-    "postbuild": "cp -r dist ../vscode-tuist/assets",
     "serve": "http-server dist",
     "start": "webpack serve --port 1236 --mode development --hot --inline"
   },

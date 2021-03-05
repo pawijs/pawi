@@ -13,10 +13,22 @@
 	"activationEvents": [
 		"onCommand:vscode-tuist.helloWorld",
 		"onCommand:vscode-tuist.edit",
-		"onWebviewPanel:tuistEditor"
+		"onCustomEditor:vscode-tuist.treeEditor"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"customEditors": [
+			{
+				"viewType": "vscode-tuist.treeEditor",
+				"displayName": "Tree Editor",
+				"selector": [
+					{
+						"filenamePattern": "*.tuist"
+					}
+				],
+				"priority": "default"
+			}
+		],
 		"commands": [
 			{
 				"command": "vscode-tuist.helloWorld",

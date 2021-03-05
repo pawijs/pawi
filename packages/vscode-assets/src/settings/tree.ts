@@ -10,8 +10,15 @@ export const tree: TreeDefinitions<BranchContent> = {
         content: { file: '' },
       }
     },
-    treeChanged({ state }: { state: Context['state'] }, { tree }) {
-      console.log(JSON.stringify(state.tuist.tree, null, 2))
+    treeChanged(ctx: Context) {
+      ctx.actions.tuist.treeChanged()
+    },
+    selectNode(ctx: Context, arg) {
+      const node = arg.tree.blocks[arg.id]
+      ctx.actions.tuist.send({
+        type: 'select',
+        path: node.content.file,
+      })
     },
     // contentComponent: NodeEditor,
   },

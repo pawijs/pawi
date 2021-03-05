@@ -23,7 +23,7 @@ const TreeWrapper = styled.div`
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    background: #222;
+    background: #282828;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
   }
