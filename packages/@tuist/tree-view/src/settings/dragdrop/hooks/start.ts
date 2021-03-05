@@ -1,8 +1,8 @@
-import { Context } from '../../../app'
+import { reference, resolve } from '@tuist/build'
 import { DragdropHooks } from '@tuist/dragdrop'
-import { TreeDrag } from '../../../types'
-import { cutBranch } from '@tuist/tree'
-import { resolve } from '@tuist/build'
+import { cutBranch, newTree } from '@tuist/tree'
+import { Context } from '../../../app'
+import { LibraryDrag, TreeDrag } from '../../../types'
 
 export const start: DragdropHooks['start'] = (ctx: Context) => {
   const { state } = ctx
@@ -10,6 +10,18 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
   if (!drag) {
     return
   }
+  if (drag.payload.block) {
+    const payload = drag.payload as LibraryDrag
+    const tree = newTree('tuist', payload.block)
+    ctx.state.treeView.libraryTree = tree
+    const newPayload: TreeDrag = {
+      origin: reference(ctx.state.treeView.libraryTree),
+      tree,
+      nodeId: tree.entry,
+    }
+    drag.payload = newPayload
+  }
+
   const payload = drag.payload as TreeDrag
   const origin = resolve(ctx, payload.origin)
   if (!origin) {

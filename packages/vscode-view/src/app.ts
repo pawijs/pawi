@@ -1,6 +1,8 @@
 import { LocaleConfig } from '@tuist/locale'
 import { StyledConfig, styledTheme } from '@tuist/styled'
 import { defaultTheme, ThemeConfig, themeProxy } from '@tuist/theme'
+import { TreeConfig } from '@tuist/tree'
+import { TreeViewConfig } from '@tuist/tree-view'
 import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
@@ -9,7 +11,12 @@ import { TuistConfig } from './types'
 
 export { styled, Comp }
 
-export type Config = TuistConfig & LocaleConfig & ThemeConfig & StyledConfig
+export type Config = TuistConfig &
+  LocaleConfig &
+  ThemeConfig &
+  StyledConfig &
+  TreeConfig &
+  TreeViewConfig
 
 export type Action<Input = void, Output = void> = IAction<Config, Input, Output>
 export type Context = IContext<Config>

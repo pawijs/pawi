@@ -19,6 +19,12 @@ export const tuist: Block<TuistConfig> = {
   state: {
     tuist: {
       tree,
+      loading: true,
+      // dummy value
+      path:
+        '/Users/maia/git/tuist/packages/examples/src/3D-cube/branch.tui.json',
+      dirname: '/Users/maia/git/tuist/packages/examples/src/3D-cube',
+      showLibrary: false,
       send: () => {},
     },
   },

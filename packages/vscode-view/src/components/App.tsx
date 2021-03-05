@@ -1,21 +1,34 @@
 // import { Dialog } from '@tuist/dialog'
-import { Drag } from '@tuist/dragdrop'
-import { Tree } from '@tuist/tree-view'
+import { Drag, dropStyles, fileDrop } from '@tuist/dragdrop'
+import { Icon } from '@tuist/styled'
+import { Library, Tree } from '@tuist/tree-view'
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { Comp, styled, useOvermind } from '../app'
 
 const Dialog = React.Fragment
 
+const BarsIcon = styled(Icon)`
+  color: #555;
+  &.highlighted {
+    color: #999;
+  }
+`
+
 export interface AppProps {
   className?: string
 }
 
 const Wrapper = styled.div`
-  /* styles here */
+  ${dropStyles};
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 0.5rem;
 `
+
 const TreeWrapper = styled.div`
-  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -44,13 +57,35 @@ const GlobalStyle = createGlobalStyle`
 
 export const App: Comp<AppProps> = ({ className }) => {
   const ctx = useOvermind()
+  const ref = React.useRef<HTMLElement>(null)
+  if (ctx.state.tuist.loading) {
+    return null
+  }
   const { tree } = ctx.state.tuist
+  const drop = fileDrop({
+    ref,
+    className,
+    accept(item) {
+      console.log('TEST', item)
+      return item.kind === 'string'
+    },
+    onDrop(args) {
+      ctx.actions.tuist.drop(args)
+    },
+  })
+  const { showLibrary } = ctx.state.tuist
   return (
-    <Wrapper className={className}>
+    <Wrapper {...drop}>
       <GlobalStyle />
       <Drag />
       <Dialog>
         <TreeWrapper>
+          <BarsIcon
+            icon="library"
+            onClick={ctx.actions.tuist.toggleLibrary}
+            highlighted={showLibrary}
+          />
+          {showLibrary && <Library />}
           {tree && <Tree tree={tree} extraProps={{}} />}
         </TreeWrapper>
       </Dialog>

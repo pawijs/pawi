@@ -1,8 +1,7 @@
 import { Reference, resolve } from '@tuist/build'
-import { appendGraph, makeId } from '../helpers'
-
+import { TreeType } from 'tuist'
 import { Action } from '../app'
-import { TreeType } from '../types'
+import { appendGraph, makeId } from '../helpers'
 
 export interface AppendArg {
   // Thing to append

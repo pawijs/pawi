@@ -26,6 +26,7 @@
     "@tuist/theme": "next",
     "@tuist/styled": "next",
     "@tuist/tree": "next",
+    "tuist": "next",
     "polished": "^3.6.7"
   },
   "devDependencies": {

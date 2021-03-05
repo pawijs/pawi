@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'test'
-import { TreeType } from '../types'
+import { TreeType } from 'tuist'
 import { appendGraph } from './appendGraph'
 
 type MockBlock = [string, string[]]

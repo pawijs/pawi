@@ -1,8 +1,6 @@
-import * as actions from '../actions'
-import { AddArg, SelectNodeArg } from '../actions'
-import { TreeType } from './TreeType'
-
-export * from './TreeType'
+import { TreeType } from 'tuist'
+import * as actions from './actions'
+import { AddArg, SelectNodeArg } from './actions'
 
 export const tree_selectNode = 'tree_selectNode'
 export const tree_treeChanged = 'tree_treeChanged'

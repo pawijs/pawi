@@ -1,6 +1,6 @@
 import { Reference } from '@tuist/build'
+import { TreeType } from 'tuist'
 import { SlotInfo } from '.'
-import { TreeType } from '@tuist/tree'
 import { UINodeType } from './UINodeType'
 
 export interface UINodeByIdType {

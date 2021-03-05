@@ -1,12 +1,10 @@
+import { reference } from '@tuist/build'
+import { draggable } from '@tuist/dragdrop'
+import classnames from 'classnames'
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Comp, useOvermind } from '../app'
 import { TreeDrag, UINodeType, UISlotType } from '../types'
-
-import { TreeType } from '@tuist/tree'
-import classnames from 'classnames'
-import { draggable } from '@tuist/dragdrop'
-import { reference } from '@tuist/build'
 
 const DUMMY_GRAPH: TreeType = {
   id: 'dummy',

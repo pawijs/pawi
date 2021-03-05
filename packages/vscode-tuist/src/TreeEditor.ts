@@ -1,9 +1,21 @@
+import { glob } from 'glob'
 import * as vscode from 'vscode'
 import { Message } from './types'
 
 const HTML = `
 <!doctype html><base href="./"><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Tuist</title><link href="/app.css" rel="stylesheet"></head><body><div id="root"></div><script defer="defer" src="/app.js"></script></body></html>
 `
+
+function getFiles(cwd: string) {
+  return new Promise<string[]>((resolve, reject) =>
+    glob('**/*.tui.ts', { cwd }, (err, files) => {
+      if (err) {
+        reject(err)
+      }
+      resolve(files.map(f => f.replace(/\.ts$/, '.js')))
+    })
+  )
+}
 
 export class TreeEditor implements vscode.CustomTextEditorProvider {
   private static readonly viewType = 'vscode-tuist.treeEditor'
@@ -27,12 +39,31 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
     }
     webviewPanel.webview.html = this.getHtmlForWebView(webviewPanel.webview)
 
+    function send(msg: Message) {
+      webviewPanel.webview.postMessage(msg)
+    }
+
     function updateWebview() {
       // Inform editor of new content
-      webviewPanel.webview.postMessage({
+      send({
         type: 'update',
+        path: document.uri.path,
         text: document.getText(),
       })
+    }
+    async function sendLibrary() {
+      const files: string[] = []
+      const folders = vscode.workspace.workspaceFolders?.map(f => f.uri.path)
+      if (folders) {
+        for (const cwd of folders) {
+          files.push(...(await getFiles(cwd)))
+        }
+        console.log(files)
+        send({
+          type: 'library',
+          paths: files,
+        })
+      }
     }
 
     const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(
@@ -71,6 +102,7 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
         }
         case 'ready': {
           updateWebview()
+          sendLibrary()
           break
         }
       }
@@ -79,7 +111,6 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
 
   private updateDocument(document: vscode.TextDocument, text: string) {
     const edit = new vscode.WorkspaceEdit()
-    // replace entire document for now
     edit.replace(
       document.uri,
       new vscode.Range(0, 0, document.lineCount, 0),
@@ -91,7 +122,7 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
   private getHtmlForWebView(webview: vscode.Webview) {
     const viewUrl = (path: string) =>
       webview.asWebviewUri(
-        vscode.Uri.joinPath(this.context.extensionUri, 'assets', path)
+        vscode.Uri.joinPath(this.context.extensionUri, 'view', path)
       )
     return HTML.replace('/app.js', viewUrl('app.js').toString()).replace(
       '/app.css',

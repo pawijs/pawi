@@ -1,7 +1,7 @@
-import { Action } from '../app'
-import { TreeType } from '@tuist/tree'
-import { uimap as doMap } from '../helpers'
 import { reference } from '@tuist/build'
+import { TreeType } from 'tuist'
+import { Action } from '../app'
+import { uimap as doMap } from '../helpers'
 
 export const uimap: Action<{ tree: TreeType }> = (ctx, arg) => {
   const { tree } = arg

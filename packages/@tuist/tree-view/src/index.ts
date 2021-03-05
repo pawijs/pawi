@@ -1,13 +1,12 @@
-import * as actions from './actions'
-
 import { Block } from '@tuist/build'
-import { TreeViewConfig } from './types'
 import { dragdrop } from '@tuist/dragdrop'
 import { locale } from '@tuist/locale'
-import { settings } from './settings'
 import { styled } from '@tuist/styled'
 import { theme } from '@tuist/theme'
 import { tree } from '@tuist/tree'
+import * as actions from './actions'
+import { settings } from './settings'
+import { TreeViewConfig } from './types'
 
 export * from './components'
 export * from './settings/theme'
@@ -19,6 +18,7 @@ export const treeView: Block<TreeViewConfig> = {
   settings,
   state: {
     treeView: {
+      library: [],
       dropTarget: {},
       uimap: {},
     },

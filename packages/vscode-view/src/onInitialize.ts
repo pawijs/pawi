@@ -6,7 +6,6 @@ export interface BootArg {
 }
 
 export const onInitialize: Action<BootArg> = ctx => {
-  console.log('INIT')
   const vscode =
     // @ts-ignore
     typeof acquireVsCodeApi !== 'undefined'
@@ -20,4 +19,9 @@ export const onInitialize: Action<BootArg> = ctx => {
   ctx.state.tuist.send = vscode.postMessage
 
   vscode.postMessage({ type: 'ready' })
+  // debug
+  // ctx.state.treeView.library = [
+  //   { name: 'three.Mesh', content: { file: 'lib/three.Mesh.js' } },
+  //   { name: 'three.Lights', content: { file: 'lib/three.Lights.js' } },
+  // ]
 }

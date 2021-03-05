@@ -1,10 +1,19 @@
 import { TreeDefinitions } from '@tuist/tree'
+import { Source } from 'tuist'
 import { Context } from '../app'
+import { getName } from '../helpers/paths'
 import { BranchContent } from '../types'
 
 export const tree: TreeDefinitions<BranchContent> = {
   tuist: {
-    newBlock() {
+    newBlock(arg) {
+      if (arg.content) {
+        const content = arg.content as Source['content']
+        return {
+          name: getName(content.file),
+          content,
+        }
+      }
       return {
         name: 'new',
         content: { file: '' },

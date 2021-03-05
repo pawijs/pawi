@@ -1,10 +1,8 @@
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Comp, styled } from '../../app'
-import { Stories, Wrapper, config } from '../helper'
-
 import { Tree } from '../../components'
-import { TreeType } from '@tuist/tree'
+import { config, Stories, Wrapper } from '../helper'
 
 export interface TwoTreesProps {
   className?: string

@@ -1,4 +1,4 @@
-import { BlockDefinition, TreeType } from '../types'
+import { BlockDefinition, TreeType } from 'tuist'
 import { makeId } from './makeId'
 
 export function newBlock(

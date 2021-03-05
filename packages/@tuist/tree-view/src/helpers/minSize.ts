@@ -1,4 +1,4 @@
-import { BlockDefinition, TreeType } from '@tuist/tree'
+import { BlockDefinition, TreeType } from 'tuist'
 import { UILayoutType, UINodeSize } from '../types'
 
 /** Compute the minimum size to display the element.

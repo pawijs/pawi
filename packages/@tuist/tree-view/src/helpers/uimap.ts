@@ -1,4 +1,6 @@
-import { BlockDefinition, StringMap, TreeType } from '@tuist/tree'
+// @ts-ignore
+import stringhash from 'string-hash'
+import { BlockDefinition, TreeType } from 'tuist'
 import {
   UILayoutType,
   UINodeType,
@@ -6,12 +8,10 @@ import {
   UISlotType,
   UITreeType,
 } from '../types'
-
 import { PALETTE_COUNT } from './colors'
-import { defaultUILayout } from './uilayout'
 import { minSize } from './minSize'
-// @ts-ignore
-import stringhash from 'string-hash'
+import { defaultUILayout } from './uilayout'
+type StringMap<T> = { [k: string]: T }
 
 /** Compute svg path of a box with up and down slots.
  * The sizes have to be computed first in the 'info' field.
@@ -87,7 +87,7 @@ function invalidPath(boxdef: UINodeType, layout: UILayoutType) {
   return res.join(' ')
 }
 
-export function className(objName: string) {
+export function colorName(objName: string) {
   const name = objName.split('.')[0]
   let num = 9 + stringhash(name)
   return `box${1 + (num % PALETTE_COUNT)}`
@@ -184,7 +184,7 @@ const uimapOne = (
   if (isRoot) {
     uibox.className = 'main'
   } else {
-    uibox.className = className(block.name)
+    uibox.className = colorName(block.name)
   }
 
   const lock =

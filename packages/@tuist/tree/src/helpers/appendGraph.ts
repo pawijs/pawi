@@ -1,4 +1,4 @@
-import { BlockDefinition, TreeType } from '../types'
+import { BlockDefinition, TreeType } from 'tuist'
 import { makeId } from './makeId'
 
 interface IdMap {
@@ -42,8 +42,8 @@ function insertBlock(
 ): string {
   const block: BlockDefinition = JSON.parse(JSON.stringify(source[id]))
   block.id = remap(target, map, id)
-  block.children = block.children.map(
-    id => (id ? insertBlock(target, source, map, id) : null)
+  block.children = block.children.map(id =>
+    id ? insertBlock(target, source, map, id) : null
   )
   target[block.id] = block
   return block.id

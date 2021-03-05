@@ -1,4 +1,4 @@
-import { TreeType } from '@tuist/tree'
+import { TreeType } from 'tuist'
 
 // A scene, a project or what we store in the library.
 // Nothing to do with 'Component' used in ui.

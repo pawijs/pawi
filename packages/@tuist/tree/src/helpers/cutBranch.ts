@@ -1,4 +1,4 @@
-import { BranchDefinition } from '../types'
+import { BranchDefinition } from 'tuist'
 import { makeId } from './makeId'
 
 interface GrabResult {

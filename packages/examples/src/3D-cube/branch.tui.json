@@ -1,7 +1,7 @@
 {
   "type": "tuist",
   "id": "1",
-  "version": "DRSOsA",
+  "version": "1614981957698",
   "entry": "main",
   "blocks": {
     "main": {
@@ -18,7 +18,7 @@
       "id": "anim",
       "name": "anim.Loop",
       "content": {
-        "file": "lib/anim.Loop.js"
+        "file": "lib/anim.Loop.tui.js"
       },
       "children": [
         "renderer"
@@ -26,9 +26,9 @@
     },
     "renderer": {
       "id": "renderer",
-      "name": "3D.Renderer",
+      "name": "three.Renderer",
       "content": {
-        "file": "lib/three.WebGLRenderer.js"
+        "file": "lib/three.WebGLRenderer.tui.js"
       },
       "children": [
         "scene"
@@ -36,9 +36,9 @@
     },
     "scene": {
       "id": "scene",
-      "name": "3D.Scene",
+      "name": "three.Scene",
       "content": {
-        "file": "lib/three.Scene.js"
+        "file": "lib/three.Scene.tui.js"
       },
       "children": [
         "mesh",
@@ -47,9 +47,9 @@
     },
     "mesh": {
       "id": "mesh",
-      "name": "3D.Mesh",
+      "name": "three.Mesh",
       "content": {
-        "file": "lib/three.Mesh.js"
+        "file": "lib/three.Mesh.tui.js"
       },
       "children": [
         "route"
@@ -57,9 +57,9 @@
     },
     "lights": {
       "id": "lights",
-      "name": "3D.Lights",
+      "name": "three.Lights",
       "content": {
-        "file": "lib/three.Lights.js"
+        "file": "lib/three.Lights.tui.js"
       },
       "children": []
     },
@@ -78,7 +78,7 @@
       "id": "now",
       "name": "now",
       "content": {
-        "file": "lib/three.Rotation.js"
+        "file": "lib/three.Rotation.tui.js"
       },
       "children": [
         "nowX",
@@ -114,7 +114,7 @@
       "id": "sliders",
       "name": "sliders",
       "content": {
-        "file": "lib/three.Rotation.js"
+        "file": "lib/three.Rotation.tui.js"
       },
       "children": [
         "sliderX",
@@ -146,9 +146,5 @@
         "file": "sliderZ.js"
       }
     }
-  },
-  "selected": {
-    "id": "route",
-    "editName": false
   }
 }

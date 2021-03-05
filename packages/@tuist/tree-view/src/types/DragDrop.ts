@@ -1,5 +1,5 @@
 import { Reference } from '@tuist/build'
-import { TreeType } from '@tuist/tree'
+import { TreeType } from 'tuist'
 
 export interface TreeDrag {
   // A reference to the original graph where the drag operation started.
@@ -7,6 +7,13 @@ export interface TreeDrag {
   // The dragged branch (sub-graph)
   tree: TreeType
   nodeId: string
+}
+
+export interface LibraryDrag {
+  block: {
+    name: string
+    content: any
+  }
 }
 
 export interface TreeDrop {

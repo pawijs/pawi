@@ -1,5 +1,7 @@
-import { StringMap } from '@tuist/tree'
+type StringMap<T = any> = { [k: string]: T }
 
+// This should not be here...
+// FIXME: cleanup.
 export interface PlaybackMetaType {
   // context changes
   expect?: StringMap

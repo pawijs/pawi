@@ -1,5 +1,5 @@
+import { TreeType } from 'tuist'
 import { Action } from '../app'
-import { TreeType } from '../types'
 
 export interface ContentChangedArg {
   tree: TreeType

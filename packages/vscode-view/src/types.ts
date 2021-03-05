@@ -1,4 +1,4 @@
-import { TreeType } from '@tuist/tree'
+import { TreeType } from 'tuist'
 import * as actions from './actions'
 
 export type BranchContent = { file: string }
@@ -9,6 +9,9 @@ export interface ReadyMessage {
 
 export interface UpdateMessage {
   type: 'update'
+  // Path of branch file (to get relative path on
+  // file drop).
+  path: string
   text: string
 }
 
@@ -17,7 +20,16 @@ export interface SelectMessage {
   path: string
 }
 
-export type Message = ReadyMessage | UpdateMessage | SelectMessage
+export interface LibraryMessage {
+  type: 'library'
+  paths: string[]
+}
+
+export type Message =
+  | ReadyMessage
+  | UpdateMessage
+  | SelectMessage
+  | LibraryMessage
 
 export interface TuistConfig {
   actions: {
@@ -26,6 +38,13 @@ export interface TuistConfig {
   state: {
     tuist: {
       tree?: TreeData
+      // Path of loaded tree
+      path: string
+      // Dirname of loaded tree
+      dirname: string
+      // Avoid blink on load
+      loading: boolean
+      showLibrary: boolean
       send: (message: Message) => void
     }
   }

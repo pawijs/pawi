@@ -1,17 +1,26 @@
-import { Icon } from '@tuist/styled'
-import classnames from 'classnames'
+import { draggable } from '@tuist/dragdrop'
+import { Icon, Resizable } from '@tuist/styled'
+import { darken } from 'polished'
 import * as React from 'react'
-import { Comp, styled, useOvermind } from '../app'
+import { Comp, css, styled, useOvermind } from '../app'
+import { colorName, indices, pfill } from '../helpers'
 
 export interface LibraryProps {
   className?: string
-  focused?: boolean
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(Resizable)`
+  padding: 0.5rem;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
-  width: 100%;
+  width: 10rem;
+  min-height: 100vh;
+  & .Handle {
+    bottom: auto;
+    top: 0;
+    background: #555;
+  }
 `
 
 const List = styled.div`
@@ -30,7 +39,7 @@ const Scroller = styled.div`
   position: relative;
 
   ::-webkit-scrollbar-track {
-    background-color: #777;
+    background-color: #333;
     border-left: 1px solid #222;
   }
 
@@ -46,12 +55,25 @@ const Scroller = styled.div`
 `
 
 const Element = styled.div`
+  cursor: pointer;
+  font-size: 0.8rem;
+  ${indices
+    .map(
+      paletteIdx => css`
+        &.box${paletteIdx} {
+          background: ${darken(0.2, pfill(paletteIdx))};
+        }
+      `
+    )
+    .join('\n')};
   background: #777;
   padding: 3px 8px;
   border-bottom: 1px solid #222;
 `
 
-const Search = Element
+const Search = styled(Element)`
+  opacity: 0.2;
+`
 
 function scrollStop(this: HTMLDivElement, e: any) {
   // el.scrollTop -= e.wheelDeltaY
@@ -68,11 +90,8 @@ function scrollStop(this: HTMLDivElement, e: any) {
   }
 }
 
-export const Library: Comp<LibraryProps> = ({ className, focused }) => {
-  useOvermind()
-  if (!focused) {
-    return null
-  }
+export const Library: Comp<LibraryProps> = ({ className }) => {
+  const ctx = useOvermind()
   function setupScroll(el: HTMLDivElement) {
     if (!el) {
       return
@@ -80,21 +99,24 @@ export const Library: Comp<LibraryProps> = ({ className, focused }) => {
     el.addEventListener('mousewheel', scrollStop)
     el.addEventListener('DOMMouseScroll', scrollStop)
   }
-  const elements = [
-    { name: 'three.cube' },
-    { name: 'three.Scene' },
-    { name: 'filter.Bar' },
-    { name: 'filter.Baz' },
-  ]
+  const elements = ctx.state.treeView.library
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} name="library" type="width">
       <Search>
         <Icon icon="search" />
       </Search>
       <Scroller ref={setupScroll as any}>
         <List>
           {elements.map(el => (
-            <Element key={el.name} className={classnames(el.name)}>
+            <Element
+              key={el.name}
+              className={colorName(el.name)}
+              {...draggable(ctx, {
+                className: colorName(el.name),
+                drag: 'tree',
+                payload: { block: el },
+              })}
+            >
               {el.name}
             </Element>
           ))}

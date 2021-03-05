@@ -1,4 +1,4 @@
-import { TreeType } from '../types'
+import { TreeType } from 'tuist'
 import { newBlock } from './newBlock'
 
 export function newTree<T>(

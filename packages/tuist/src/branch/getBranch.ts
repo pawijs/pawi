@@ -1,7 +1,7 @@
-import { Branch } from './types'
 import { Load } from '../loader/types'
+import { Branch } from './types'
 
 export async function getBranch(load: Load, name: string): Promise<Branch> {
-  const exports = await load(name)
-  return exports.branch
+  const data = await load(name, true)
+  return JSON.parse(data)
 }

@@ -1,14 +1,12 @@
+import classnames from 'classnames'
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Comp, styled, useOvermind } from '../app'
-import { TreeDrag, UITreeType } from '../types'
-
-import { DropTarget } from './DropTarget'
 import { KEY_ACTIONS } from '../helpers'
+import { TreeDrag, UITreeType } from '../types'
+import { DropTarget } from './DropTarget'
 import { Node } from './Node'
 import { TreeSVG } from './TreeSVG'
-import { TreeType } from '@tuist/tree'
-import classnames from 'classnames'
 
 export interface NodesProps {
   className?: string

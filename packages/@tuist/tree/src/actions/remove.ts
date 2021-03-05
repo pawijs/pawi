@@ -1,6 +1,6 @@
+import { TreeType } from 'tuist'
 import { Action } from '../app'
 import { cutBranch } from '../helpers'
-import { TreeType } from '../types'
 
 export interface RemoveArg {
   tree: TreeType

@@ -21,6 +21,7 @@
   "dependencies": {
     "@tuist/build": "next",
     "@tuist/hooks": "next",
+    "tuist": "next",
     "nanoid": "^3.1.12",
     "string-hash": "^1.1.3"
   },

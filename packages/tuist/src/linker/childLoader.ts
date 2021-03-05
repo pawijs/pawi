@@ -76,9 +76,12 @@ export function childLoader<T extends {} = {}>(
   }
 
   async function loadChild(
-    id: string,
+    id: string | null,
     parentContext: Partial<T> = {}
   ): Promise<TChild<T>> {
+    if (!id) {
+      return { value: {}, updates: [] }
+    }
     const path = blocks[id].content.file
     const mod: NodeModule = await load(path)
     const { init } = mod

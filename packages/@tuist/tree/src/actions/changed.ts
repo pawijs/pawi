@@ -1,6 +1,7 @@
+import { TreeType } from 'tuist'
 import { Action } from '../app'
-import { TreeConnectArg, TreeType } from '../types'
 import { makeId } from '../helpers'
+import { TreeConnectArg } from '../types'
 
 export interface TreeChangedArg {
   tree: TreeType

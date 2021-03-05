@@ -1,11 +1,9 @@
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Comp, styled, useOvermind } from '../app'
-
+import { TreeDrag } from '../types'
 import { NodeHeader } from './NodeHeader'
 import { Nodes } from './Nodes'
-import { TreeDrag } from '../types'
-import { TreeType } from '@tuist/tree'
 
 export interface TreeProps<T = any> {
   className?: string
@@ -18,6 +16,7 @@ export interface TreeProps<T = any> {
 }
 
 const Wrapper = styled.div`
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
 `

@@ -11,7 +11,7 @@ export const cooker = Cooker(process.argv, {
     'packages/@tuist/*',
     'packages/examples',
     'packages/tuist',
-    'packages/vscode-assets',
+    'packages/vscode-view',
     'packages/vscode-tuist',
     'other/*'
   ],

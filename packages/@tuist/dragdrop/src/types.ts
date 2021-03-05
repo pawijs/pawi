@@ -126,7 +126,8 @@ export interface FileDroppableOptions {
   // overmind and we need to update the div.
   ref: React.RefObject<HTMLElement>
   className?: string
-  onDrop: (args: { files: File[] }) => void
+  onDrop: (args: { files: File[], strings: [] }) => void
+  accept?: (arg: { kind: string, type: string}) => boolean
   // Extra payload to add
   payload?: any
 }

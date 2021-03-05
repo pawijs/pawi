@@ -1,7 +1,6 @@
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Context } from '../app'
-import { TreeType } from '@tuist/tree'
 
 export const KEY_ACTIONS: {
   [key: string]: (

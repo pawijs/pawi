@@ -1,8 +1,14 @@
 import * as React from 'react'
 import { FileDroppableHooks, FileDroppableOptions } from './types'
 
+function acceptFile({ kind }: { kind: string }) {
+  return kind === 'file'
+}
+
 export function fileDrop(settings: FileDroppableOptions): FileDroppableHooks {
   const ref = settings.ref
+
+  const accept = settings.accept || acceptFile
 
   // TODO: detect a drag operation in window and add
   // 'dropZone' style.
@@ -13,15 +19,24 @@ export function fileDrop(settings: FileDroppableOptions): FileDroppableHooks {
     const data = e.dataTransfer.items
     if (data) {
       const files: File[] = []
+      const strings: string[] = []
       for (let idx = 0; idx < data.length; ++idx) {
         const item = data[idx]
-        const file = item.getAsFile()
-        if (file) {
-          files.push(file)
+        if (accept(item)) {
+          if (item.kind === 'file') {
+            const file = item.getAsFile()
+            if (file) {
+              files.push(file)
+            }
+          } else {
+            strings.push(await new Promise(res => item.getAsString(res)))
+          }
         }
       }
-      if (files.length) {
-        settings.onDrop(Object.assign({}, settings.payload || {}, { files }))
+      if (files.length || strings.length) {
+        settings.onDrop(
+          Object.assign({}, settings.payload || {}, { files, strings })
+        )
       }
     }
     if (ref.current) {

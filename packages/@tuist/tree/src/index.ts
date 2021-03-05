@@ -5,15 +5,7 @@ import { setup } from './setup'
 import { TreeConfig } from './types'
 
 export * from './helpers'
-export {
-  BlockDefinition,
-  BranchDefinition,
-  StringMap,
-  TreeConfig,
-  TreeDefinitions,
-  TreeSettings,
-  TreeType,
-} from './types'
+export { TreeConfig, TreeDefinitions, TreeSettings } from './types'
 
 export const tree: Block<TreeConfig> = {
   name: 'tree',

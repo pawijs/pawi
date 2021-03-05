@@ -1,10 +1,9 @@
-import { DragdropHooks, Position } from '@tuist/dragdrop'
 import { Reference, resolve } from '@tuist/build'
-import { SlotInfo, TreeDrag, TreeDrop } from '../../../types'
-
+import { DragdropHooks, Position } from '@tuist/dragdrop'
+import { TreeType } from 'tuist'
 import { Context } from '../../../app'
-import { TreeType } from '@tuist/tree'
 import { defaultUILayout } from '../../../helpers'
+import { SlotInfo, TreeDrag, TreeDrop } from '../../../types'
 
 const MIN_TREE_DIST = Math.pow(200, 2)
 

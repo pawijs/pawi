@@ -1,8 +1,6 @@
 import * as React from 'react'
-
+import { TreeType } from 'tuist'
 import { Comp, styled, useOvermind } from '../app'
-
-import { TreeType } from '@tuist/tree'
 
 export interface NodeNameProps {
   className?: string
