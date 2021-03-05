@@ -58,12 +58,11 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
             base.path + '/../' + e.path.replace(/.js$/, '.ts')
           )
           let doc = await vscode.workspace.openTextDocument(uri)
-          vscode.window.showTextDocument(doc, vscode.ViewColumn.One)
-          vscode.commands.executeCommand(
-            'vscode.open',
-            uri,
-            vscode.ViewColumn.One
-          )
+          const column =
+            webviewPanel.viewColumn === vscode.ViewColumn.One
+              ? vscode.ViewColumn.Two
+              : vscode.ViewColumn.One
+          vscode.window.showTextDocument(doc, column)
           break
         }
         case 'update': {
@@ -78,13 +77,13 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
     })
   }
 
-  private updateDocument(document: vscode.TextDocument, data: any) {
+  private updateDocument(document: vscode.TextDocument, text: string) {
     const edit = new vscode.WorkspaceEdit()
     // replace entire document for now
     edit.replace(
       document.uri,
       new vscode.Range(0, 0, document.lineCount, 0),
-      JSON.stringify(data, null, 2)
+      text
     )
     return vscode.workspace.applyEdit(edit)
   }

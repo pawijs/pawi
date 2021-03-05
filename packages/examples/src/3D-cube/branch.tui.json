@@ -1,7 +1,7 @@
 {
   "type": "tuist",
   "id": "1",
-  "version": "1",
+  "version": "DRSOsA",
   "entry": "main",
   "blocks": {
     "main": {
@@ -146,5 +146,9 @@
         "file": "sliderZ.js"
       }
     }
+  },
+  "selected": {
+    "id": "route",
+    "editName": false
   }
 }

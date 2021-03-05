@@ -23,7 +23,7 @@
 				"displayName": "Tree Editor",
 				"selector": [
 					{
-						"filenamePattern": "*.tuist"
+						"filenamePattern": "*.tui.json"
 					}
 				],
 				"priority": "default"

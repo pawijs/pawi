@@ -13,12 +13,7 @@
   },
   "dependencies": {
     "@tuist/build": "next",
-    "@tuist/code-editor": "next",
-    "@tuist/editor": "next",
-    "@tuist/locale": "next",
-    "@tuist/shortcuts": "next",
-    "@tuist/styled": "next",
-    "@tuist/theme": "next",
+    "@tuist/dragdrop": "next",
     "@tuist/tree-view": "next",
     "@tuist/tree": "next"
   },

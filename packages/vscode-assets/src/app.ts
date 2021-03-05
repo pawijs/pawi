@@ -1,4 +1,3 @@
-import { EditorConfig } from '@tuist/editor'
 import { LocaleConfig } from '@tuist/locale'
 import { StyledConfig, styledTheme } from '@tuist/styled'
 import { defaultTheme, ThemeConfig, themeProxy } from '@tuist/theme'
@@ -10,11 +9,7 @@ import { TuistConfig } from './types'
 
 export { styled, Comp }
 
-export type Config = TuistConfig &
-  LocaleConfig &
-  ThemeConfig &
-  StyledConfig &
-  EditorConfig
+export type Config = TuistConfig & LocaleConfig & ThemeConfig & StyledConfig
 
 export type Action<Input = void, Output = void> = IAction<Config, Input, Output>
 export type Context = IContext<Config>

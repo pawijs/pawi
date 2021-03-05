@@ -1,7 +1,5 @@
 // import { Dialog } from '@tuist/dialog'
 import { Drag } from '@tuist/dragdrop'
-import { Editor } from '@tuist/editor'
-import { ThemeProvider } from '@tuist/theme'
 import { Tree } from '@tuist/tree-view'
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
@@ -17,7 +15,7 @@ const Wrapper = styled.div`
   /* styles here */
 `
 const TreeWrapper = styled.div`
-  margin: 3rem;
+  margin: 0.5rem;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -44,28 +42,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const experiment: 'tree' | 'editor' = 'tree'
-
 export const App: Comp<AppProps> = ({ className }) => {
   const ctx = useOvermind()
-  const { doc, tree } = ctx.state.tuist
+  const { tree } = ctx.state.tuist
   return (
     <Wrapper className={className}>
       <GlobalStyle />
-      <ThemeProvider>
-        <Wrapper>
-          <Drag />
-          <Dialog>
-            {experiment === 'tree' ? (
-              <TreeWrapper>
-                <Tree tree={tree} extraProps={{}} />
-              </TreeWrapper>
-            ) : (
-              <Editor holder={doc} header={() => null} noPagination />
-            )}
-          </Dialog>
-        </Wrapper>
-      </ThemeProvider>
+      <Drag />
+      <Dialog>
+        <TreeWrapper>
+          {tree && <Tree tree={tree} extraProps={{}} />}
+        </TreeWrapper>
+      </Dialog>
     </Wrapper>
   )
 }

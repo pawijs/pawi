@@ -1,4 +1,3 @@
-import { CompositionHolder } from '@tuist/editor'
 import { TreeType } from '@tuist/tree'
 import * as actions from './actions'
 
@@ -26,8 +25,7 @@ export interface TuistConfig {
   }
   state: {
     tuist: {
-      tree: TreeData
-      doc: CompositionHolder
+      tree?: TreeData
       send: (message: Message) => void
     }
   }
