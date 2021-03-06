@@ -115,19 +115,21 @@ export const Nodes: Comp<NodesProps> = React.memo(
 
     return (
       <Wrapper
-        id={treeId}
         ref={ref as any}
-        className={classnames(
-          className,
-          'Graph',
-          // This classname is used to find all compatible graphs for drop operation on
-          // page. If this is the tree that is dragged, we do not want it to be 'dropped' on.
-          noDrop ? undefined : `tree-${tree.type}`
-        )}
+        className={classnames(className, 'Graph')}
         onKeyDown={onKeyDown}
         tabIndex={-1}
       >
-        <TreeSVG width={uitree.size.width} height={uitree.size.height}>
+        <TreeSVG
+          id={treeId}
+          className={
+            // This classname is used to find all compatible graphs for drop operation on
+            // page. If this is the tree that is dragged, we do not want it to be 'dropped' on.
+            noDrop ? undefined : `tree-${tree.type}`
+          }
+          width={uitree.size.width}
+          height={uitree.size.height}
+        >
           <g transform={transform}>
             {mapUINodes(tree, uitree, noDrop)}
             {uidropnode && dropTarget ? (

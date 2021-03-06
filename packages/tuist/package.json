@@ -11,7 +11,6 @@
   },
   "scripts": {
     "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
-    "webpack": "webpack",
     "clean": "rimraf .cache dist coverage ../node_modules/tuist",
     "postbuild": "cp package.json ../node_modules/tuist",
     "prepare": "rimraf dist && cp -r ../node_modules/tuist/dist dist",

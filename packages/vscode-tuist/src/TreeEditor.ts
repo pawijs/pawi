@@ -12,7 +12,7 @@ function getFiles(cwd: string) {
       if (err) {
         reject(err)
       }
-      resolve(files.map(f => f.replace(/\.ts$/, '.js')))
+      resolve(files.map(f => `${cwd}/${f.replace(/\.ts$/, '.js')}`))
     })
   )
 }
@@ -40,6 +40,7 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.html = this.getHtmlForWebView(webviewPanel.webview)
 
     function send(msg: Message) {
+      console.log('EXT:SEND', msg)
       webviewPanel.webview.postMessage(msg)
     }
 
@@ -58,7 +59,6 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
         for (const cwd of folders) {
           files.push(...(await getFiles(cwd)))
         }
-        console.log(files)
         send({
           type: 'library',
           paths: files,
@@ -80,13 +80,13 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
 
     const base = document.uri
 
-    webviewPanel.webview.onDidReceiveMessage(async (e: Message) => {
+    webviewPanel.webview.onDidReceiveMessage(async (msg: Message) => {
       // receive changes from editor
-      console.log('RECEIVE', e)
-      switch (e.type) {
+      console.log('EXT:RECV', msg.type)
+      switch (msg.type) {
         case 'select': {
           const uri = vscode.Uri.file(
-            base.path + '/../' + e.path.replace(/.js$/, '.ts')
+            base.path + '/../' + msg.path.replace(/.js$/, '.ts')
           )
           let doc = await vscode.workspace.openTextDocument(uri)
           const column =
@@ -97,7 +97,7 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
           break
         }
         case 'update': {
-          this.updateDocument(document, e.text)
+          this.updateDocument(document, msg.text)
           break
         }
         case 'ready': {
@@ -116,7 +116,7 @@ export class TreeEditor implements vscode.CustomTextEditorProvider {
       new vscode.Range(0, 0, document.lineCount, 0),
       text
     )
-    return vscode.workspace.applyEdit(edit)
+    return vscode.workspace.applyEdit(edit).then(() => document.save())
   }
 
   private getHtmlForWebView(webview: vscode.Webview) {

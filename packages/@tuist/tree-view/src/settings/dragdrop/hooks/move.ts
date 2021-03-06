@@ -5,7 +5,7 @@ import { Context } from '../../../app'
 import { defaultUILayout } from '../../../helpers'
 import { SlotInfo, TreeDrag, TreeDrop } from '../../../types'
 
-const MIN_TREE_DIST = Math.pow(200, 2)
+const MIN_TREE_DIST = 2 * 50 * 50 // px
 
 interface GraphPosition {
   tree: Reference<TreeType>
@@ -33,25 +33,18 @@ function findClosest<T extends PositionWithSize>(
   let d = minDistance
   let target: T | undefined = undefined
   for (const e of elements) {
-    let dx = e.x - x
-    let dy = e.y - y
+    let dx = x - e.x
+    let dy = y - e.y
     if (useSize) {
-      const { width, height } = e
-      if (dx < 0 && width) {
-        dx = Math.min(
-          // distance to left border
-          -dx,
-          // distance to right border
-          Math.abs(dx + width)
-        )
+      const width = e.width || 0
+      const height = e.height || 0
+      if (dx > 0) {
+        // inside or dist to right border
+        dx = Math.max(0, dx - width)
       }
-      if (dy < 0 && height) {
-        dy = Math.min(
-          // distance to top border
-          -dy,
-          // distance to bottom border
-          Math.abs(dy + height)
-        )
+      if (dy > 0) {
+        // inside or dist to bottom border
+        dy = Math.max(0, dy - height)
       }
     }
     const distance = dx * dx + dy * dy
@@ -86,7 +79,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
       if (!uigraph || !uigraph.tree) {
         return undefined
       }
-      const rect = e.getBoundingClientRect() as DOMRect
+      const rect = e.getBoundingClientRect()
       const g: GraphPosition = {
         tree: uigraph.tree,
         id: e.id,
@@ -130,7 +123,7 @@ export const move: DragdropHooks['move'] = (ctx: Context, value) => {
       }
       state.dragdrop.drop = {
         type: 'tree',
-        callback: () => ctx.actions.treeView.drop,
+        callback: ctx.actions.treeView.drop,
         payload,
       }
       const definition = state.tree.definitions()[branch.type]

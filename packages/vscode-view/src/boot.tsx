@@ -11,7 +11,13 @@ import { App } from './components'
 const config = build(tuist).using(tree).using(treeView).config()
 
 ReactDOM.render(
-  <Provider value={new Overmind(config, { devtools: false })}>
+  <Provider
+    value={
+      new Overmind(config, {
+        devtools: '127.0.0.1:3031',
+      })
+    }
+  >
     <App />
   </Provider>,
   document.querySelector('#root')

@@ -1,8 +1,8 @@
-import { Context } from '../../../app'
-import { DragdropHooks } from '@tuist/dragdrop'
-import { TreeDrag } from '../../../types'
-import { makeId } from '@tuist/tree'
 import { resolve } from '@tuist/build'
+import { DragdropHooks } from '@tuist/dragdrop'
+import { makeId } from '@tuist/tree'
+import { Context } from '../../../app'
+import { TreeDrag } from '../../../types'
 
 export const release: DragdropHooks['release'] = (ctx: Context) => {
   const { actions, state } = ctx
@@ -21,6 +21,7 @@ export const release: DragdropHooks['release'] = (ctx: Context) => {
     if (originTree && originTree.lock) {
       delete originTree.lock
       originTree.version = makeId({ [originTree.version]: '' })
+      actions.tree.changed({ tree: originTree })
       actions.treeView.uimap({ tree: originTree })
     }
   }

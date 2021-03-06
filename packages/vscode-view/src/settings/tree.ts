@@ -19,8 +19,8 @@ export const tree: TreeDefinitions<BranchContent> = {
         content: { file: '' },
       }
     },
-    treeChanged(ctx: Context) {
-      ctx.actions.tuist.treeChanged()
+    treeChanged(ctx: Context, arg) {
+      ctx.actions.tuist.treeChanged(arg)
     },
     selectNode(ctx: Context, arg) {
       const node = arg.tree.blocks[arg.id]

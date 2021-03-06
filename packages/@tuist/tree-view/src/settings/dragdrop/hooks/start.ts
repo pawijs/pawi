@@ -19,6 +19,7 @@ export const start: DragdropHooks['start'] = (ctx: Context) => {
       tree,
       nodeId: tree.entry,
     }
+    console.log('>>>>', newPayload)
     drag.payload = newPayload
   }
 

@@ -4,9 +4,6 @@ import * as actions from './actions'
 import { onInitialize } from './onInitialize'
 import { settings } from './settings'
 import { TuistConfig } from './types'
-// Whild debugging
-// import * as tree from './tuist.json'
-const tree = undefined
 
 export const tuist: Block<TuistConfig> = {
   name: 'tuist',
@@ -18,7 +15,6 @@ export const tuist: Block<TuistConfig> = {
   },
   state: {
     tuist: {
-      tree,
       loading: true,
       // dummy value
       path:

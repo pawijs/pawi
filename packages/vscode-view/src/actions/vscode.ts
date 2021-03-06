@@ -9,18 +9,22 @@ export const receive: Action<Message> = (ctx, arg) => {
   switch (arg.type) {
     case 'update': {
       const tree = JSON.parse(arg.text) as TreeType
-      tree.version = Date.now().toString()
+      if (tree.version === ctx.state.tuist.tree?.version) {
+        break
+      }
       ctx.state.tuist.tree = tree
       ctx.state.tuist.path = arg.path
       ctx.state.tuist.dirname = arg.path.split('/').slice(0, -1).join('/')
       break
     }
     case 'library': {
+      const { dirname } = ctx.state.tuist
       function makeBlock(path: string) {
+        console.log('makeBlock', dirname, path, relativePath(dirname, path))
         return {
           name: getName(path),
           content: {
-            file: relativePath(ctx.state.tuist.dirname, path),
+            file: relativePath(dirname, path),
           },
         }
       }
@@ -30,7 +34,7 @@ export const receive: Action<Message> = (ctx, arg) => {
 }
 
 export const send: Action<Message> = (ctx, arg) => {
-  console.log('SEND', arg)
+  // console.log('SEND', arg)
   // Call to vscode
   ctx.state.tuist.send(arg)
 }
