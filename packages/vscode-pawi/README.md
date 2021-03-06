@@ -4,7 +4,8 @@ The extension requires the 'vscode-view' app to build first.
 
 # pawi README
 
-This is the README for your extension "pawi". After writing up a brief description, we recommend including the following sections.
+Pawi is an extension to do visual and live coding for pawi
+based projects [JS live coding](https://github.com/pawijs/pawi).
 
 ## Features
 
