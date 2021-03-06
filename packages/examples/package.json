@@ -7,18 +7,18 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tuist-org/tuist.git"
+    "url": "https://github.com/pawijs/pawi.git"
   },
   "scripts": {
     "test": "ava",
     "test:watch": "ava --watch",
     "serve": "cd src && snowpack dev"
   },
-  "author": "Maia Taewana <maia@tuist.org>",
+  "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
   "dependencies": {
     "three": "^0.126.1",
-    "tuist": "next"
+    "pawi": "next"
   },
   "devDependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",

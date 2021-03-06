@@ -8,11 +8,11 @@ export const cooker = Cooker(process.argv, {
   },
   path: '.',
   packagesGlobs: [
-    'packages/@tuist/*',
+    'packages/@pawi/*',
     'packages/examples',
-    'packages/tuist',
+    'packages/pawi',
     'packages/vscode-view',
-    'packages/vscode-tuist',
-    'other/*'
+    'packages/vscode-pawi',
+    'other/*',
   ],
 })

@@ -1,4 +1,4 @@
-import { TContext, TNode, TValue } from 'tuist'
+import { TContext, TNode, TValue } from 'pawi'
 
 export interface ContextTypes {
   number: number

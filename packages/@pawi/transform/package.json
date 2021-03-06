@@ -1,0 +1,27 @@
+{
+  "name": "@pawi/transform",
+  "version": "0.0.0",
+  "description": "Code transform for live scrubbing.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawijs/pawi.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@pawi/transform",
+    "postbuild": "cp package.json ../../node_modules/@pawi/transform",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@pawi/transform/dist dist",
+    "stories": "parcel serve src/stories/index.html",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false",
+    "test": "jest -c setup/jest.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
+}

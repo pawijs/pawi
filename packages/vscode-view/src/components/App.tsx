@@ -1,7 +1,7 @@
-// import { Dialog } from '@tuist/dialog'
-import { Drag, dropStyles, fileDrop } from '@tuist/dragdrop'
-import { Icon } from '@tuist/styled'
-import { Library, Tree } from '@tuist/tree-view'
+// import { Dialog } from '@pawi/dialog'
+import { Drag, dropStyles, fileDrop } from '@pawi/dragdrop'
+import { Icon } from '@pawi/styled'
+import { Library, Tree } from '@pawi/tree-view'
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { Comp, styled, useOvermind } from '../app'
@@ -58,10 +58,10 @@ const GlobalStyle = createGlobalStyle`
 export const App: Comp<AppProps> = ({ className }) => {
   const ctx = useOvermind()
   const ref = React.useRef<HTMLElement>(null)
-  if (ctx.state.tuist.loading) {
+  if (ctx.state.pawi.loading) {
     return null
   }
-  const { tree } = ctx.state.tuist
+  const { tree } = ctx.state.pawi
   const drop = fileDrop({
     ref,
     className,
@@ -70,10 +70,10 @@ export const App: Comp<AppProps> = ({ className }) => {
       return item.kind === 'string'
     },
     onDrop(args) {
-      ctx.actions.tuist.drop(args)
+      ctx.actions.pawi.drop(args)
     },
   })
-  const { showLibrary } = ctx.state.tuist
+  const { showLibrary } = ctx.state.pawi
   return (
     <Wrapper {...drop}>
       <GlobalStyle />
@@ -82,7 +82,7 @@ export const App: Comp<AppProps> = ({ className }) => {
         <TreeWrapper>
           <BarsIcon
             icon="library"
-            onClick={ctx.actions.tuist.toggleLibrary}
+            onClick={ctx.actions.pawi.toggleLibrary}
             highlighted={showLibrary}
           />
           {showLibrary && <Library />}

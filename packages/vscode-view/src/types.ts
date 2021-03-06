@@ -1,4 +1,4 @@
-import { TreeType } from 'tuist'
+import { TreeType } from 'pawi'
 import * as actions from './actions'
 
 export type BranchContent = { file: string }
@@ -31,12 +31,12 @@ export type Message =
   | SelectMessage
   | LibraryMessage
 
-export interface TuistConfig {
+export interface PawiConfig {
   actions: {
-    tuist: typeof actions
+    pawi: typeof actions
   }
   state: {
-    tuist: {
+    pawi: {
       tree?: TreeData
       // Path of loaded tree
       path: string

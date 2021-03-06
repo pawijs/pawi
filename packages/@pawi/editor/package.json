@@ -1,0 +1,40 @@
+{
+  "name": "@pawi/editor",
+  "version": "0.0.0",
+  "description": "WYSIWYG editor",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawijs/pawi.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@pawi/editor",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@pawi/editor/dist dist",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@pawi/editor",
+    "stories": "webpack-dev-server --config=./setup/stories.webpack.js --port 8888 --mode development --hot --inline",
+    "-- coverage tests are super slow. Only run when needed --": "",
+    "test": "jest -c setup/jest.js --coverage false",
+    "test:coverage": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@pawi/build": "next",
+    "@pawi/dragdrop": "next",
+    "@pawi/hooks": "next",
+    "@pawi/locale": "next",
+    "@pawi/styled": "next",
+    "@pawi/shortcuts": "next",
+    "@pawi/theme": "next",
+    "@pawi/useragent": "next",
+    "clipboard-polyfill": "^3.0.1",
+    "clipboard-js": "^0.3.6"
+  },
+  "devDependencies": {
+    "@pawi/story": "next"
+  }
+}

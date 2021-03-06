@@ -1,17 +1,17 @@
-import { LocaleConfig } from '@tuist/locale'
-import { StyledConfig, styledTheme } from '@tuist/styled'
-import { defaultTheme, ThemeConfig, themeProxy } from '@tuist/theme'
-import { TreeConfig } from '@tuist/tree'
-import { TreeViewConfig } from '@tuist/tree-view'
+import { LocaleConfig } from '@pawi/locale'
+import { StyledConfig, styledTheme } from '@pawi/styled'
+import { defaultTheme, ThemeConfig, themeProxy } from '@pawi/theme'
+import { TreeConfig } from '@pawi/tree'
+import { TreeViewConfig } from '@pawi/tree-view'
 import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { TuistConfig } from './types'
+import { PawiConfig } from './types'
 
 export { styled, Comp }
 
-export type Config = TuistConfig &
+export type Config = PawiConfig &
   LocaleConfig &
   ThemeConfig &
   StyledConfig &

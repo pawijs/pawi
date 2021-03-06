@@ -1,13 +1,13 @@
-import { unproxy } from '@tuist/build'
-import { appendGraph } from '@tuist/tree'
-import { TreeChangedArg } from '@tuist/tree/dist/actions'
+import { unproxy } from '@pawi/build'
+import { appendGraph } from '@pawi/tree'
+import { TreeChangedArg } from '@pawi/tree/dist/actions'
 import { Action } from '../app'
 
 // Disable live preview until we have better hot reloading to avoid glitches.
 const livePreview = false
 
 export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
-  if (arg.tree.id !== ctx.state.tuist.tree?.id) {
+  if (arg.tree.id !== ctx.state.pawi.tree?.id) {
     // Only watch changes on main tree
     return
   }
@@ -24,18 +24,18 @@ export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
         connecting.tree
       )
       // Send to vscode
-      ctx.actions.tuist.send({
+      ctx.actions.pawi.send({
         type: 'update',
-        path: ctx.state.tuist.path,
+        path: ctx.state.pawi.path,
         text: JSON.stringify(newTree, null, 2),
       })
     }
-  } else if (arg.tree.id === ctx.state.tuist.tree?.id) {
+  } else if (arg.tree.id === ctx.state.pawi.tree?.id) {
     // Send to vscode
-    ctx.actions.tuist.send({
+    ctx.actions.pawi.send({
       type: 'update',
-      path: ctx.state.tuist.path,
-      text: JSON.stringify(ctx.state.tuist.tree, null, 2),
+      path: ctx.state.pawi.path,
+      text: JSON.stringify(ctx.state.pawi.tree, null, 2),
     })
   }
 }

@@ -1,5 +1,5 @@
+import { projectLoader, simpleLoader } from 'pawi'
 import * as three from 'three'
-import { projectLoader, simpleLoader } from 'tuist'
 import { ContextTypes } from '../3D-cube/lib/context'
 
 async function run() {

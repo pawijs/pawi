@@ -1,4 +1,4 @@
-# Tuist examples
+# Pawi examples
 
 Sample graphs for testing and development.
 

@@ -1,22 +1,22 @@
 {
   "name": "vscode-view",
   "version": "0.0.0",
-  "author": "Maia Taewana <maia@tuist.org>",
+  "author": "Maia Taewana <maia@pawijs.org>",
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",
-    "clean": "rimraf .cache dist && rimraf ../vscode-tuist/assets",
+    "clean": "rimraf .cache dist && rimraf ../vscode-pawi/assets",
     "devtools": "npx overmind-devtools",
     "prebuild": "npm run clean",
     "start": "webpack serve --port 1236 --mode development --hot --inline"
   },
   "dependencies": {
-    "@tuist/build": "next",
-    "@tuist/dragdrop": "next",
-    "@tuist/preferences": "next",
-    "@tuist/styled": "next",
-    "@tuist/tree-view": "next",
-    "@tuist/tree": "next"
+    "@pawi/build": "next",
+    "@pawi/dragdrop": "next",
+    "@pawi/preferences": "next",
+    "@pawi/styled": "next",
+    "@pawi/tree-view": "next",
+    "@pawi/tree": "next"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",

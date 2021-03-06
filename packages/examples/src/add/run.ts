@@ -1,5 +1,4 @@
-import { branchLoader, simpleLoader } from 'tuist'
-
+import { branchLoader, simpleLoader } from 'pawi'
 import { ContextTypes } from './context'
 
 async function run() {

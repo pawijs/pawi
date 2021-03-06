@@ -1,5 +1,5 @@
 {
-  "name": "tuist-monorepo",
+  "name": "pawi-monorepo",
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuist-org/tuist.git"
+    "url": "git+https://github.com/pawijs/pawi.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",

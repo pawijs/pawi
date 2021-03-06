@@ -27,7 +27,7 @@ module.exports = {
 
   output: {
     publicPath: '/',
-    path: root('../vscode-tuist/view'),
+    path: root('../vscode-pawi/view'),
     filename: '[name].js',
     chunkFilename: '[name].js',
     // This setting is required for web workers to not use 'window'

@@ -1,4 +1,4 @@
-import { InitValue } from 'tuist'
+import { InitValue } from 'pawi'
 
 export function init(): InitValue {
   const el = document.querySelector('#route') as HTMLInputElement

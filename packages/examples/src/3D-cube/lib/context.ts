@@ -1,5 +1,4 @@
-import { TChild, TContext, TNode, TOptValue } from 'tuist'
-
+import { TChild, TContext, TNode, TOptValue } from 'pawi'
 import THREE from 'three'
 
 export interface ContextTypes {

@@ -1,0 +1,29 @@
+{
+  "name": "@pawi/tree",
+  "version": "0.0.0",
+  "description": "Out-tree structure and handling",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawijs/pawi.git"
+  },
+  "author": "Maia Taewana <maia@pawijs.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
+    "postbuild": "cp package.json ../../node_modules/@pawi/tree",
+    "clean": "rimraf .cache dist coverage ../../node_modules/@pawi/tree",
+    "prepare": "rimraf dist && cp -r ../../node_modules/@pawi/tree/dist dist",
+    "test": "jest -c setup/jest.js",
+    "test:watch": "jest -c setup/jest.js --watch --coverage false"
+  },
+  "dependencies": {
+    "@pawi/build": "next",
+    "@pawi/hooks": "next",
+    "pawi": "next",
+    "nanoid": "^3.1.12",
+    "string-hash": "^1.1.3"
+  },
+  "devDependencies": {}
+}

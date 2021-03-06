@@ -1,8 +1,8 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
-import { EditorSettings } from '@tuist/editor'
-import { PreferencesHooks, PreferencesSettings } from '@tuist/preferences'
-import { StyledSettings } from '@tuist/styled'
-import { TreeSettings } from '@tuist/tree'
+import { EditorSettings } from '@pawi/editor'
+import { PreferencesHooks, PreferencesSettings } from '@pawi/preferences'
+import { StyledSettings } from '@pawi/styled'
+import { TreeSettings } from '@pawi/tree'
 import { Context } from '../app'
 import { tree } from './tree'
 
@@ -15,12 +15,12 @@ export const settings: Settings = {
   tree,
   hooks: {
     preferences_restored(ctx: Context) {
-      ctx.state.tuist.loading = false
+      ctx.state.pawi.loading = false
     },
   },
   preferences: {
     paths: {
-      ['tuist.showLibrary']: true,
+      ['pawi.showLibrary']: true,
       ['styled.sizes']: true,
     },
   },

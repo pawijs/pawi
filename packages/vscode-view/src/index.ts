@@ -1,25 +1,25 @@
-import { Block } from '@tuist/build'
-import { dragdrop } from '@tuist/dragdrop'
+import { Block } from '@pawi/build'
+import { dragdrop } from '@pawi/dragdrop'
 import * as actions from './actions'
 import { onInitialize } from './onInitialize'
 import { settings } from './settings'
-import { TuistConfig } from './types'
+import { PawiConfig } from './types'
 
-export const tuist: Block<TuistConfig> = {
-  name: 'tuist',
+export const pawi: Block<PawiConfig> = {
+  name: 'pawi',
   dependencies: [dragdrop],
   onInitialize,
   settings,
   actions: {
-    tuist: actions,
+    pawi: actions,
   },
   state: {
-    tuist: {
+    pawi: {
       loading: true,
       // dummy value
       path:
-        '/Users/maia/git/tuist/packages/examples/src/3D-cube/branch.tui.json',
-      dirname: '/Users/maia/git/tuist/packages/examples/src/3D-cube',
+        '/Users/maia/git/pawi/packages/examples/src/3D-cube/branch.awi.json',
+      dirname: '/Users/maia/git/pawi/packages/examples/src/3D-cube',
       showLibrary: false,
       send: () => {},
     },

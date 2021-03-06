@@ -25,9 +25,9 @@ script:
 after_success:
   - |
     if [[ $TRAVIS_SECURE_ENV_VARS == 'true' ]]; then
-      git remote set-url origin https://tuist-bot:${GH_TOKEN}@github.com/tuist-org/tuist
+      git remote set-url origin https://pawi-bot:${GH_TOKEN}@github.com/pawijs/pawi
       git config --global user.email "bot@tuitui.st"
-      git config --global user.name "Friendly Tuist Bot"
+      git config --global user.name "Friendly Pawi Bot"
     fi
     if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
       printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc

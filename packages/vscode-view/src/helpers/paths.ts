@@ -15,5 +15,5 @@ export function getName(path: string) {
     .split('.')
     .slice(0, -1)
     .join('.')
-    .replace(/\.tui$/, '')
+    .replace(/\.awi$/, '')
 }
