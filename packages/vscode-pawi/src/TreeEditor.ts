@@ -18,7 +18,7 @@ function getFiles(cwd: string) {
 }
 
 export class TreeEditor implements vscode.CustomTextEditorProvider {
-  private static readonly viewType = 'pawi.treeEditor'
+  private static readonly viewType = 'vscode-pawi.treeEditor'
   public static register(context: vscode.ExtensionContext): vscode.Disposable {
     const editor = new TreeEditor(context)
     return vscode.window.registerCustomEditorProvider(
