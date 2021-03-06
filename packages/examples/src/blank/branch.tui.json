@@ -1,0 +1,16 @@
+{
+  "type": "tuist",
+  "id": "1",
+  "version": "1",
+  "entry": "main",
+  "blocks": {
+    "main": {
+      "id": "main",
+      "name": "main",
+      "content": {
+        "file": "main.js"
+      },
+      "children": []
+    }
+  }
+}
