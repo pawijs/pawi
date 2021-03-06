@@ -12,15 +12,15 @@ To explore a **tuist** project, clone [sample-project][sample-url].
 
 ## What is this ?
 
-A tool for live-coding using latest web technologies.
+A tool for live-coding using latest web technologies and Visual Studio Code.
 
-This repository also contains all the Overmind helper modules needed to
-create the live editor. The helpers are published as separate npm packages and
+This repository also contains the Overmind helper modules needed to create
+the live editor. The helpers are published as separate npm packages and
 maintained by **tuist-org**.
 
 Some information on the project on [dev.to](https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l)
 
-![Screen Shot 2021-02-27 at 6 48 01 PM](https://user-images.githubusercontent.com/79422935/109376981-0e93f980-792d-11eb-97a3-5978224e8642.png)
+![Screen Shot 2021-03-06 at 12 48 00 PM](https://user-images.githubusercontent.com/79422935/110215961-6cb76400-7e7a-11eb-8bd0-ae03060a9b7a.png)
 
 Say hello [@maia_tae](https://twitter.com/maia_tae).
 
@@ -29,9 +29,9 @@ Say hello [@maia_tae](https://twitter.com/maia_tae).
 - [![NPM version][tuist-image]][tuist-npm] [tuist][tuist-url]
   (live coding runtime)
 
-## Packages used by editor
+## Overmind packages
 
-These packages are helpers to build Overmind apps (on which the vscode editor is based).
+These packages are used to build Overmind apps (on which the vscode editor is based).
 
 - [![NPM version][build-image]][build-npm] [@tuist/build][build-url]
   (modularity for building modular apps)
@@ -40,7 +40,7 @@ These packages are helpers to build Overmind apps (on which the vscode editor is
 - [![NPM version][dragdrop-image]][dragdrop-npm] [@tuist/dragdrop][dragdrop-url]
   (drag and drop support)
 - [![NPM version][editor-image]][editor-npm] [@tuist/editor][editor-url]
-  (WYSIWYG editor)
+  (WYSIWYG editor: not used in vscode extension yet)
 - [![NPM version][hooks-image]][hooks-npm] [@tuist/hooks][hooks-url]
   (hooks to trigger actions)
 - [![NPM version][locale-image]][locale-npm] [@tuist/locale][locale-url]
@@ -146,9 +146,6 @@ coverage.
 
 ### Related to tuist live coding
 
-1. code-editor [TODO] add stories and tests
-2. tree [TODO] 100% coverage
-3. render-tree [TODO] 100% coverage
-4. tuist [TODO] fix tests
-5. tree-view [TODO] fix stories
-6. vscode-tuist [TODO] migrate code
+1. tree [TODO] 100% coverage
+2. tree-view [TODO] 100% coverage (through stories)
+3. tuist [TODO] fix tests
