@@ -26,6 +26,6 @@
     "ts-loader": "^8.0.17",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack": "^5.19.0"
+    "webpack": "^5.20.0"
   }
 }
