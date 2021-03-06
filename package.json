@@ -90,7 +90,7 @@
     "ttypescript": "1.5.12",
     "typescript": "4.1.5",
     "vscode-test": "1.5.0",
-    "webpack": "5.20.0",
+    "webpack": "5.24.3",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "3.11.0"
   },

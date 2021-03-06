@@ -1,6 +1,8 @@
-# Tuitui
+# Tuist
 
 A simple tool for live-coding using latest web technologies.
+
+The project is made of the runtime (tuist) and a [vscode extension](https://github.com/tuist-org/tuist/tree/next/packages/vscode-tuist).
 
 Some information on the project on [dev.to](https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l)
 
