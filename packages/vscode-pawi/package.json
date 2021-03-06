@@ -5,6 +5,7 @@
 	"description": "Live coding and visual composition in VSCode",
 	"version": "0.0.1",
 	"license": "MIT",
+	"private": true,
 	"engines": {
 		"vscode": "^1.54.0"
 	},
