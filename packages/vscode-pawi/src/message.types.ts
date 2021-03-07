@@ -1,3 +1,7 @@
+// ============== KEEP IN SYNC vscode-pawi / vscode-view ========== //
+// TODO: Is there a better way to keep these types in sync (without publishing an npm
+// module just for this ?)
+
 export interface ReadyMessage {
   type: 'ready'
 }

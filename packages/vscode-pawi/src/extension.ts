@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
-import { TreeEditor } from './TreeEditor'
+import { TreeEditorProvider } from './treeEditor/TreeEditorProvider'
 
 export function activate(context: vscode.ExtensionContext) {
-  context.subscriptions.push(TreeEditor.register(context))
+  context.subscriptions.push(TreeEditorProvider.register(context))
 }

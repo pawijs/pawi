@@ -1,35 +1,10 @@
 import { TreeType } from 'pawi'
 import * as actions from './actions'
+import { Message } from './message.types'
+export * from './message.types'
 
 export type BranchContent = { file: string }
 export type TreeData = TreeType<BranchContent>
-export interface ReadyMessage {
-  type: 'ready'
-}
-
-export interface UpdateMessage {
-  type: 'update'
-  // Path of branch file (to get relative path on
-  // file drop).
-  path: string
-  text: string
-}
-
-export interface SelectMessage {
-  type: 'select'
-  path: string
-}
-
-export interface LibraryMessage {
-  type: 'library'
-  paths: string[]
-}
-
-export type Message =
-  | ReadyMessage
-  | UpdateMessage
-  | SelectMessage
-  | LibraryMessage
 
 export interface PawiConfig {
   actions: {
