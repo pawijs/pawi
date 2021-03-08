@@ -1,4 +1,4 @@
-import { Source } from 'pawi'
+import { Source } from '@forten/tree-type'
 import { Action } from '../app'
 import { relativePath } from '../helpers/paths'
 

@@ -8,9 +8,10 @@ export const cooker = Cooker(process.argv, {
   },
   path: '.',
   packagesGlobs: [
+    'packages/pawi',
+    'packages/@pawi/*',
     'packages/@pawi/*',
     'packages/examples',
-    'packages/pawi',
     'packages/vscode-view',
     'packages/vscode-pawi',
     'other/*',

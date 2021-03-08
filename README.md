@@ -31,85 +31,19 @@ Say hello [@maia_tae](https://twitter.com/maia_tae).
 - [![NPM version][pawi-image]][pawi-npm] [pawi][pawi-url]
   (live coding runtime)
 
-## Overmind packages
+## Pawi blocks library
 
-These packages are used to build Overmind apps (on which the vscode editor is based).
+- [![NPM version][base-image]][base-npm] [@pawi/base][base-url]
+  (basic blocks: animation setup, midi)
+- [![NPM version][three-image]][three-npm] [@pawi/three][three-url]
+  (Three.js blocks: 3D programming)
 
-- [![NPM version][build-image]][build-npm] [@pawi/build][build-url]
-  (modularity for building modular apps)
-- [![NPM version][code-editor-image]][code-editor-npm] [@pawi/code-editor][code-editor-url]
-  (code editor based on CodeMirror with scrubbing)
-- [![NPM version][dragdrop-image]][dragdrop-npm] [@pawi/dragdrop][dragdrop-url]
-  (drag and drop support)
-- [![NPM version][editor-image]][editor-npm] [@pawi/editor][editor-url]
-  (WYSIWYG editor: not used in vscode extension yet)
-- [![NPM version][hooks-image]][hooks-npm] [@pawi/hooks][hooks-url]
-  (hooks to trigger actions)
-- [![NPM version][locale-image]][locale-npm] [@pawi/locale][locale-url]
-  (internationalization)
-- [![NPM version][preferences-image]][preferences-npm] [@pawi/preferences][preferences-url]
-  (user UI state persistance)
-- [![NPM version][shortcuts-image]][shortcuts-npm] [@pawi/shortcuts][shortcuts-url]
-  (keyboard shortcuts)
-- [![NPM version][story-image]][story-npm] [@pawi/story][story-url]
-  (storybook to help develop components)
-- [![NPM version][styled-image]][styled-npm] [@pawi/styled][styled-url]
-  (basic components)
-- [![NPM version][theme-image]][theme-npm] [@pawi/theme][theme-url]
-  (theming support)
-- [![NPM version][tree-image]][tree-npm] [@pawi/tree][tree-url]
-  (root-tree definition and methods)
-- [![NPM version][tree-view-image]][tree-view-npm] [@pawi/tree-view][tree-view-url]
-  (visual composer for root-tree structures)
-- [![NPM version][useragent-image]][useragent-npm] [@pawi/useragent][useragent-url]
-  (detect useragent, online, offline and other helpers)
-
-[build-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/build
-[build-image]: https://img.shields.io/npm/v/@pawi/build.svg?style=flat
-[build-npm]: https://npmjs.org/package/@pawi/build
-[code-editor-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/code-editor
-[code-editor-image]: https://img.shields.io/npm/v/@pawi/code-editor.svg?style=flat
-[code-editor-npm]: https://npmjs.org/package/@pawi/code-editor
-[dragdrop-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/dragdrop
-[dragdrop-image]: https://img.shields.io/npm/v/@pawi/dragdrop.svg?style=flat
-[dragdrop-npm]: https://npmjs.org/package/@pawi/dragdrop
-[editor-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/editor
-[editor-image]: https://img.shields.io/npm/v/@pawi/editor.svg?style=flat
-[editor-npm]: https://npmjs.org/package/@pawi/editor
-[hooks-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/hooks
-[hooks-image]: https://img.shields.io/npm/v/@pawi/hooks.svg?style=flat
-[hooks-npm]: https://npmjs.org/package/@pawi/hooks
-[locale-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/locale
-[locale-image]: https://img.shields.io/npm/v/@pawi/locale.svg?style=flat
-[locale-npm]: https://npmjs.org/package/@pawi/locale
-[preferences-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/preferences
-[preferences-image]: https://img.shields.io/npm/v/@pawi/preferences.svg?style=flat
-[preferences-npm]: https://npmjs.org/package/@pawi/preferences
-[sample-url]: https://github.com/pawijs/sample-project
-[shortcuts-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/shortcuts
-[shortcuts-image]: https://img.shields.io/npm/v/@pawi/shortcuts.svg?style=flat
-[shortcuts-npm]: https://npmjs.org/package/@pawi/shortcuts
-[story-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/story
-[story-image]: https://img.shields.io/npm/v/@pawi/story.svg?style=flat
-[story-npm]: https://npmjs.org/package/@pawi/story
-[styled-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/styled
-[styled-image]: https://img.shields.io/npm/v/@pawi/styled.svg?style=flat
-[styled-npm]: https://npmjs.org/package/@pawi/styled
-[theme-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/theme
-[theme-image]: https://img.shields.io/npm/v/@pawi/theme.svg?style=flat
-[theme-npm]: https://npmjs.org/package/@pawi/theme
-[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi
-[pawi-image]: https://img.shields.io/npm/v/pawi.svg?style=flat
-[pawi-npm]: https://npmjs.org/package/pawi
-[tree-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/tree
-[tree-image]: https://img.shields.io/npm/v/@pawi/tree.svg?style=flat
-[tree-npm]: https://npmjs.org/package/@pawi/tree
-[tree-view-url]: https://github.com/pawijs/pawi/tree-view/next/packages/@pawi/tree-view
-[tree-view-image]: https://img.shields.io/npm/v/@pawi/tree-view.svg?style=flat
-[tree-view-npm]: https://npmjs.org/package/@pawi/tree-view
-[useragent-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/useragent
-[useragent-image]: https://img.shields.io/npm/v/@pawi/useragent.svg?style=flat
-[useragent-npm]: https://npmjs.org/package/@pawi/useragent
+[base-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/base
+[base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
+[base-npm]: https://npmjs.org/package/@pawi/base
+[three-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/three
+[three-image]: https://img.shields.io/npm/v/@pawi/three.svg?style=flat
+[three-npm]: https://npmjs.org/package/@pawi/three
 
 ### Release process
 
@@ -128,26 +62,3 @@ $ git pull
 $ git merge --ff-only next
 $ git push
 ```
-
-### Dependencies
-
-Here is the order in which we review and update modules (later modules
-depend on all or some of the previous ones). Modules with a \* have 100%
-coverage.
-
-1. build\*
-2. hooks\*
-3. locale\*
-4. theme\*
-5. story [TODO] 100% coverage
-6. styled [TODO] fix stories and tests
-7. dragdrop [TODO] improve coverage
-8. useragent [TODO] write more tests
-9. shortcuts [TODO] write more tests
-10. editor [TODO] fix stories, fix tests
-
-### Related to pawi live coding
-
-1. tree [TODO] 100% coverage
-2. tree-view [TODO] 100% coverage (through stories)
-3. pawi [TODO] fix tests

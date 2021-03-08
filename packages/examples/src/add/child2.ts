@@ -1,4 +1,4 @@
-import { Value } from './context'
+import { Value } from '../lib/types'
 
 export function link(): Value {
   return {

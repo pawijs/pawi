@@ -11,12 +11,13 @@
     "start": "webpack serve --port 1236 --mode development --hot --inline"
   },
   "dependencies": {
-    "@pawi/build": "next",
-    "@pawi/dragdrop": "next",
-    "@pawi/preferences": "next",
-    "@pawi/styled": "next",
-    "@pawi/tree-view": "next",
-    "@pawi/tree": "next"
+    "@forten/build": "next",
+    "@forten/dragdrop": "next",
+    "@forten/preferences": "next",
+    "@forten/styled": "next",
+    "@forten/tree-type": "next",
+    "@forten/tree-view": "next",
+    "@forten/tree": "next"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",

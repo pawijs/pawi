@@ -1,6 +1,6 @@
-import { Value } from './context'
+import { Arg, Value } from '../lib/types'
 
-export function link({ number: x }: Value, { number: y }: Value): Value {
+export function link({ number: x }: Arg, { number: y }: Arg): Value {
   if (!x || !y) {
     return { number: () => 0 }
   }

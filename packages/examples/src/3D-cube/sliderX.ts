@@ -1,4 +1,4 @@
-import { Value } from './lib/context'
+import { Value } from '../lib/types'
 
 export function link(): Value {
   const el = document.querySelector('#sliderX') as HTMLInputElement

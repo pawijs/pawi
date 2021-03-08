@@ -1,8 +1,8 @@
+import { StyledConfig, styledTheme } from '@forten/styled'
+import { TreeConfig } from '@forten/tree'
+import { TreeViewConfig } from '@forten/tree-view'
 import { LocaleConfig } from '@pawi/locale'
-import { StyledConfig, styledTheme } from '@pawi/styled'
 import { defaultTheme, ThemeConfig, themeProxy } from '@pawi/theme'
-import { TreeConfig } from '@pawi/tree'
-import { TreeViewConfig } from '@pawi/tree-view'
 import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
@@ -19,6 +19,11 @@ export type Config = PawiConfig &
   TreeViewConfig
 
 export type Action<Input = void, Output = void> = IAction<Config, Input, Output>
+export type AsyncAction<Input = void, Output = void> = IAction<
+  Config,
+  Input,
+  Promise<Output>
+>
 export type Context = IContext<Config>
 
 export type BaseTheme = typeof styledTheme & typeof defaultTheme

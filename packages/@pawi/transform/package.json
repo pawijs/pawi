@@ -10,7 +10,7 @@
   },
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "tsc -p setup/tsconfig.${NODE_ENV:=development}.json",
     "clean": "rimraf .cache dist coverage ../../node_modules/@pawi/transform",

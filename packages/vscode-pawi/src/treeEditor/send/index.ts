@@ -6,11 +6,13 @@ import { sendUpdate } from './update'
 export function send(editor: TreeEditor, type: Message['type']) {
   switch (type) {
     case 'update':
-      return sendUpdate(editor)
+      sendUpdate(editor)
+      break
     case 'library':
-      return sendLibrary(editor)
+      sendLibrary(editor)
+      break
     default:
       console.error(`Invalid message type '${type}' to send.`)
-      return
+      break
   }
 }

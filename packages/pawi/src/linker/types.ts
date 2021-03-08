@@ -1,7 +1,6 @@
-import { TChild, Update } from '../types'
-
-import { Branch } from '../branch/types'
+import { Branch } from '@forten/tree-type'
 import { Loader } from '../loader/types'
+import { TChild, Update } from '../types'
 
 export interface LinkerOptions {
   loader: Loader

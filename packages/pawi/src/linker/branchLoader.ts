@@ -8,7 +8,7 @@ export function branchLoader<T extends {} = {}>(
 ): BranchLoader<T> {
   return async function loadBranch(branchPath, parentContext = {}) {
     const cloader = loader(branchPath)
-    const branch = await getBranch(cloader, `branch.awi.json`)
+    const branch = await getBranch(cloader, `./branch.o.json`)
     const loadChild = childLoader(cloader, branch)
     return loadChild(branch.entry, parentContext)
   }

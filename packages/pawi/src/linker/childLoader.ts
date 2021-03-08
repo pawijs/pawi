@@ -1,7 +1,11 @@
-import { Context, NodeModule, TChild, Update } from '..'
-import { Branch } from '../branch/types'
+import { Branch } from '@forten/tree-type'
+import { TChild, Update } from '..'
 import { Load } from '../loader/types'
+import { TBlock, TContext, TResolvedBlock } from '../types'
 import { ChildLoader } from './types'
+
+type Context = TContext<{}>
+type BlockModule = TResolvedBlock<{}> & { init?: (ctx: Context) => TBlock<{}> }
 
 function makeCacheFunction(): Context['cache'] {
   const store = new Map<string, any>()
@@ -83,24 +87,24 @@ export function childLoader<T extends {} = {}>(
       return { value: {}, updates: [] }
     }
     const path = blocks[id].content.file
-    const mod: NodeModule = await load(path)
+    const mod: BlockModule = await load(path)
     const { init } = mod
 
     // Down context registration
-    const node = init ? init(getContext(id, parentContext)) : { ...mod }
-    if (!node) {
-      console.log(`Node '${path}' is broken.`)
+    const block = init ? await init(getContext(id, parentContext)) : { ...mod }
+    if (block.error) {
+      console.log(`[ ERROR ] ${block.error} (${path}).`)
       return { value: {}, updates: [] }
     }
-    const { link, route, collect } = node
+    const { link, route, collect } = block
     // Cleanup parent context
-    delete node.link
-    delete node.collect
-    delete node.link
+    delete block.link
+    delete block.collect
+    delete block.link
     // Up function call registration
     const children = await getChildren(id, {
       ...parentContext,
-      ...node,
+      ...block,
     })
     if (link) {
       const { args, updates } = getArguments(link, children)

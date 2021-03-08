@@ -1,13 +1,8 @@
 import { Overmind } from 'overmind'
-import { Action, Config } from './app'
-// FIXME: remove pawi.json in production
+import { AsyncAction, Config } from './app'
 import * as jtree from './dev.json'
 
-export interface BootArg {
-  app: Overmind<Config>
-}
-
-export const onInitialize: Action<BootArg> = ctx => {
+export const onInitialize: AsyncAction<Overmind<Config>> = async ctx => {
   // @ts-ignore
   if (typeof acquireVsCodeApi === 'undefined') {
     // development

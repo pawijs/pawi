@@ -1,5 +1,5 @@
-import { Block } from '@pawi/build'
-import { dragdrop } from '@pawi/dragdrop'
+import { Block } from '@forten/build'
+import { dragdrop } from '@forten/dragdrop'
 import * as actions from './actions'
 import { onInitialize } from './onInitialize'
 import { settings } from './settings'
@@ -17,9 +17,8 @@ export const pawi: Block<PawiConfig> = {
     pawi: {
       loading: true,
       // dummy value
-      path:
-        '/Users/maia/git/pawi/packages/examples/src/3D-cube/branch.awi.json',
-      dirname: '/Users/maia/git/pawi/packages/examples/src/3D-cube',
+      path: '',
+      dirname: '',
       showLibrary: false,
       send: () => {},
     },

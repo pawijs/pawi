@@ -1,5 +1,5 @@
+import { Tree } from '@forten/tree-view'
 import { ParagraphProps } from '@pawi/editor'
-import { Tree } from '@pawi/tree-view'
 import * as React from 'react'
 import { Comp, styled, useOvermind } from '../app'
 import { TreeData } from '../types'

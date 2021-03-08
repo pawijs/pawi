@@ -1,11 +1,17 @@
-export function relativePath(a: string, b: string) {
-  const ap = a.split('/')
-  const bp = b.split('/')
+import { isBare } from 'pawi'
+
+export function relativePath(dirname: string, path: string) {
+  if (isBare(path)) {
+    return path
+  }
+
+  const ap = dirname.split('/')
+  const bp = path.split('/')
   while (ap[0] !== undefined && ap[0] === bp[0]) {
     ap.shift()
     bp.shift()
   }
-  return [...ap.map(() => '..'), ...bp].join('/')
+  return ['.', ...ap.map(() => '..'), ...bp].join('/')
 }
 
 export function getName(path: string) {
@@ -15,5 +21,5 @@ export function getName(path: string) {
     .split('.')
     .slice(0, -1)
     .join('.')
-    .replace(/\.awi$/, '')
+    .replace(/\.o$/, '')
 }

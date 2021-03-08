@@ -10,6 +10,6 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ### Added
 
-- Tree view to edit \*.awi.json files
-- Library for all files named \*.awi.ts
+- Tree view to edit \*.o.json files
+- Library for all files named \*.o.ts
 - Initial release

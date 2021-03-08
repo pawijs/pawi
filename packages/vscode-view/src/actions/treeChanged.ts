@@ -1,6 +1,6 @@
-import { unproxy } from '@pawi/build'
-import { appendGraph } from '@pawi/tree'
-import { TreeChangedArg } from '@pawi/tree/dist/actions'
+import { unproxy } from '@forten/build'
+import { appendGraph } from '@forten/tree'
+import { TreeChangedArg } from '@forten/tree/dist/actions'
 import { Action } from '../app'
 
 // Disable live preview until we have better hot reloading to avoid glitches.

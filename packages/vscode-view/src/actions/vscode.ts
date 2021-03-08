@@ -1,4 +1,4 @@
-import { TreeType } from 'pawi'
+import { TreeType } from '@forten/tree-type'
 import { Action } from '../app'
 import { getName, relativePath } from '../helpers/paths'
 import { Message } from '../types'

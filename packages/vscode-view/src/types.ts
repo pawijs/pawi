@@ -1,4 +1,4 @@
-import { TreeType } from 'pawi'
+import { TreeType } from '@forten/tree-type'
 import * as actions from './actions'
 import { Message } from './message.types'
 export * from './message.types'

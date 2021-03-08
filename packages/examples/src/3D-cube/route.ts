@@ -1,6 +1,6 @@
-import { InitValue } from 'pawi'
+import { Block } from '../lib/types'
 
-export function init(): InitValue {
+export async function init(): Block {
   const el = document.querySelector('#route') as HTMLInputElement
   return {
     route(now, sliders) {

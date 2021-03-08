@@ -1,4 +1,4 @@
-import { Value } from './context'
+import { Value } from '../lib/types'
 
 export function link(): Value {
   // This validates the return type. Could be check in 'debug' mode where we

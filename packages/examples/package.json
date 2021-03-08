@@ -12,12 +12,13 @@
   "scripts": {
     "test": "ava",
     "test:watch": "ava --watch",
-    "serve": "cd src && snowpack dev"
+    "serve": "snowpack dev"
   },
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
   "dependencies": {
-    "three": "^0.126.1",
+    "@pawi/base": "next",
+    "@pawi/three": "next",
     "pawi": "next"
   },
   "devDependencies": {

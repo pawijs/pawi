@@ -1,5 +1,5 @@
-import { TreeDefinitions } from '@pawi/tree'
-import { Source } from 'pawi'
+import { TreeDefinitions } from '@forten/tree'
+import { Source } from '@forten/tree-type'
 import { Context } from '../app'
 import { getName } from '../helpers/paths'
 import { BranchContent } from '../types'

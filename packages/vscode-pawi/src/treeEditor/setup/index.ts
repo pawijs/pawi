@@ -15,6 +15,7 @@ export function setupEditor(
   const editor: TreeEditor = {
     document,
     send: msg => {
+      // console.log('SEND', msg)
       webview.postMessage(msg)
     },
     disposables: [],

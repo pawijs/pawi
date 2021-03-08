@@ -1,28 +1,68 @@
+import { existsSync, readFileSync } from 'fs'
 import { glob } from 'glob'
+import { join } from 'path'
 import { workspace } from 'vscode'
 import { TreeEditor } from '../types'
 
-function getFiles(cwd: string) {
+function findFiles(cwd: string, prefix: string, ts = false) {
   return new Promise<string[]>((resolve, reject) =>
-    glob('**/*.awi.ts', { cwd }, (err, files) => {
+    glob(`**/*.o.${ts ? 'ts' : 'js'}`, { cwd }, (err, files) => {
       if (err) {
         reject(err)
       }
-      resolve(files.map(f => `${cwd}/${f.replace(/\.ts$/, '.js')}`))
+      resolve(files.map(f => `${prefix}/${ts ? f.replace(/\.ts$/, '.js') : f}`))
     })
   )
 }
 
-export async function sendLibrary(editor: TreeEditor) {
+function packageJson(
+  cwd: string
+): { name?: string; type?: string; dependencies?: { [lib: string]: string } } {
+  const packageFile = join(cwd, 'package.json')
+  if (!existsSync(packageFile)) {
+    return {}
+  }
+  return JSON.parse(readFileSync(packageFile, 'utf-8'))
+}
+
+async function moduleFilesFromDep(cwd: string) {
+  const { name, type } = packageJson(cwd)
+  if (!name || type !== 'module') {
+    // skip
+    return []
+  } else {
+    return findFiles(cwd, name)
+  }
+}
+
+async function moduleFiles(cwd: string) {
+  const { dependencies } = packageJson(cwd)
+  if (!dependencies) {
+    return []
+  }
   const files: string[] = []
+  for (const dep in dependencies) {
+    files.push(...(await moduleFilesFromDep(join(cwd, 'node_modules', dep))))
+  }
+  return files
+}
+
+export async function sendLibrary(editor: TreeEditor) {
+  const base = editor.document.uri.path
   const folders = workspace.workspaceFolders?.map(f => f.uri.path)
-  if (folders) {
-    for (const cwd of folders) {
-      files.push(...(await getFiles(cwd)))
+  if (!folders) {
+    return
+  }
+  for (const cwd of folders) {
+    if (base.startsWith(cwd)) {
+      editor.send({
+        type: 'library',
+        paths: [
+          ...(await findFiles(cwd, cwd, true)),
+          ...(await moduleFiles(cwd)),
+        ],
+      })
+      return
     }
-    editor.send({
-      type: 'library',
-      paths: files,
-    })
   }
 }

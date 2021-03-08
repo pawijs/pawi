@@ -1,6 +1,6 @@
-import { Context, Node } from './lib/context'
+import { Context, Block } from '../lib/types'
 
-export function init({ time }: Context): Node {
+export async function init({ time }: Context): Block {
   return {
     link: () => ({
       number: () => time.now * 0.3,

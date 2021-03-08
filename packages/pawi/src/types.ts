@@ -8,22 +8,18 @@ export interface BaseContext {
 }
 
 export interface TChild<C extends Object> {
-  value: TValue<C>
+  value: TArg<C>
   updates: Update[]
 }
 
-export type TValue<C extends Object = {}> = {
-  [k in keyof C]?: () => C[k]
-} & { update?: Update }
-
-export type TOptValue<C extends Object = {}> = TValue<C> | void
-
 export type TContext<C extends Object = {}> = C & BaseContext
 
-export type TNode<C extends Object = {}> = Partial<
+export type TResolvedBlock<C extends Object = {}> = Partial<
   C & {
+    // This is the proper way to abort an init.
+    error: string
     // Return a value to parent (maybe using children values)
-    link: (...arg: TValue<C>[]) => TOptValue<C>
+    link: (...arg: TArg<C>[]) => TValue<C>
     // Update only parts of the tree
     route: (...arg: Update[]) => void
     // This is like route but with all items
@@ -31,22 +27,14 @@ export type TNode<C extends Object = {}> = Partial<
   }
 >
 
-export type TInitValue<T extends Object = {}> = TNode<T> | void
+export type TBlock<C extends Object = {}> = Promise<TResolvedBlock<C>>
+
+export type TArg<C extends Object = {}> = {
+  [k in keyof C]?: () => C[k]
+} & { update?: Update }
+
+export type TValue<C extends Object = {}> = TArg<C> | void
 
 export interface TInit<C extends Object = {}> {
-  (ctx: TContext<C>): TNode<C>
-}
-
-// Init function
-export type Context = TContext<{}>
-export type InitValue = TInitValue<{}>
-export type Init = (ctx: Context) => InitValue
-// Update function (if alone)
-export type Child = TChild<{}>
-// A Child or void
-export type Value = TOptValue<{}>
-export type Link = (...args: Child[]) => Value
-// Module
-export interface NodeModule extends TNode<{}> {
-  init?: Init
+  (ctx: TContext<C>): Promise<TBlock<C>>
 }

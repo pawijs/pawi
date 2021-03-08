@@ -1,0 +1,4 @@
+setup
+# keep src
+.prettierrc.json
+tsconfig.json

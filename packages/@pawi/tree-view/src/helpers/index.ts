@@ -1,6 +1,0 @@
-export * from './colors'
-export * from './getTextSizeCanvas'
-export * from './minSize'
-export * from './uilayout'
-export * from './uimap'
-export * from './keyActions'
