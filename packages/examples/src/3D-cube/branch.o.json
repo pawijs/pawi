@@ -18,7 +18,7 @@
       "id": "anim",
       "name": "anim.Loop",
       "content": {
-        "file": "../lib/anim.Loop.o.js"
+        "file": "@pawi/base/dist/anim.Loop.o.js"
       },
       "children": [
         "renderer"
