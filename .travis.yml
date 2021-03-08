@@ -32,8 +32,7 @@ after_success:
     fi
     if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
       printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc
-      npm install -g yarn
-      yarn add nodegit
+      # npm install --no-save nodegit
       npm run release
     fi
 branches:
