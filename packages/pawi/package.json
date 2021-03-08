@@ -19,6 +19,9 @@
   },
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
+  "dependencies": {
+    "@forten/tree-type": "next"
+  },
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@types/simple-mock": "^0.8.1",
@@ -28,9 +31,6 @@
     "simple-mock": "^0.8.0",
     "ts-loader": "^8.0.17",
     "typescript": "^4.1.5"
-  },
-  "dependencies": {
-    "@forten/tree-type": "next"
   },
   "ava": {
     "files": [

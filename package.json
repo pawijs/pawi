@@ -49,13 +49,13 @@
     "styled-components": "5.2.0",
     "three": "0.126.1",
     "workbox-window": "5.1.4",
-    "@forten/tree-type": "next",
     "@forten/build": "next",
     "@forten/dragdrop": "next",
     "@forten/preferences": "next",
     "@forten/styled": "next",
-    "@forten/tree-view": "next",
-    "@forten/tree": "next"
+    "@forten/tree": "next",
+    "@forten/tree-type": "next",
+    "@forten/tree-view": "next"
   },
   "devDependencies": {
     "@snowpack/plugin-typescript": "1.2.1",
