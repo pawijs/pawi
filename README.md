@@ -5,26 +5,27 @@
 [![Build status][travis-image]][travis-url]
 [![Commitizen friendly][commitizen-image]][commitizen-url]
 
-[travis-image]: https://img.shields.io/travis/pawijs/pawi.svg?style=flat
-[travis-url]: https://travis-ci.org/pawijs/pawi
-[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat
-[commitizen-url]: http://commitizen.github.io/cz-cli/
-
 To explore a **pawi** project, clone [sample-project][sample-url].
 
 ## What is this ?
 
 A tool for live-coding using latest web technologies and Visual Studio Code.
 
-This repository also contains the Overmind helper modules needed to create
-the live editor. The helpers are published as separate npm packages and
-maintained by **pawijs**.
+## Exploring
 
-Some information on the project on [dev.to](https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l)
+1. Install VSCode extension [**Pawi**][vscode-url]
+2. Clone [sample project][sample-url]
+3. Install dependencies
+4. Start server: `npm run serve` and choose an example
+5. Open project in vscode
+6. In VSCode, open the corresponding file `src/[example]/branch.o.json`
+7. Open hamburger for library and start editing...
 
-![Screen Shot 2021-03-06 at 12 48 00 PM](https://user-images.githubusercontent.com/79422935/110215961-6cb76400-7e7a-11eb-8bd0-ae03060a9b7a.png)
+Some information on the project on [dev.to][article-url]
 
-Say hello [@maia_tae](https://twitter.com/maia_tae).
+![pawi-animation][animation-url]
+
+Say hello [@maia_tae][twitter-url]
 
 ## Pawi
 
@@ -41,9 +42,16 @@ Say hello [@maia_tae](https://twitter.com/maia_tae).
 [base-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/base
 [base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
 [base-npm]: https://npmjs.org/package/@pawi/base
+[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi
+[pawi-image]: https://img.shields.io/npm/v/pawi.svg?style=flat
+[pawi-npm]: https://npmjs.org/package/pawi
 [three-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/three
 [three-image]: https://img.shields.io/npm/v/@pawi/three.svg?style=flat
 [three-npm]: https://npmjs.org/package/@pawi/three
+
+# Internal
+
+These are some notes for maintainers, published here because getting this wrong makes a mess :-)
 
 ### Release process
 
@@ -62,3 +70,14 @@ $ git pull
 $ git merge --ff-only next
 $ git push
 ```
+
+[travis-image]: https://img.shields.io/travis/pawijs/pawi.svg?style=flat
+[travis-url]: https://travis-ci.org/pawijs/pawi
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat
+[commitizen-url]: http://commitizen.github.io/cz-cli/
+[animation-url]: https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif
+[sample-url]: https://github.com/pawijs/sample-project
+[twitter-url]: https://twitter.com/maia_tae
+[article-url]: https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l
+
+[vscode-url]:
