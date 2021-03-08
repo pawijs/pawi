@@ -3,9 +3,8 @@
 	"displayName": "Pawi Live Coding",
 	"publisher": "pawijs",
 	"description": "Live coding and visual composition in VSCode",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"license": "MIT",
-	"private": true,
 	"icon": "logo.png",
 	"repository": {
 		"type": "git",
