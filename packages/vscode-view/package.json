@@ -16,7 +16,7 @@
     "@forten/dragdrop": "next",
     "@forten/preferences": "next",
     "@forten/styled": "next",
-    "@forten/tree-type": "next",
+    "@forten/tree-type": "^1.0.0",
     "@forten/tree-view": "next",
     "@forten/tree": "next",
     "pawi": "next"
