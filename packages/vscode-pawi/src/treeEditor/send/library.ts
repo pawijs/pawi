@@ -6,12 +6,18 @@ import { TreeEditor } from '../types'
 
 function findFiles(cwd: string, prefix: string, ts = false) {
   return new Promise<string[]>((resolve, reject) =>
-    glob(`**/*.o.${ts ? 'ts' : 'js'}`, { cwd }, (err, files) => {
-      if (err) {
-        reject(err)
+    glob(
+      `!(node_modules)/**/*.o.${ts ? 'ts' : 'js'}`,
+      { cwd, ignore: join(cwd, 'node_modules') },
+      (err, files) => {
+        if (err) {
+          reject(err)
+        }
+        resolve(
+          files.map(f => `${prefix}/${ts ? f.replace(/\.ts$/, '.js') : f}`)
+        )
       }
-      resolve(files.map(f => `${prefix}/${ts ? f.replace(/\.ts$/, '.js') : f}`))
-    })
+    )
   )
 }
 
@@ -55,12 +61,14 @@ export async function sendLibrary(editor: TreeEditor) {
   }
   for (const cwd of folders) {
     if (base.startsWith(cwd)) {
+      const paths = [
+        ...(await findFiles(cwd, cwd, true)),
+        ...(await moduleFiles(cwd)),
+      ]
+      paths.sort()
       editor.send({
         type: 'library',
-        paths: [
-          ...(await findFiles(cwd, cwd, true)),
-          ...(await moduleFiles(cwd)),
-        ],
+        paths,
       })
       return
     }

@@ -8,8 +8,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-03-09
+
 ### Added
 
 - Tree view to edit \*.o.json files
-- Library for all files named \*.o.ts
-- Initial release
+- Library view to drag & drop blocks on tree
+- Load blocks named \*.o.ts from project
+- Load blocks named \*.o.js from project direct dependencies

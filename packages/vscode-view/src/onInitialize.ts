@@ -7,8 +7,16 @@ export const onInitialize: AsyncAction<Overmind<Config>> = async ctx => {
   if (typeof acquireVsCodeApi === 'undefined') {
     // development
     ctx.state.treeView.library = [
-      { name: 'three.Mesh', content: { file: 'lib/three.Mesh.js' } },
-      { name: 'three.Lights', content: { file: 'lib/three.Lights.js' } },
+      {
+        type: 'pawi',
+        name: 'three.Mesh',
+        content: { file: './lib/three.Mesh.js' },
+      },
+      {
+        type: 'pawi',
+        name: 'three.Lights',
+        content: { file: './lib/three.Lights.js' },
+      },
     ]
     // Whild debugging
     ctx.state.pawi.tree = jtree

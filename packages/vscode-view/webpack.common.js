@@ -25,8 +25,13 @@ module.exports = {
 
   devtool: 'source-map',
 
+  optimization: {
+    usedExports: true,
+  },
+
   output: {
     publicPath: '/',
+    clean: true,
     path: root('../vscode-pawi/view'),
     filename: '[name].js',
     chunkFilename: '[name].js',

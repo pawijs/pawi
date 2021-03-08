@@ -1,76 +1,48 @@
-# Build
+[![version number](https://vsmarketplacebadge.apphb.com/version-short/pawijs.vscode-pawi.svg)](https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi)
+[![install count](https://vsmarketplacebadge.apphb.com/installs-short/pawijs.vscode-pawi.svg)](https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi)
 
-The extension requires the 'vscode-view' app to build first.
+# Visual Live Coding for VSCode
 
-# pawi README
+![vscode-firstTreeBuild](https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif)
 
-Pawi is an extension to do visual and live coding for pawi
-based projects [JS live coding](https://github.com/pawijs/pawi).
+[Pawi](http://pawijs.org/) is a set of tools, libraries and editor helpers to make
+the creation of delicate and complex visuals simpler and faster by enabling:
 
-## Features
+1. Code reuse (once a block is created, it can easily be reused in new projects)
+2. Code sharing (publishing blocks as npm package for others to use)
+3. Stability (library versions locked with npm, versioning)
+4. Fast feedback loop (live coding, visual programming)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The project uses the latest web technologies and tries to have the lowest possible
+impact on performance (typically equivalent to a function call).
 
-For example if there is an image subfolder under your extension project workspace:
+## How does it work ?
 
-\!\[feature X\]\(images/feature-x.png\)
+The extension displays the visual programming view when opening a "pawi"
+branch definition (named `[name].o.json`). All files in the project and the
+project's direct dependencies named `[name].o.ts` are loaded as library items.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+See the [sample project](https://github.com/pawijs/sample-project) for an example
+on how to configure a project.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-- `myExtension.enable`: enable/disable this extension
-- `myExtension.thing`: set to `blah` to do something
+The extension does not have any settings yet.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+The project is in "alpha" stage with potentially lots of moving parts, please join the
+discussion on the [repository](https://github.com/pawijs/pawi) if you have any questions
+or wish to contribute ideas, documentation or features.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### [1.0.0] - 2021-03-09
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release, very early prototype.
 
 ---
 
-## Following extension guidelines
+# Build
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-- Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-- Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+The extension requires the 'vscode-view' app to build first inside the pawi monorepo.

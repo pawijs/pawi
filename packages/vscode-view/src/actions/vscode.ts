@@ -20,8 +20,8 @@ export const receive: Action<Message> = (ctx, arg) => {
     case 'library': {
       const { dirname } = ctx.state.pawi
       function makeBlock(path: string) {
-        console.log('makeBlock', dirname, path, relativePath(dirname, path))
         return {
+          type: 'pawi',
           name: getName(path),
           content: {
             file: relativePath(dirname, path),

@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/pawijs/pawi.git"
@@ -20,7 +21,7 @@
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
   "dependencies": {
-    "@forten/tree-type": "next"
+    "@forten/tree-type": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",

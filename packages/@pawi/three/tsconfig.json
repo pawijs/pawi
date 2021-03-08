@@ -10,7 +10,7 @@
       "esnext",
       "dom"
     ],
-    "module": "esnext",
+    "module": "ES2020",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,

@@ -13,8 +13,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vscode-pawi.helloWorld",
-		"onCommand:vscode-pawi.edit",
 		"onCustomEditor:vscode-pawi.treeEditor"
 	],
 	"main": "./dist/extension.js",
@@ -31,16 +29,7 @@
 				"priority": "default"
 			}
 		],
-		"commands": [
-			{
-				"command": "vscode-pawi.helloWorld",
-				"title": "Hello World"
-			},
-			{
-				"command": "vscode-pawi.edit",
-				"title": "Open editor"
-			}
-		]
+		"commands": []
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
