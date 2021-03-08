@@ -1,18 +1,10 @@
+import { isBare } from '../../helpers.js'
 import { MakeLoader, MakeLoaderOpts } from '../types'
 
 export function getBaseUrl() {
   const { location } = window
   const base = `${location.protocol}//${location.host}${location.pathname}`
   return base.endsWith('/') ? base.slice(0, -1) : base
-}
-
-export function isBare(path: string) {
-  return !(
-    path.startsWith('./') ||
-    path.startsWith('../') ||
-    path.startsWith('/') ||
-    path === '.'
-  )
 }
 
 export function simpleLoader(opts: MakeLoaderOpts = {}): MakeLoader {

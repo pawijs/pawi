@@ -17,7 +17,8 @@
     "@forten/styled": "next",
     "@forten/tree-type": "next",
     "@forten/tree-view": "next",
-    "@forten/tree": "next"
+    "@forten/tree": "next",
+    "pawi": "next"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",

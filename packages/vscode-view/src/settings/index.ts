@@ -2,12 +2,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
 import { PreferencesHooks, PreferencesSettings } from '@forten/preferences'
 import { StyledSettings } from '@forten/styled'
 import { TreeSettings } from '@forten/tree'
-import { EditorSettings } from '@pawi/editor'
 import { Context } from '../app'
 import { tree } from './tree'
 
-type Settings = EditorSettings &
-  TreeSettings &
+type Settings = TreeSettings &
   StyledSettings &
   PreferencesSettings & { hooks: PreferencesHooks }
 

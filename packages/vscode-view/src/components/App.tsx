@@ -1,4 +1,4 @@
-// import { Dialog } from '@pawi/dialog'
+// import { Dialog } from '@forten/dialog'
 import { Drag, dropStyles, fileDrop } from '@forten/dragdrop'
 import { Icon } from '@forten/styled'
 import { Library, Tree } from '@forten/tree-view'
