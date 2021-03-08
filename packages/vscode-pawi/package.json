@@ -6,6 +6,10 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pawijs/pawi.git"
+	},
 	"engines": {
 		"vscode": "^1.54.0"
 	},
