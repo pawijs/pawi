@@ -1,19 +1,17 @@
-# pawi
-
-(rename of **tuist** project)
+# Pawi Visual Live Coding in VSCode
 
 [![Build status][travis-image]][travis-url]
 [![Commitizen friendly][commitizen-image]][commitizen-url]
 
-To explore a **pawi** project, clone [sample-project][sample-url].
-
-## What is this ?
-
 A tool for live-coding using latest web technologies and Visual Studio Code.
+
+![pawi-animation][animation-url]
+
+Some information on the project on [dev.to][article-url].
 
 ## Exploring
 
-1. Install VSCode extension [**Pawi**][vscode-url]
+1. Install VSCode extension **Pawi**
 2. Clone [sample project][sample-url]
 3. Install dependencies
 4. Start server: `npm run serve` and choose an example
@@ -21,19 +19,15 @@ A tool for live-coding using latest web technologies and Visual Studio Code.
 6. In VSCode, open the corresponding file `src/[example]/branch.o.json`
 7. Open hamburger for library and start editing...
 
-Some information on the project on [dev.to][article-url]
+If you find this interesting, say hello :-) [@maia_tae][twitter-url]
 
-![pawi-animation][animation-url]
+# Published modules
 
-Say hello [@maia_tae][twitter-url]
-
-## Pawi
+- [![version number][vscode-version]][vscode-url] [![install count][vscode-count]][vscode-count-url]
+  (VSCode **Pawi** extension)
 
 - [![NPM version][pawi-image]][pawi-npm] [pawi][pawi-url]
   (live coding runtime)
-
-## Pawi blocks library
-
 - [![NPM version][base-image]][base-npm] [@pawi/base][base-url]
   (basic blocks: animation setup, midi)
 - [![NPM version][three-image]][three-npm] [@pawi/three][three-url]
@@ -79,5 +73,7 @@ $ git push
 [sample-url]: https://github.com/pawijs/sample-project
 [twitter-url]: https://twitter.com/maia_tae
 [article-url]: https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l
-
-[vscode-url]:
+[vscode-version]: https://vsmarketplacebadge.apphb.com/version-short/pawijs.vscode-pawi.svg
+[vscode-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi
+[vscode-count]: https://vsmarketplacebadge.apphb.com/installs-short/pawijs.vscode-pawi.svg
+[vscode-count-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi

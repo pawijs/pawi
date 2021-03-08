@@ -1,24 +1,48 @@
-# Pawi
+[![version number](https://vsmarketplacebadge.apphb.com/version-short/pawijs.vscode-pawi.svg)](https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi)
+[![install count](https://vsmarketplacebadge.apphb.com/installs-short/pawijs.vscode-pawi.svg)](https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi)
 
-A simple tool for live-coding using latest web technologies.
+# Visual Live Coding for VSCode
 
-The project is made of the runtime (pawi) and a [vscode extension](https://github.com/pawijs/pawi/tree/next/packages/vscode-pawi).
+![vscode-firstTreeBuild](https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif)
 
-Some information on the project on [dev.to](https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l)
+[Pawi](http://pawijs.org/) is a set of tools, libraries and editor helpers to make
+the creation of delicate and complex visuals simpler and faster by enabling:
 
-![Screen Shot 2021-02-27 at 6 48 01 PM](https://user-images.githubusercontent.com/79422935/109376981-0e93f980-792d-11eb-97a3-5978224e8642.png)
+1. Code reuse (once a block is created, it can easily be reused in new projects)
+2. Code sharing (publishing blocks as npm package for others to use)
+3. Stability (library versions locked with npm, versioning)
+4. Fast feedback loop (live coding, visual programming)
 
-## Explore code
+The project uses the latest web technologies and tries to have the lowest possible
+impact on performance (typically equivalent to a function call).
 
-The examples are in `src/projects`.
+## How does it work ?
 
-## Running projects
+The extension displays the visual programming view when opening a "pawi"
+branch definition (named `[name].o.json`). All files in the project and the
+project's direct dependencies named `[name].o.ts` are loaded as library items.
 
-```sh
-npm install
-npm run serve
-```
+See the [sample project](https://github.com/pawijs/sample-project) for an example
+on how to configure a project.
 
-Open http://127.0.0.1:8080/projects/ in **a modern browser** (tested on Google Chrome 88 and Safari 14.0).
+## Extension Settings
 
-Say hello [@maia_tae](https://twitter.com/maia_tae).
+The extension does not have any settings yet.
+
+## Known Issues
+
+The project is in "alpha" stage with potentially lots of moving parts, please join the
+discussion on the [repository](https://github.com/pawijs/pawi) if you have any questions
+or wish to contribute ideas, documentation or features.
+
+## Release Notes
+
+### [1.0.0] - 2021-03-09
+
+Initial release, very early prototype.
+
+---
+
+# Build
+
+The extension requires the 'vscode-view' app to build first inside the pawi monorepo.
