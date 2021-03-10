@@ -3,9 +3,9 @@ import { dragdrop } from '@forten/dragdrop'
 import * as actions from './actions'
 import { onInitialize } from './onInitialize'
 import { settings } from './settings'
-import { PawiConfig } from './types'
+import { TreeEditorConfig } from './types'
 
-export const pawi: Block<PawiConfig> = {
+export const treeEditor: Block<TreeEditorConfig> = {
   name: 'pawi',
   dependencies: [dragdrop],
   onInitialize,
@@ -14,7 +14,7 @@ export const pawi: Block<PawiConfig> = {
     pawi: actions,
   },
   state: {
-    pawi: {
+    treeEditor: {
       loading: true,
       // dummy value
       path: '',

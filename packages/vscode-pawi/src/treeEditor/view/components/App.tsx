@@ -58,10 +58,10 @@ const GlobalStyle = createGlobalStyle`
 export const App: Comp<AppProps> = ({ className }) => {
   const ctx = useOvermind()
   const ref = React.useRef<HTMLElement>(null)
-  if (ctx.state.pawi.loading) {
+  if (ctx.state.treeEditor.loading) {
     return null
   }
-  const { tree } = ctx.state.pawi
+  const { tree } = ctx.state.treeEditor
   const drop = fileDrop({
     ref,
     className,
@@ -73,7 +73,7 @@ export const App: Comp<AppProps> = ({ className }) => {
       ctx.actions.pawi.drop(args)
     },
   })
-  const { showLibrary } = ctx.state.pawi
+  const { showLibrary } = ctx.state.treeEditor
   return (
     <Wrapper {...drop}>
       <GlobalStyle />

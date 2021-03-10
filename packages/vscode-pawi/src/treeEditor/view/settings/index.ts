@@ -13,7 +13,7 @@ export const settings: Settings = {
   tree,
   hooks: {
     preferences_restored(ctx: Context) {
-      ctx.state.pawi.loading = false
+      ctx.state.treeEditor.loading = false
     },
   },
   preferences: {

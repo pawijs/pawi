@@ -9,16 +9,16 @@ export const receive: Action<Message> = (ctx, arg) => {
   switch (arg.type) {
     case 'update': {
       const tree = JSON.parse(arg.text) as TreeType
-      if (tree.version === ctx.state.pawi.tree?.version) {
+      if (tree.version === ctx.state.treeEditor.tree?.version) {
         break
       }
-      ctx.state.pawi.tree = tree
-      ctx.state.pawi.path = arg.path
-      ctx.state.pawi.dirname = arg.path.split('/').slice(0, -1).join('/')
+      ctx.state.treeEditor.tree = tree
+      ctx.state.treeEditor.path = arg.path
+      ctx.state.treeEditor.dirname = arg.path.split('/').slice(0, -1).join('/')
       break
     }
     case 'library': {
-      const { dirname } = ctx.state.pawi
+      const { dirname } = ctx.state.treeEditor
       function makeBlock(path: string) {
         return {
           type: 'pawi',
@@ -36,5 +36,5 @@ export const receive: Action<Message> = (ctx, arg) => {
 export const send: Action<Message> = (ctx, arg) => {
   // console.log('SEND', arg)
   // Call to vscode
-  ctx.state.pawi.send(arg)
+  ctx.state.treeEditor.send(arg)
 }

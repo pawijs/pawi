@@ -19,14 +19,14 @@ export const onInitialize: AsyncAction<Overmind<Config>> = async ctx => {
       },
     ]
     // Whild debugging
-    ctx.state.pawi.tree = jtree
+    ctx.state.treeEditor.tree = jtree
   } else {
     // @ts-ignore
     const vscode = acquireVsCodeApi()
     window.addEventListener('message', e => {
       ctx.actions.pawi.receive(e.data)
     })
-    ctx.state.pawi.send = vscode.postMessage
+    ctx.state.treeEditor.send = vscode.postMessage
     vscode.postMessage({ type: 'ready' })
   }
 }

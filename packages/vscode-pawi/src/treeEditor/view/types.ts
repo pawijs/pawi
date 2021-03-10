@@ -1,17 +1,17 @@
 import { TreeType } from '@forten/tree-type'
+import { Message } from '../../message.types'
 import * as actions from './actions'
-import { Message } from './message.types'
-export * from './message.types'
+export * from '../../message.types'
 
 export type BranchContent = { file: string }
 export type TreeData = TreeType<BranchContent>
 
-export interface PawiConfig {
+export interface TreeEditorConfig {
   actions: {
     pawi: typeof actions
   }
   state: {
-    pawi: {
+    treeEditor: {
       tree?: TreeData
       // Path of loaded tree
       path: string

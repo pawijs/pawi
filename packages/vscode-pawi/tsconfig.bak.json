@@ -12,7 +12,6 @@
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "sourceMap": true,
-    "outDir": "dist",
     "rootDir": "src",
     "strict": true,
     "noImplicitAny": true,

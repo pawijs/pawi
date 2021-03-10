@@ -20,7 +20,7 @@ const env = process.env.NODE_ENV || 'development'
 
 module.exports = {
   entry: {
-    app: root('src/boot.tsx'),
+    app: root('src/treeEditor/view/boot.tsx'),
   },
 
   devtool: 'source-map',
@@ -32,7 +32,7 @@ module.exports = {
   output: {
     publicPath: '/',
     clean: true,
-    path: root('../vscode-pawi/view'),
+    path: root('view'),
     filename: '[name].js',
     chunkFilename: '[name].js',
     // This setting is required for web workers to not use 'window'
@@ -67,7 +67,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: 'body',
       filename: 'index.html',
-      template: root('src/index.html'),
+      template: root('src/treeEditor/view/index.html'),
     }),
   ],
 

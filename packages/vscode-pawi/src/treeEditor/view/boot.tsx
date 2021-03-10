@@ -5,10 +5,10 @@ import { Overmind } from 'overmind'
 import { Provider } from 'overmind-react'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { pawi } from '.'
+import { treeEditor } from '.'
 import { App } from './components'
 
-const config = build(pawi).using(tree).using(treeView).config()
+const config = build(treeEditor).using(tree).using(treeView).config()
 
 ReactDOM.render(
   <Provider

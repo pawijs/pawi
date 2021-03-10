@@ -10,8 +10,8 @@ export interface DropArg {
 export const drop: Action<DropArg> = (ctx, arg) => {
   const { strings } = arg
   for (const path of strings) {
-    const relPath = relativePath(ctx.state.pawi.dirname, path)
-    const { tree } = ctx.state.pawi
+    const relPath = relativePath(ctx.state.treeEditor.dirname, path)
+    const { tree } = ctx.state.treeEditor
     if (tree) {
       const content: Source['content'] = {
         file: relPath,

@@ -7,7 +7,7 @@ import { Action } from '../app'
 const livePreview = false
 
 export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
-  if (arg.tree.id !== ctx.state.pawi.tree?.id) {
+  if (arg.tree.id !== ctx.state.treeEditor.tree?.id) {
     // Only watch changes on main tree
     return
   }
@@ -26,16 +26,16 @@ export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
       // Send to vscode
       ctx.actions.pawi.send({
         type: 'update',
-        path: ctx.state.pawi.path,
+        path: ctx.state.treeEditor.path,
         text: JSON.stringify(newTree, null, 2),
       })
     }
-  } else if (arg.tree.id === ctx.state.pawi.tree?.id) {
+  } else if (arg.tree.id === ctx.state.treeEditor.tree?.id) {
     // Send to vscode
     ctx.actions.pawi.send({
       type: 'update',
-      path: ctx.state.pawi.path,
-      text: JSON.stringify(ctx.state.pawi.tree, null, 2),
+      path: ctx.state.treeEditor.path,
+      text: JSON.stringify(ctx.state.treeEditor.tree, null, 2),
     })
   }
 }

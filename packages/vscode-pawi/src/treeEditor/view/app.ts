@@ -7,11 +7,11 @@ import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
 import { FunctionComponent as Comp } from 'react'
 import styled from 'styled-components'
-import { PawiConfig } from './types'
+import { TreeEditorConfig } from './types'
 
 export { styled, Comp }
 
-export type Config = PawiConfig &
+export type Config = TreeEditorConfig &
   LocaleConfig &
   ThemeConfig &
   StyledConfig &
