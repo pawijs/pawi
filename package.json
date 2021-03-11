@@ -15,7 +15,7 @@
     "format": "npm run lint -- --fix && prettier --write --with-node-modules \"**/*.md\" \"**/*.css\" \"**/*.json\"",
     "install": "npm run link",
     "link": "repo-cooker --link",
-    "release": "repo-cooker --release",
+    "release": "repo-cooker --release --print-release",
     "serve": "cd packages/examples && npm run serve",
     "test": "repo-cooker test"
   },
@@ -90,7 +90,7 @@
     "prettier": "2.1.2",
     "prettier-plugin-organize-imports": "^1.1.1",
     "react-test-renderer": "16.13.1",
-    "repo-cooker": "^6.3.1",
+    "repo-cooker": "latest",
     "rimraf": "3.0.2",
     "simple-mock": "0.8.0",
     "snowpack": "3.0.13",
