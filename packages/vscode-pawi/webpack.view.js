@@ -81,7 +81,6 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              configFile: root(`setup/tsconfig.${env}.json`),
               onlyCompileBundledFiles: true,
             },
           },

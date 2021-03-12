@@ -1,5 +1,5 @@
 # TODO
 
 - [ ] Use https://www.snowpack.dev/guides/web-test-runner
-- [x] Use HMR https://github.com/snowpackjs/esm-hmr
-- [ ] Cleanup root package.json (contains dependencies related to @forten modules)
+- [ ] Try to reduce view size for faster display (use preact or another smaller library, check what is bundled and why)
+

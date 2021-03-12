@@ -1,35 +1,38 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es6",
-		"jsx": "react",
-		"jsxFactory": "React.createElement",
-		"lib": [
-			"es6",
-			"es7",
-			"esnext",
-			"dom"
-		],
-		"sourceMap": true,
-		"rootDir": "src",
-		"outDir": "dist",
-		"strict": true,
-		"skipLibCheck": false,
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"noUnusedParameters": true,
-		"resolveJsonModule": true,
-		"strictNullChecks": true,
-		"strictPropertyInitialization": true,
-		"noImplicitThis": true,
-		"alwaysStrict": true,
-		"noUnusedLocals": true,
-		"baseUrl": "./",
-		"esModuleInterop": true
-	},
-	"exclude": [
-		"node_modules",
-		".vscode-test"
-	]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "lib": [
+      "es6",
+      "es7",
+      "esnext",
+      "dom"
+    ],
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "skipLibCheck": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "baseUrl": "./",
+    "esModuleInterop": true
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "/node_modules",
+    ".vscode-test"
+  ]
 }
