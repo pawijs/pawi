@@ -37,7 +37,7 @@ Some information on the project on [dev.to][article-url].
 
 # What is Pawi ?
 
-[Pawi](https://pawijs.org/) is a set of tools, libraries and editor helpers
+[Pawi](http://pawijs.org/) is a set of tools, libraries and editor helpers
 to make the creation of delicate and complex visuals simpler and faster by
 enabling:
 

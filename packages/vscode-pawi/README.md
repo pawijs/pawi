@@ -5,7 +5,7 @@
 
 ![vscode-firstTreeBuild](https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif)
 
-[Pawi](https://pawijs.org/) is a set of tools, libraries and editor helpers to make
+[Pawi](http://pawijs.org/) is a set of tools, libraries and editor helpers to make
 the creation of delicate and complex visuals simpler and faster by enabling:
 
 1. Code reuse (once a block is created, it can easily be reused in new projects)
