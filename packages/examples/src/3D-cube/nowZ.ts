@@ -1,4 +1,4 @@
-import { Context, Block } from '../lib/types'
+import { Context, Block } from 'src/lib/types'
 
 export async function init({ time }: Context): Block {
   return {

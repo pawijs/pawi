@@ -17,29 +17,33 @@ Some information on the project on [dev.to][article-url].
 4. Start server: `npm run serve` and choose an example
 5. Open project in vscode
 6. In VSCode, open the corresponding file `src/[example]/branch.o.json`
-7. Open hamburger for library and start editing...
+7. Open hamburger for library and start editing or edit some existing blocks.
 
 If you find this interesting, say hello :-) [@maia_tae][twitter-url]
 
 # Published modules
 
 - [![version number][vscode-version]][vscode-url] [![install count][vscode-count]][vscode-count-url]
-  (VSCode **Pawi** extension)
-
+  (VSCode extension)
+- [![NPM version][snow-image]][snow-npm] [snowpack-pawi][snow-url]
+  (Snowpack plugin for smooth code reloding)
 - [![NPM version][pawi-image]][pawi-npm] [pawi][pawi-url]
-  (live coding runtime)
+  (Runtime)
 - [![NPM version][base-image]][base-npm] [@pawi/base][base-url]
-  (basic blocks: animation setup, midi)
+  (Basic blocks: animation setup, midi)
 - [![NPM version][three-image]][three-npm] [@pawi/three][three-url]
   (Three.js blocks: 3D programming)
 
-[base-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/base
-[base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
-[base-npm]: https://npmjs.org/package/@pawi/base
-[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi
+[snow-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/snowpack-pawi
+[snow-image]: https://img.shields.io/npm/v/snowpack-pawi.svg?style=flat
+[snow-npm]: https://npmjs.org/package/snowpack-pawi
+[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/pawi
 [pawi-image]: https://img.shields.io/npm/v/pawi.svg?style=flat
 [pawi-npm]: https://npmjs.org/package/pawi
-[three-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/three
+[base-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/@pawi/base
+[base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
+[base-npm]: https://npmjs.org/package/@pawi/base
+[three-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/@pawi/three
 [three-image]: https://img.shields.io/npm/v/@pawi/three.svg?style=flat
 [three-npm]: https://npmjs.org/package/@pawi/three
 
@@ -64,16 +68,3 @@ $ git pull
 $ git merge --ff-only next
 $ git push
 ```
-
-[travis-image]: https://img.shields.io/travis/pawijs/pawi.svg?style=flat
-[travis-url]: https://travis-ci.org/pawijs/pawi
-[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat
-[commitizen-url]: http://commitizen.github.io/cz-cli/
-[animation-url]: https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif
-[sample-url]: https://github.com/pawijs/sample-project
-[twitter-url]: https://twitter.com/maia_tae
-[article-url]: https://dev.to/maia_tae/visual-live-coding-proof-of-concept-1o7l
-[vscode-version]: https://vsmarketplacebadge.apphb.com/version-short/pawijs.vscode-pawi.svg
-[vscode-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi
-[vscode-count]: https://vsmarketplacebadge.apphb.com/installs-short/pawijs.vscode-pawi.svg
-[vscode-count-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi

@@ -1,4 +1,4 @@
-import { Arg, Value } from '../lib/types'
+import { Arg, Value } from 'src/lib/types'
 
 const PI2 = Math.PI * 2
 

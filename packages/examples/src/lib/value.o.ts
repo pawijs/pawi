@@ -1,4 +1,4 @@
-import { Value } from './types'
+import { Value } from 'src/lib/types'
 
 export function update(): Value {
   return {

@@ -1,4 +1,4 @@
-import { ThreeContext } from '@pawi/three'
+import { ThreeContext } from 'examples/src/lib/node_modules/examples/src/lib/node_modules/@pawi/three'
 
 export interface ContextTypes extends ThreeContext {
   // The song position in seconds (provided by midi sync). Value can jump.

@@ -5,7 +5,7 @@
 
 ![vscode-firstTreeBuild](https://user-images.githubusercontent.com/79422935/110322560-2e879380-8078-11eb-97d1-bb8e02bbf9fc.gif)
 
-[Pawi](http://pawijs.org/) is a set of tools, libraries and editor helpers to make
+[Pawi](https://pawijs.org/) is a set of tools, libraries and editor helpers to make
 the creation of delicate and complex visuals simpler and faster by enabling:
 
 1. Code reuse (once a block is created, it can easily be reused in new projects)
@@ -40,9 +40,3 @@ or wish to contribute ideas, documentation or features.
 ### [1.0.0] - 2021-03-09
 
 Initial release, very early prototype.
-
----
-
-# Build
-
-The extension requires the 'vscode-view' app to build first inside the pawi monorepo.

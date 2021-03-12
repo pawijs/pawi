@@ -1,5 +1,5 @@
-import { branchLoader, simpleLoader } from 'pawi'
-import { ContextTypes } from '../lib/context'
+import { branchLoader, simpleLoader } from 'examples/src/add/node_modules/examples/src/add/node_modules/pawi'
+import { ContextTypes } from 'src/lib/context'
 
 async function run() {
   const { loader } = simpleLoader()

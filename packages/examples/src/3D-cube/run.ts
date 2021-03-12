@@ -1,6 +1,6 @@
-import { projectLoader, simpleLoader } from 'pawi'
-import * as three from 'three'
-import { ContextTypes } from '../lib/context'
+import { projectLoader, simpleLoader } from 'examples/src/3D-cube/node_modules/examples/src/3D-cube/node_modules/pawi'
+import * as three from 'examples/src/3D-cube/node_modules/examples/src/3D-cube/node_modules/three'
+import { ContextTypes } from 'src/lib/context'
 
 async function run() {
   const { loader } = simpleLoader()

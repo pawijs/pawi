@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:watch": "env NODE_ENV=production repo-cooker build:watch",
-    "build": "env NODE_ENV=production repo-cooker --build",
+    "build": "repo-cooker --build",
     "checkdeps": "repo-cooker --check-dependencies",
     "clean": "repo-cooker clean",
     "commit": "git-cz",

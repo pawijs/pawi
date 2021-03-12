@@ -1,5 +1,5 @@
-import { TArg, TBlock, TContext, TValue } from 'pawi'
-import { ContextTypes } from './context'
+import { TArg, TBlock, TContext, TValue } from 'examples/src/lib/node_modules/examples/src/lib/node_modules/pawi'
+import { ContextTypes } from 'src/lib/context'
 
 // Init function
 export type Context = TContext<ContextTypes>

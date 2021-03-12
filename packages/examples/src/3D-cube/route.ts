@@ -1,4 +1,4 @@
-import { Block } from '../lib/types'
+import { Block } from 'src/lib/types'
 
 export async function init(): Block {
   const el = document.querySelector('#route') as HTMLInputElement
