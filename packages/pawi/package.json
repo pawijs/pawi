@@ -1,7 +1,7 @@
 {
   "name": "pawi",
   "version": "0.0.0",
-  "description": "pawi types (API contract for semver)",
+  "description": "pawi types and linker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",

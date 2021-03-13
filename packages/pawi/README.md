@@ -8,11 +8,15 @@
 [travis-image]: https://img.shields.io/travis/pawijs/pawi.svg?style=flat
 [travis-url]: https://travis-ci.com/pawijs/pawi
 
-Types for [Pawi](http://pawijs.org).
+Types and linker for [Pawi](http://pawijs.org).
 
-This package is used to bump major semver version on all related packages in
-case the Block API changes. It is an important kind of contract between the
-linker, the libraries and all the projects based on pawi.
+The types in this package act as semver "contract" and drive major semver
+version bump on dependent packages in case the Block API changes. It is an
+important piece to ensure stability of the work done with pawi and ensures
+that the linker, UI, libraries and all the projects based on pawi work
+together seamlessly.
+
+The linker part of this package builds an executable from a branch definition.
 
 See [sample-project](https://github.com/pawijs/sample-project) for an example.
 

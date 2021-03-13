@@ -1,5 +1,5 @@
 import { Branch } from '@forten/tree-type'
-import { TArg, Update } from 'pawi'
+import { TArg, Update } from './types'
 
 export interface TChild<C extends Object> {
   value: TArg<C>

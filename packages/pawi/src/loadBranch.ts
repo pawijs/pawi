@@ -1,6 +1,6 @@
 import { childLoader } from './childLoader'
+import { TChild } from './link.types'
 import { simpleLoader } from './simpleLoader'
-import { TChild } from './types'
 
 export async function loadBranch<T extends {}>(
   branchPath: string,

@@ -20,21 +20,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "skipLibCheck": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "ES2020",
-    "paths": {
-      "tuitui": [
-        "pawi"
-      ]
-    },
-    "plugins": [
-      {
-        "transform": "@pawi/transform"
-      }
-    ]
+    "target": "ES2020"
   },
   "include": [
     "./**/*"

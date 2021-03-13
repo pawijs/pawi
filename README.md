@@ -26,9 +26,7 @@ Some information on the project on [dev.to][article-url].
 - [![NPM version][snow-image]][snow-npm] [snowpack-pawi][snow-url]
   (Snowpack plugin for HMR live-coding)
 - [![NPM version][pawi-image]][pawi-npm] [pawi][pawi-url]
-  (Types)
-- [![NPM version][pawi-link-image]][pawi-link-npm] [pawi-link][pawi-link-url]
-  (Linker)
+  (Types and linker)
 
 ## Libraries
 
@@ -61,9 +59,6 @@ impact on performance (a function call).
 [pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi
 [pawi-image]: https://img.shields.io/npm/v/pawi.svg?style=flat
 [pawi-npm]: https://npmjs.org/package/pawi
-[pawi-link-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi-link
-[pawi-link-image]: https://img.shields.io/npm/v/pawi-link.svg?style=flat
-[pawi-link-npm]: https://npmjs.org/package/pawi-link
 [base-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/base
 [base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
 [base-npm]: https://npmjs.org/package/@pawi/base

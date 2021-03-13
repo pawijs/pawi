@@ -1,6 +1,6 @@
 import { Branch } from '@forten/tree-type'
-import { TArg, TBlockModule, TContext, Update } from 'pawi'
-import { ChildLoader, Loader, TChild } from './types'
+import { ChildLoader, Loader, TChild } from './link.types'
+import { TArg, TBlockModule, TContext, Update } from './types'
 
 type Context = TContext<{}>
 type BlockModule = TBlockModule<{}>
@@ -58,7 +58,7 @@ function getRoutes<T>(route: Function, children: TChild<T>[]) {
   return {
     args: Array.from({ length: route.length }).map(
       (_, i) => (children[i] && updateAll(children[i].updates)) || {}
-    ),
+    ) as Update[],
     // out-of-route updates
     updates: ([] as Update[]).concat(
       ...children.slice(route.length).map(child => child.updates)

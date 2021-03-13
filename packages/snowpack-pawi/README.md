@@ -24,5 +24,4 @@ module.exports = {
 }
 ```
 
-NB: The dependency to 'pawi' is to ensure semver major bump in case the HMR api changes in
-pawi-link.
+NB: The dependency to 'pawi' is to ensure semver major bump in case the HMR api changes.

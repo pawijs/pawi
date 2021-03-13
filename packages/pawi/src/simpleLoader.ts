@@ -1,5 +1,5 @@
 import { isBare } from './helpers'
-import { Loader } from './types'
+import { Loader } from './link.types'
 
 export function getBaseUrl() {
   const { location } = window

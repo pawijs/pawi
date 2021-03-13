@@ -1,6 +1,6 @@
-import { Update } from 'pawi'
 import { updateAll } from './childLoader'
 import { loadBranch } from './loadBranch'
+import { Update } from './types'
 
 export async function link<T>(
   projectPath: string,
