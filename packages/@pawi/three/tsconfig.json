@@ -20,7 +20,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "skipLibCheck": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,

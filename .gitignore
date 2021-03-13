@@ -1,5 +1,5 @@
-/node_modules
-/packages/node_modules/**/node_modules
+**/node_modules
+/packages/node_modules
 **/.cache
 **/coverage
 **/dist
@@ -7,3 +7,4 @@
 /packages/**/package-lock.json
 **/.DS_Store
 /.vscode
+notes

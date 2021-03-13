@@ -1,7 +1,7 @@
 {
-  "name": "@pawi/base",
+  "name": "@pawi/three",
   "version": "0.0.0",
-  "description": "Official basic pawi blocks",
+  "description": "Official pawi blocks for Three.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -16,12 +16,18 @@
   },
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
-  "dependencies": {},
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "three": "^0.126.1"
+  },
   "devDependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",
     "@types/node": "^14.14.31",
     "@types/simple-mock": "^0.8.1",
-    "@types/webmidi": "^2.0.4",
+    "@types/three": "^0.125.3",
     "pawi": "next",
     "snowpack": "^3.0.13",
     "snowpack-pawi": "next",
