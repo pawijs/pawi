@@ -1,6 +1,4 @@
-const HMR_INIT = `
-
-export const pawi = {}
+const HMR_INIT = `export const pawi = {}
 if (import.meta.hot) {
   import.meta.hot.accept(module => {
     if (pawi.reload) {
@@ -8,6 +6,7 @@ if (import.meta.hot) {
     }
   })
 }
+
 `
 
 module.exports = function () {
@@ -15,7 +14,7 @@ module.exports = function () {
     name: 'snowpack-pawi',
     transform({ fileExt, contents }) {
       if (fileExt === '.js') {
-        return contents + HMR_INIT
+        return HMR_INIT + contents
       }
     },
   }
