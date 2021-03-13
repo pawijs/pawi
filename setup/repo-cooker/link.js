@@ -36,6 +36,7 @@ function linkToModule({ config }) {
     commonRoot = dirname(commonRoot)
   }
   const nodeModules = resolve(commonRoot, 'node_modules')
+  console.log('ROOT', commonRoot, packagesPaths)
 
   return runAll(
     packages.map(name => {
