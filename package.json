@@ -12,7 +12,7 @@
     "devtools": "npx overmind-devtools",
     "fixdeps": "repo-cooker --fix-dependencies",
     "format": "npm run lint -- --fix && prettier --write --with-node-modules \"**/*.md\" \"**/*.css\" \"**/*.json\"",
-    "install": "npm run link",
+    "postinstall": "npm run link",
     "link": "repo-cooker link",
     "release": "repo-cooker --release --print-release",
     "test": "repo-cooker test"

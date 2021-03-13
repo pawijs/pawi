@@ -26,7 +26,7 @@ Some information on the project on [dev.to][article-url].
 - [![NPM version][snow-image]][snow-npm] [snowpack-pawi][snow-url]
   (Snowpack plugin for HMR live-coding)
 - [![NPM version][pawi-image]][pawi-npm] [pawi][pawi-url]
-  (Runtime)
+  (Types and linker)
 
 ## Libraries
 
@@ -53,16 +53,16 @@ impact on performance (a function call).
 [vscode-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi
 [vscode-count]: https://vsmarketplacebadge.apphb.com/installs-short/pawijs.vscode-pawi.svg
 [vscode-count-url]: https://marketplace.visualstudio.com/items?itemName=pawijs.vscode-pawi
-[snow-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/snowpack-pawi
+[snow-url]: https://github.com/pawijs/pawi/tree/next/packages/snowpack-pawi
 [snow-image]: https://img.shields.io/npm/v/snowpack-pawi.svg?style=flat
 [snow-npm]: https://npmjs.org/package/snowpack-pawi
-[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/pawi
+[pawi-url]: https://github.com/pawijs/pawi/tree/next/packages/pawi
 [pawi-image]: https://img.shields.io/npm/v/pawi.svg?style=flat
 [pawi-npm]: https://npmjs.org/package/pawi
-[base-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/@pawi/base
+[base-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/base
 [base-image]: https://img.shields.io/npm/v/@pawi/base.svg?style=flat
 [base-npm]: https://npmjs.org/package/@pawi/base
-[three-url]: https://github.com/pawijs/pawi/tree/next/packages/node_modules/@pawi/three
+[three-url]: https://github.com/pawijs/pawi/tree/next/packages/@pawi/three
 [three-image]: https://img.shields.io/npm/v/@pawi/three.svg?style=flat
 [three-npm]: https://npmjs.org/package/@pawi/three
 

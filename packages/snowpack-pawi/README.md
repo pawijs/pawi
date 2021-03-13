@@ -11,7 +11,7 @@
 Snowpack plugin for [Pawi](http://pawijs.org) live-coding.
 
 With this plugin, the render tree does not need to be rebuilt through a full
-page reload but
+page reload but can reload only the required blocks.
 
 ```sh
 npm install --save-dev snowpack-pawi
@@ -23,3 +23,5 @@ module.exports = {
   plugins: ['snowpack-pawi'],
 }
 ```
+
+NB: The dependency to 'pawi' is to ensure semver major bump in case the HMR api changes.

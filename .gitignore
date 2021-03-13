@@ -1,9 +1,9 @@
 **/node_modules
-/packages/node_modules
 **/.cache
 **/coverage
 **/dist
 **/*.log
+/packages/other/*
 /packages/**/package-lock.json
 **/.DS_Store
 /.vscode

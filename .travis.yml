@@ -18,6 +18,7 @@ notifications:
 script:
   - |
     if [[ $SKIP_TESTS != 'true' ]]; then
+      npm run link
       npm run checkdeps
       # npm run lint
       # npm run test

@@ -1,19 +1,9 @@
 import { Branch } from '@forten/tree-type'
-import { TChild, Update } from '..'
-import { Load } from '../loader/types'
-import { TArg, TBlock, TContext, TResolvedBlock } from '../types'
-import { ChildLoader } from './types'
+import { ChildLoader, Loader, TChild } from './link.types'
+import { TArg, TBlockModule, TContext, Update } from './types'
 
 type Context = TContext<{}>
-type BlockModule = TResolvedBlock<{}> & {
-  init?: (ctx: Context) => TBlock<{}>
-  // The snowpack-pawi HMR plugin transforms sources and adds this
-  // 'pawi' export. It will also be used for scrubbing.
-  // DO NOT RENAME.
-  pawi?: {
-    reload: (payload: { module: BlockModule }) => void
-  }
-}
+type BlockModule = TBlockModule<{}>
 
 function makeCacheFunction(): Context['cache'] {
   const store = new Map<string, any>()
@@ -68,7 +58,7 @@ function getRoutes<T>(route: Function, children: TChild<T>[]) {
   return {
     args: Array.from({ length: route.length }).map(
       (_, i) => (children[i] && updateAll(children[i].updates)) || {}
-    ),
+    ) as Update[],
     // out-of-route updates
     updates: ([] as Update[]).concat(
       ...children.slice(route.length).map(child => child.updates)
@@ -85,7 +75,7 @@ export function updateAll(updates: Update[]) {
 }
 
 export function childLoader<T extends {} = {}>(
-  load: Load,
+  load: Loader,
   branch: Branch
 ): ChildLoader<T> {
   const caches = new Map<string, {}>()
