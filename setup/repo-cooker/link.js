@@ -30,7 +30,12 @@ const linkOne = function linkToModule(sourcePackage, pkgAsModule) {
 function linkToModule({ config }) {
   const { runCommand } = config
   const packages = Object.keys(config.packagesPaths)
-  const nodeModules = resolve(config.path, 'node_modules')
+  const packagesPaths = Object.values(config.packagesPaths).map(p => resolve(p))
+  let commonRoot = dirname(packagesPaths[0])
+  while (packagesPaths.find(p => !p.startsWith(commonRoot))) {
+    commonRoot = dirname(commonRoot)
+  }
+  const nodeModules = resolve(commonRoot, 'node_modules')
 
   return runAll(
     packages.map(name => {

@@ -8,10 +8,11 @@
 [travis-image]: https://img.shields.io/travis/pawijs/pawi.svg?style=flat
 [travis-url]: https://travis-ci.com/pawijs/pawi
 
-Runtime for [Pawi](http://pawijs.org).
+Types for [Pawi](http://pawijs.org).
 
-The runtime loads branches and modules and links everyting together in order
-to run a Pawi project.
+This package is used to bump major semver version on all related packages in
+case the Block API changes. It is an important kind of contract between the
+linker, the libraries and all the projects based on pawi.
 
 See [sample-project](https://github.com/pawijs/sample-project) for an example.
 

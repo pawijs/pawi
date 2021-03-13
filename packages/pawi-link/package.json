@@ -1,7 +1,7 @@
 {
-  "name": "@pawi/base",
+  "name": "pawi-link",
   "version": "0.0.0",
-  "description": "Official basic pawi blocks",
+  "description": "pawi linker (runtime)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -12,7 +12,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf .cache dist coverage"
+    "clean": "rimraf .cache dist coverage",
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "author": "Maia Taewana <maia@pawijs.org>",
   "license": "MIT",
@@ -21,15 +23,29 @@
     "src"
   ],
   "dependencies": {
+    "@forten/tree-type": "^1.0.0",
     "pawi": "next"
   },
   "devDependencies": {
-    "@snowpack/plugin-typescript": "^1.2.1",
     "@types/node": "^14.14.31",
     "@types/simple-mock": "^0.8.1",
-    "@types/webmidi": "^2.0.4",
-    "snowpack": "^3.0.13",
-    "snowpack-pawi": "next",
+    "ava": "^3.15.0",
+    "esm": "^3.2.25",
+    "rimraf": "^3.0.2",
+    "simple-mock": "^0.8.0",
+    "ts-loader": "^8.0.17",
     "typescript": "^4.1.5"
+  },
+  "ava": {
+    "files": [
+      "**/*.test.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register",
+      "./src/test-browser-env.ts"
+    ]
   }
 }
