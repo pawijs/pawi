@@ -1,6 +1,6 @@
 import { Branch } from '@forten/tree-type'
 import { ChildLoader, Loader, TChild } from './link.types'
-import { TArg, TBlockModule, TContext, Update } from './types'
+import { ReloadFn, TArg, TBlockModule, TContext, Update } from './types'
 
 type Context = TContext<{}>
 type BlockModule = TBlockModule<{}>
@@ -178,9 +178,17 @@ export function childLoader<T extends {} = {}>(
     if (mod.pawi) {
       // pawi object set by hmr extension
       arg.devMode = true
-      mod.pawi.reload = ({ module }) => {
-        console.log('[PAWI-HMR]', path)
-        initModule(arg, module)
+      if (!mod.pawi.blocks) {
+        const blocksFn: ReloadFn[] = [({ module }) => initModule(arg, module)]
+        mod.pawi.blocks = blocksFn
+        mod.pawi.reload = async arg => {
+          console.log('[PAWI-HMR]', path)
+          for (const fn of blocksFn) {
+            await fn(arg)
+          }
+        }
+      } else {
+        mod.pawi.blocks.push(({ module }) => initModule(arg, module))
       }
     }
     return initModule(arg, mod)

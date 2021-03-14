@@ -43,12 +43,17 @@ export type TResolvedBlock<C extends Object = {}> = Partial<
 
 export type TBlock<C extends Object = {}> = Promise<TResolvedBlock<C>>
 
+export type ReloadFn<T extends Object = {}> = (payload: {
+  module: TBlockModule<T>
+}) => Promise<TValue<T>>
+
 export type TBlockModule<T extends Object = {}> = TResolvedBlock<{}> & {
   // Init function exposed in block.
   init?: TInit<T>
   // The snowpack-pawi HMR plugin transforms sources and adds this
   // './types' export. It will also be used for scrubbing.
   pawi?: {
-    reload: (payload: { module: TBlockModule<T> }) => void
+    reload?: ReloadFn
+    blocks?: ReloadFn[]
   }
 }
