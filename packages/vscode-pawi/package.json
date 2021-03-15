@@ -28,7 +28,7 @@
         "displayName": "Tree Editor",
         "selector": [
           {
-            "filenamePattern": "*.o.json"
+            "filenamePattern": "index.o.ts"
           }
         ],
         "priority": "default"
@@ -48,6 +48,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "build:view": "webpack --config webpack.view-prod.js",
+    "build": "npm run build:view",
     "devtools": "npx overmind-devtools",
     "start": "webpack serve --port 1236 --hot --inline --config webpack.view-dev.js"
   },

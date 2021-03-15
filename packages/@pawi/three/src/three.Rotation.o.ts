@@ -4,7 +4,7 @@ function zero() {
   return 0
 }
 
-export async function init({ object3D, detached }: Context): Block {
+export async function init({ object3D, detached, time }: Context): Block {
   const rotation = object3D.rotation
   rotation.x = 0
   rotation.y = 0

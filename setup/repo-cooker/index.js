@@ -9,6 +9,5 @@ export const cooker = Cooker(process.argv, {
     'packages/@pawi/*',
     'packages/snowpack-pawi',
     'packages/vscode-pawi',
-    'packages/other/*',
   ],
 })

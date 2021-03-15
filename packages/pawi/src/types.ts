@@ -6,13 +6,19 @@ export interface Update {
   (): void
 }
 
+export type CacheFunction = <T>(
+  key: string,
+  set: () => T,
+  cleanup?: (value: T) => void
+) => T
+
 /**
  * Raw context before it is augmented by the returned values of 'init'.
  * Parent blocks add to this context by having 'init' return an object
  * with new or changed context values.
  */
 export interface BaseContext {
-  cache<T>(key: string, fn: () => T): T
+  cache: CacheFunction
   detached: boolean
 }
 
@@ -48,6 +54,8 @@ export type ReloadFn<T extends Object = {}> = (payload: {
 }) => Promise<TValue<T>>
 
 export type TBlockModule<T extends Object = {}> = TResolvedBlock<{}> & {
+  // The block is a branch definition
+  branch?: string // JSON.stringify( Branch )
   // Init function exposed in block.
   init?: TInit<T>
   // The snowpack-pawi HMR plugin transforms sources and adds this

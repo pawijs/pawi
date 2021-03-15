@@ -1,4 +1,11 @@
-import { isBare } from 'pawi'
+export function isBare(path: string) {
+  return !(
+    path.startsWith('./') ||
+    path.startsWith('../') ||
+    path.startsWith('/') ||
+    path === '.'
+  )
+}
 
 export function relativePath(dirname: string, path: string) {
   if (isBare(path)) {

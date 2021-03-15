@@ -7,7 +7,8 @@ export interface TChild<C extends Object> {
 }
 
 export interface Loader<T = any> {
-  (name: string, raw?: boolean): Promise<T>
+  load(name: string, raw?: boolean): Promise<T>
+  at(dirname: string): Loader
 }
 
 export interface LinkerOptions {

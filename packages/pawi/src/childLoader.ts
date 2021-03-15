@@ -1,19 +1,18 @@
 import { Branch } from '@forten/tree-type'
+import { getContext } from './getContext'
+import { initBranch } from './initBranch'
 import { ChildLoader, Loader, TChild } from './link.types'
-import { ReloadFn, TArg, TBlockModule, TContext, Update } from './types'
+import {
+  CacheFunction,
+  ReloadFn,
+  TArg,
+  TBlockModule,
+  TContext,
+  Update,
+} from './types'
 
 type Context = TContext<{}>
 type BlockModule = TBlockModule<{}>
-
-function makeCacheFunction(): Context['cache'] {
-  const store = new Map<string, any>()
-  return function cache(name, fn) {
-    if (!store.has(name)) {
-      store.set(name, fn())
-    }
-    return store.get(name)
-  }
-}
 
 interface ArgWrapper<V> {
   value: V
@@ -75,11 +74,12 @@ export function updateAll(updates: Update[]) {
 }
 
 export function childLoader<T extends {} = {}>(
-  load: Loader,
+  cache: CacheFunction,
+  loader: Loader,
   branch: Branch
 ): ChildLoader<T> {
-  const caches = new Map<string, {}>()
   const blocks = branch.blocks
+  const { load } = loader
 
   async function getChildren(
     id: string,
@@ -93,17 +93,6 @@ export function childLoader<T extends {} = {}>(
       }
     }
     return children
-  }
-
-  function getContext(name: string, parentContext: {}): Context {
-    if (!caches.has(name)) {
-      caches.set(name, makeCacheFunction())
-    }
-    return {
-      ...parentContext,
-      cache: caches.get(name) as Context['cache'],
-      detached: false,
-    }
   }
 
   async function initModule(
@@ -120,10 +109,23 @@ export function childLoader<T extends {} = {}>(
     },
     mod: BlockModule
   ) {
-    const { init } = mod
-    const context = getContext(id, parentContext)
+    const { branch, init } = mod
+    const { context, sweep } = getContext(cache, id, parentContext)
+    if (branch) {
+      const dirname = path.split('/').slice(0, -1).join('/')
+      const child = await initBranch(
+        loader.at(dirname),
+        JSON.parse(branch),
+        context
+      )
+      // Cleanup unused nodes
+      sweep()
+      return child
+    }
     // Down context registration
     const block = init ? await init(context) : { ...mod }
+    // Cleanup all unused values in context.cache after init
+    sweep()
     if (block.error) {
       console.log(`[ ERROR ] ${block.error} (${path}).`)
       return { value: {}, updates: [] }
@@ -131,8 +133,8 @@ export function childLoader<T extends {} = {}>(
     const { link, route, collect } = block
     // Cleanup parent context
     delete block.link
+    delete block.route
     delete block.collect
-    delete block.link
     // Up function call registration
     // In dev mode (HMR), down calls are always re-run to update context.
     const children = await getChildren(id, {

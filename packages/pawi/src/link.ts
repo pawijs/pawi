@@ -9,10 +9,3 @@ export async function link<T>(
   const { updates } = await loadBranch(projectPath, rootCtx)
   return updateAll(updates)
 }
-
-export async function run<T>(
-  projectPath: string,
-  rootCtx: Partial<T> = {}
-): Promise<void> {
-  return (await link(projectPath, rootCtx))()
-}
