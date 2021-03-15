@@ -19,7 +19,6 @@ export type CacheFunction = <T>(
  */
 export interface BaseContext {
   cache: CacheFunction
-  detached: boolean
 }
 
 export type TArg<C extends Object = {}> = {

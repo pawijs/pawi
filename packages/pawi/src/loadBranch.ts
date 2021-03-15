@@ -30,12 +30,13 @@ const PROJECT_ROOT: Branch = {
  */
 export async function loadBranch<T extends {}>(
   branchPath: string,
-  parentContext: Partial<T> = {}
+  parentContext: Partial<T> = {},
+  run = false
 ): Promise<TChild<T>> {
   // Wrap the branch as a block to enable live reload
   // This branch is only loaded once. No need for sweeping.
   const { cache } = newCache()
   const load = makeLoader(branchPath)
   const { context } = getContext(cache, branchPath, parentContext)
-  return initBranch(load, PROJECT_ROOT, context)
+  return initBranch(load, PROJECT_ROOT, context, run)
 }

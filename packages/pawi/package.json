@@ -4,15 +4,17 @@
   "description": "pawi types and linker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "typexx": "module",
+  "type": "module",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/pawijs/pawi.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
+    "prebuild": "npm run clean",
     "clean": "rimraf .cache dist coverage",
+    "pretest": "rimraf ./node_modules/@pawi && ln -sf ../../@pawi ./node_modules/@pawi",
     "test": "web-test-runner \"**/*.test.ts\"",
     "test:watch": "web-test-runner \"**/*.test.ts\" --watch; exit 0",
     "testxx": "web-test-runner \"**/*.test.ts\" --node-resolve"

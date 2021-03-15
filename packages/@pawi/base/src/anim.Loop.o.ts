@@ -1,18 +1,16 @@
 import { Block, Context } from './types'
 
-export async function init({
-  cache,
-  detached,
-  time: fixedTime,
-}: Context): Block {
+export async function init({ cache, time: fixedTime }: Context): Block {
   const time =
     fixedTime || cache('time', () => ({ now: performance.now() / 1000, dt: 0 }))
-  const current = cache('current', () => ({ loop: undefined as any }))
-  if (detached) {
-    // stop
-    delete current.loop
-    return {}
-  }
+
+  const current = cache(
+    'current',
+    () => ({ loop: undefined as any }),
+    current => {
+      delete current.loop
+    }
+  )
   return {
     time,
     collect(children) {
@@ -22,7 +20,7 @@ export async function init({
       }
       function loop() {
         if (current.loop !== loop) {
-          // This avoids having multiple requestAnimationFrame running
+          // Abort old loop
           return
         }
         const now = performance.now() / 1000

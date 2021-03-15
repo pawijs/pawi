@@ -22,7 +22,7 @@ export interface ChildLoaderOptions {
 }
 
 export interface ChildLoader<T extends {} = {}> {
-  (id: string, context?: Partial<T>): Promise<TChild<T>>
+  (id: string, context: Partial<T>, run?: boolean): Promise<TChild<T>>
 }
 
 export interface BranchLoader<T extends {} = {}> {

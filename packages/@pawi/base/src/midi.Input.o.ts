@@ -9,8 +9,8 @@ const MIDI = {
 function setupMidi() {
   const midi: Context['midi'] = { songPosition: 0 }
 
-  function receiveMidi(msg: WebMidi.MIDIMessageEvent) {
-    const { data } = msg
+  function receiveMidi(msg: Event) {
+    const { data } = msg as WebMidi.MIDIMessageEvent
     const [status, lsb, msb] = data
     if (status === MIDI.SONGPOSITION) {
       midi.songPosition = ((msb << 7) + lsb) * 6
@@ -22,7 +22,7 @@ function setupMidi() {
   return { midi, receiveMidi }
 }
 
-export async function init({ detached, cache }: Context): Block {
+export async function init({ cache }: Context): Block {
   if (!navigator.requestMIDIAccess) {
     return { error: 'Navigator does not support WebMIDI.' }
   }
@@ -31,22 +31,26 @@ export async function init({ detached, cache }: Context): Block {
 
   const { midi, receiveMidi } = cache('midi', setupMidi)
 
-  const input = cache('midiInput', () => {
-    for (const input of midiAccess.inputs.values()) {
-      if (input.name === MIDI_INPUT) {
-        input.addEventListener('midimessage', receiveMidi)
-        return input
+  const input = cache(
+    'midiInput',
+    () => {
+      for (const input of midiAccess.inputs.values()) {
+        if (input.name === MIDI_INPUT) {
+          input.addEventListener('midimessage', receiveMidi)
+          return input
+        }
+      }
+      return undefined
+    },
+    input => {
+      if (input) {
+        input.removeEventListener('midimessage', receiveMidi)
       }
     }
-    return undefined
-  })
+  )
 
   if (!input) {
     return { error: `Could not find MIDI input '${MIDI_INPUT}'.` }
-  }
-
-  if (detached) {
-    return {}
   }
 
   return { midi }

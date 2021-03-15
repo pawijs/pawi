@@ -16,7 +16,6 @@ export function getContext<T extends Object = {}>(
   const context = {
     ...parentContext,
     cache,
-    detached: false,
   } as TContext<T>
   return { context, sweep }
 }

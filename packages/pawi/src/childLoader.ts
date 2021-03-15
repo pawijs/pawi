@@ -13,6 +13,13 @@ import {
 
 type Context = TContext<{}>
 type BlockModule = TBlockModule<{}>
+interface InitModuleArg {
+  id: string
+  path: string
+  parentContext: {}
+  devMode?: boolean
+  run: boolean
+}
 
 interface ArgWrapper<V> {
   value: V
@@ -21,7 +28,7 @@ interface ArgWrapper<V> {
 
 type AnyArg = TArg<{ [key: string]: any }>
 
-function makeHmrWrapper<T extends AnyArg>(
+function HmrWrap<T extends AnyArg>(
   cache: Context['cache'],
   currentValue: T
 ): T {
@@ -96,17 +103,7 @@ export function childLoader<T extends {} = {}>(
   }
 
   async function initModule(
-    {
-      id,
-      path,
-      parentContext,
-      devMode,
-    }: {
-      id: string
-      path: string
-      parentContext: {}
-      devMode?: boolean
-    },
+    { id, path, parentContext, devMode }: InitModuleArg,
     mod: BlockModule
   ) {
     const { branch, init } = mod
@@ -118,6 +115,9 @@ export function childLoader<T extends {} = {}>(
         JSON.parse(branch),
         context
       )
+      if (devMode) {
+        child.value = HmrWrap(context.cache, child.value)
+      }
       // Cleanup unused nodes
       sweep()
       return child
@@ -144,7 +144,7 @@ export function childLoader<T extends {} = {}>(
     if (link) {
       const { args, updates } = getArguments(link, children)
       const rawValue = link(...args) || {}
-      const value = devMode ? makeHmrWrapper(context.cache, rawValue) : rawValue
+      const value = devMode ? HmrWrap(context.cache, rawValue) : rawValue
       if (value.update) {
         return { value: {}, updates: [...updates, value.update] }
       } else {
@@ -152,13 +152,16 @@ export function childLoader<T extends {} = {}>(
       }
     } else if (route) {
       const { args, updates } = getRoutes(route, children)
-      return { value: {}, updates: [...updates, () => route(...args)] }
+      const rawValue = { update: () => route(...args) }
+      const { update } = devMode ? HmrWrap(context.cache, rawValue) : rawValue
+      return { value: {}, updates: [...updates, update] }
     } else {
       const updates = ([] as Update[]).concat(
         ...children.map(child => child.updates)
       )
       if (collect) {
-        const update = collect(updateAll(updates))
+        const rawValue = { update: collect(updateAll(updates)) }
+        const { update } = devMode ? HmrWrap(context.cache, rawValue) : rawValue
         return { value: {}, updates: [update] }
       } else {
         // pass updates up
@@ -167,21 +170,30 @@ export function childLoader<T extends {} = {}>(
     }
   }
 
+  async function initAndRun(arg: InitModuleArg, mod: BlockModule) {
+    const child = await initModule(arg, mod)
+    if (arg.run) {
+      updateAll(child.updates)()
+    }
+    return child
+  }
+
   async function loadChild(
     id: string | null,
-    parentContext: Partial<T> = {}
+    parentContext: Partial<T>,
+    run = false
   ): Promise<TChild<T>> {
     if (!id) {
       return { value: {}, updates: [] }
     }
     const path = blocks[id].content.file
     const mod: BlockModule = await load(path)
-    const arg = { id, path, parentContext, devMode: false }
+    const arg = { id, path, parentContext, devMode: false, run }
     if (mod.pawi) {
       // pawi object set by hmr extension
       arg.devMode = true
       if (!mod.pawi.blocks) {
-        const blocksFn: ReloadFn[] = [({ module }) => initModule(arg, module)]
+        const blocksFn: ReloadFn[] = [({ module }) => initAndRun(arg, module)]
         mod.pawi.blocks = blocksFn
         mod.pawi.reload = async arg => {
           console.log('[PAWI-HMR]', path)
@@ -190,10 +202,10 @@ export function childLoader<T extends {} = {}>(
           }
         }
       } else {
-        mod.pawi.blocks.push(({ module }) => initModule(arg, module))
+        mod.pawi.blocks.push(({ module }) => initAndRun(arg, module))
       }
     }
-    return initModule(arg, mod)
+    return initAndRun(arg, mod)
   }
 
   return loadChild

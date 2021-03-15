@@ -1,8 +1,8 @@
-import { link } from './link'
+import { loadBranch } from './loadBranch'
 
 export async function run<T>(
   projectPath: string,
   rootCtx: Partial<T> = {}
 ): Promise<void> {
-  return (await link(projectPath, rootCtx))()
+  await loadBranch(projectPath, rootCtx, true)
 }
