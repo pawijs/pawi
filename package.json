@@ -36,7 +36,7 @@
     "assertion-error": "1.1.0"
   },
   "devDependencies": {
-    "@esm-bundle/chai": "^4.3.4",
+    "@esm-bundle/chai": "4.3.4",
     "@fortawesome/fontawesome-svg-core": "1.2.30",
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
