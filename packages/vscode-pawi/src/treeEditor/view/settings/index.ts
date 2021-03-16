@@ -18,7 +18,7 @@ export const settings: Settings = {
   },
   preferences: {
     paths: {
-      ['pawi.showLibrary']: true,
+      ['treeEditor.showLibrary']: true,
       ['styled.sizes']: true,
     },
   },

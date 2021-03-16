@@ -1,6 +1,6 @@
 import { TreeType } from '@forten/tree-type'
 import { Action } from '../app'
-import { getName, relativePath } from '../helpers/paths'
+import { makeLibrary } from '../helpers/makeLibrary'
 import { Message } from '../types'
 
 export const receive: Action<Message> = (ctx, arg) => {
@@ -19,16 +19,8 @@ export const receive: Action<Message> = (ctx, arg) => {
     }
     case 'library': {
       const { dirname } = ctx.state.treeEditor
-      function makeBlock(path: string) {
-        return {
-          type: 'pawi',
-          name: getName(path),
-          content: {
-            file: relativePath(dirname, path),
-          },
-        }
-      }
-      ctx.state.treeView.library = arg.paths.map(makeBlock)
+      ctx.state.treeView.library = makeLibrary(dirname, arg.paths)
+      break
     }
   }
 }

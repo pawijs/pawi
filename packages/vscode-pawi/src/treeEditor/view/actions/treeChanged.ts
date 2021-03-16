@@ -19,7 +19,7 @@ export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
       const newTree = unproxy(tree)
       appendGraph(
         newTree,
-        connecting.nodeId,
+        connecting.blockId,
         connecting.slotIdx,
         connecting.tree
       )

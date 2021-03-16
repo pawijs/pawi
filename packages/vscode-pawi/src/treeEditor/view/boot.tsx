@@ -11,13 +11,7 @@ import { App } from './components'
 const config = build(treeEditor).using(tree).using(treeView).config()
 
 ReactDOM.render(
-  <Provider
-    value={
-      new Overmind(config, {
-        devtools: '127.0.0.1:3031',
-      })
-    }
-  >
+  <Provider value={new Overmind(config, { devtools: false })}>
     <App />
   </Provider>,
   document.querySelector('#root')

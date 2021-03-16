@@ -1,7 +1,7 @@
 import { TreeDefinitions } from '@forten/tree'
 import { Source } from '@forten/tree-type'
 import { Context } from '../app'
-import { getName } from '../helpers/paths'
+import { visibleName } from '../helpers/paths'
 import { BranchContent } from '../types'
 
 export const tree: TreeDefinitions<BranchContent> = {
@@ -10,7 +10,7 @@ export const tree: TreeDefinitions<BranchContent> = {
       if (arg.content) {
         const content = arg.content as Source['content']
         return {
-          name: getName(content.file),
+          name: visibleName(content.file),
           content,
         }
       }
@@ -22,7 +22,7 @@ export const tree: TreeDefinitions<BranchContent> = {
     treeChanged(ctx: Context, arg) {
       ctx.actions.pawi.treeChanged(arg)
     },
-    selectNode(ctx: Context, arg) {
+    selectBlock(ctx: Context, arg) {
       const node = arg.tree.blocks[arg.id]
       ctx.actions.pawi.send({
         type: 'select',

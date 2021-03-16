@@ -46,9 +46,9 @@ module.exports = {
     },
   },
 
-  watchOptions: {
-    aggregateTimeout: 600,
-  },
+  // watchOptions: {
+  //   aggregateTimeout: 600,
+  // },
 
   devServer: {
     contentBase: root('dist'),

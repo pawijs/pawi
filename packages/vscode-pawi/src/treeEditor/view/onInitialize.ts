@@ -1,24 +1,21 @@
-import { Overmind } from 'overmind'
-import { AsyncAction, Config } from './app'
+import { AsyncAction } from './app'
 import * as jtree from './dev.json'
+import { makeLibrary } from './helpers/makeLibrary'
 
-export const onInitialize: AsyncAction<Overmind<Config>> = async ctx => {
+export const onInitialize: AsyncAction = async ctx => {
   // @ts-ignore
   if (typeof acquireVsCodeApi === 'undefined') {
-    // development
-    ctx.state.treeView.library = [
-      {
-        type: 'pawi',
-        name: 'three.Mesh',
-        content: { file: './lib/three.Mesh.js' },
-      },
-      {
-        type: 'pawi',
-        name: 'three.Lights',
-        content: { file: './lib/three.Lights.js' },
-      },
-    ]
     // Whild debugging
+    ctx.state.treeView.library = makeLibrary('/this/foo/bar', [
+      '@pawi/three/three.Mesh.o.js',
+      '@pawi/three/three.Scene.o.js',
+      '@pawi/three/three.Lights.o.js',
+      '@pawi/base/anim.Loop.o.js',
+      '@pawi/base/base.value.o.js',
+      '/this/foo/bar/slider.o.js',
+      '/this/foo/3D-cube/index.o.js',
+      '/this/foo/blank/index.o.js',
+    ])
     ctx.state.treeEditor.tree = jtree
   } else {
     // @ts-ignore

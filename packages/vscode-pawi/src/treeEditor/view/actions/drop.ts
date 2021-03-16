@@ -16,6 +16,8 @@ export const drop: Action<DropArg> = (ctx, arg) => {
       const content: Source['content'] = {
         file: relPath,
       }
+      // I have NO WTF IDEA why this creates a "Object is of type 'unknown'" error.
+      // @ts-ignore
       ctx.actions.tree.add({
         tree,
         content,
