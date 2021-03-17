@@ -1,5 +1,5 @@
 import { AsyncAction } from './app'
-import * as jtree from './dev.json'
+import jtree from './dev.json'
 import { makeLibrary } from './helpers/makeLibrary'
 
 export const onInitialize: AsyncAction = async ctx => {

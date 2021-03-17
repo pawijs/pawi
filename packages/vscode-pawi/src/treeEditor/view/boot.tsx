@@ -5,8 +5,8 @@ import { Overmind } from 'overmind'
 import { Provider } from 'overmind-react'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { treeEditor } from '.'
-import { App } from './components'
+import { App } from './components/index.js'
+import { treeEditor } from './index.js'
 
 const config = build(treeEditor).using(tree).using(treeView).config()
 

@@ -5,11 +5,12 @@ import { TreeConfig } from '@forten/tree'
 import { TreeViewConfig } from '@forten/tree-view'
 import { IAction, IContext } from 'overmind'
 import { createHook } from 'overmind-react'
-import { FunctionComponent as Comp } from 'react'
+import { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import { TreeEditorConfig } from './types'
 
-export { styled, Comp }
+export type Comp<Props> = FunctionComponent<Props>
+export { styled }
 
 export type Config = TreeEditorConfig &
   LocaleConfig &

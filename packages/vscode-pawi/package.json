@@ -39,13 +39,13 @@
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
-    "watch": "npm run build:view -- --watch & webpack --watch",
+    "watch": "npm run build:watch & webpack --watch",
     "package": "npm run compile -- --mode production --devtool hidden-source-map",
     "test": "tsc -p ./",
-    "build:watch": "webpack --config webpack.view-prod.js --watch",
-    "build": "webpack --config webpack.view-prod.js",
+    "build:watch": "npm run build -- --watch",
+    "build": "cd src/treeEditor/view && snowpack build",
     "devtools": "npx overmind-devtools",
-    "start": "webpack serve --port 1236 --hot --inline --config webpack.view-dev.js"
+    "start": "cd src/treeEditor/view && snowpack dev"
   },
   "dependencies": {},
   "sideEffects": [
