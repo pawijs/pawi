@@ -1,5 +1,5 @@
-import { Uri, ViewColumn, window, workspace } from 'vscode'
-import { TreeEditor } from '../types'
+import { commands, Uri, ViewColumn, window, workspace } from 'vscode'
+import { TreeEditor, TREE_EDITOR_VIEW_TYPE } from '../types'
 
 export async function receiveSelect(
   { document }: TreeEditor,
@@ -7,8 +7,18 @@ export async function receiveSelect(
   path: string
 ) {
   const uri = Uri.file(document.uri.path + '/../' + path.replace(/.js$/, '.ts'))
-  let doc = await workspace.openTextDocument(uri)
+  const isBranch = path.endsWith('/index.o.js')
   const column =
     panelColumn === ViewColumn.One ? ViewColumn.Two : ViewColumn.One
-  window.showTextDocument(doc, column)
+  if (isBranch) {
+    commands.executeCommand('vscode.openWith', uri, TREE_EDITOR_VIEW_TYPE, {
+      preview: true,
+      viewColumn: column,
+      preserveFocus: isBranch,
+    })
+  } else {
+    const doc = await workspace.openTextDocument(uri)
+    console.log(path, isBranch)
+    window.showTextDocument(doc, column)
+  }
 }
