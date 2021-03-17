@@ -3,6 +3,9 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  buildOptions: {
+    out: '../../../view',
+  },
   packageOptions: {
     external: ['fake-indexeddb/auto'],
   },
