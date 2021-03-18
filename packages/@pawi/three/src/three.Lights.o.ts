@@ -1,4 +1,4 @@
-import { Block, Context } from './types'
+import { Block, Context } from 'pawi.types'
 const base = 0xff5555
 const skyColor = base
 const sunColor = base

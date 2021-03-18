@@ -1,4 +1,4 @@
-import { Block, Context } from './types'
+import { Block, Context } from 'pawi.types'
 
 export async function init({ THREE, object3D, cache }: Context): Block {
   const mesh = cache(

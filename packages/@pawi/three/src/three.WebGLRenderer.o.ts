@@ -1,4 +1,4 @@
-import { Block, Context } from './types'
+import { Block, Context } from 'pawi.types'
 
 function getScreen(el: HTMLElement) {
   const sz = el.getBoundingClientRect()
