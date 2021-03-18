@@ -29,7 +29,7 @@ after_success:
       git config --global user.email "maia@pawijs.org"
       git config --global user.name "Maia Taewana"
     fi
-    if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
+    if [[ $TRAVIS_BRANCH == 'main' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
       printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc
       printf "$VSCE_TOKEN\n" > ~/.vsce
       npm install -g vsce
