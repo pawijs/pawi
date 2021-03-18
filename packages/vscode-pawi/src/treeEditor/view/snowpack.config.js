@@ -6,9 +6,6 @@ module.exports = {
   buildOptions: {
     out: '../../../view',
   },
-  packageOptions: {
-    external: ['fake-indexeddb/auto'],
-  },
   plugins: ['@snowpack/plugin-typescript'],
   optimize: {
     bundle: true,

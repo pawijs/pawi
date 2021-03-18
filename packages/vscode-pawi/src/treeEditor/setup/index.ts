@@ -1,8 +1,11 @@
 import { TextDocument, Uri, WebviewPanel } from 'vscode'
 import { registerReceive } from '../receive'
-import { TreeEditor } from '../types'
+import { TreeEditorProxy } from '../types'
 import { setHtml } from './html'
 import { registerOnChange } from './onChange'
+import { registerOnCreate } from './onCreate'
+import { registerOnDelete } from './onDelete'
+import { registerOnRename } from './onRename'
 
 export function setupEditor(
   extensionUri: Uri,
@@ -12,7 +15,7 @@ export function setupEditor(
   setHtml(extensionUri, panel)
   const webview = panel.webview
 
-  const editor: TreeEditor = {
+  const editor: TreeEditorProxy = {
     document,
     send: msg => {
       // console.log('SEND', msg)
@@ -23,6 +26,9 @@ export function setupEditor(
 
   panel.onDidDispose(() => editor.disposables.forEach(d => d.dispose()))
 
-  registerOnChange(editor)
   registerReceive(editor, panel)
+  registerOnChange(editor)
+  registerOnCreate(editor)
+  registerOnDelete(editor)
+  registerOnRename(editor)
 }

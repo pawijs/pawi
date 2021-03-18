@@ -1,5 +1,5 @@
 import { unproxy } from '@forten/build'
-import { appendGraph } from '@forten/tree'
+import { appendBranch } from '@forten/tree'
 import { TreeChangedArg } from '@forten/tree/dist/actions'
 import { Action } from '../app'
 
@@ -17,25 +17,23 @@ export const treeChanged: Action<TreeChangedArg> = (ctx, arg) => {
       // Live connect preview
       const tree = arg.tree
       const newTree = unproxy(tree)
-      appendGraph(
+      appendBranch(
         newTree,
         connecting.blockId,
         connecting.slotIdx,
         connecting.tree
       )
-      // Send to vscode
-      ctx.actions.pawi.send({
-        type: 'update',
+      ctx.actions.treeEditor.send({
+        type: 'updateBranch',
         path: ctx.state.treeEditor.path,
-        text: JSON.stringify(newTree, null, 2),
+        branch: JSON.stringify(newTree, null, 2),
       })
     }
   } else if (arg.tree.id === ctx.state.treeEditor.tree?.id) {
-    // Send to vscode
-    ctx.actions.pawi.send({
-      type: 'update',
+    ctx.actions.treeEditor.send({
+      type: 'updateBranch',
       path: ctx.state.treeEditor.path,
-      text: JSON.stringify(ctx.state.treeEditor.tree, null, 2),
+      branch: JSON.stringify(ctx.state.treeEditor.tree, null, 2),
     })
   }
 }

@@ -1,6 +1,7 @@
 import { TreeType } from '@forten/tree-type'
-import { Message } from '../../message.types'
+import { EditorToVSCodeMessage } from '../../message.types'
 import * as actions from './actions'
+import * as receive from './receive'
 export * from '../../message.types'
 
 export type BranchContent = { file: string }
@@ -8,7 +9,8 @@ export type TreeData = TreeType<BranchContent>
 
 export interface TreeEditorConfig {
   actions: {
-    pawi: typeof actions
+    treeEditor: typeof actions
+    receive: typeof receive
   }
   state: {
     treeEditor: {
@@ -20,7 +22,7 @@ export interface TreeEditorConfig {
       // Avoid blink on load
       loading: boolean
       showLibrary: boolean
-      send: (message: Message) => void
+      send: (message: EditorToVSCodeMessage) => void
     }
   }
 }

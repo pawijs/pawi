@@ -1,12 +1,17 @@
 import { workspace } from 'vscode'
-import { send } from '../send'
-import { TreeEditor } from '../types'
+import { parseSource } from '../helpers/serialize'
+import { TreeEditorProxy } from '../types'
 
-export function registerOnChange(editor: TreeEditor) {
+export function registerOnChange(editor: TreeEditorProxy) {
   editor.disposables.push(
     workspace.onDidChangeTextDocument(e => {
-      if (e.document.uri.toString() === editor.document.uri.toString()) {
-        send(editor, 'update')
+      const { document } = editor
+      if (e.document.uri.toString() === document.uri.toString()) {
+        editor.send({
+          type: 'updateBranch',
+          path: document.uri.path,
+          branch: parseSource(document.getText()),
+        })
       }
     })
   )

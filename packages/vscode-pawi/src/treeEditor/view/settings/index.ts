@@ -1,4 +1,5 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
+import { faCopy } from '@fortawesome/free-solid-svg-icons/faCopy'
 import { PreferencesHooks, PreferencesSettings } from '@forten/preferences'
 import { StyledSettings } from '@forten/styled'
 import { TreeSettings } from '@forten/tree'
@@ -25,6 +26,7 @@ export const settings: Settings = {
   styled: {
     icons: {
       library: faBars,
+      copy: faCopy,
     },
   },
 }

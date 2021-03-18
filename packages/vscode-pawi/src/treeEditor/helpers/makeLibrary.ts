@@ -1,8 +1,7 @@
 import { existsSync, readFileSync } from 'fs'
 import { glob } from 'glob'
 import { join } from 'path'
-import { workspace } from 'vscode'
-import { TreeEditor } from '../types'
+import { rootPath } from './paths'
 
 function findFiles(cwd: string, prefix: string, ts = false) {
   return new Promise<string[]>((resolve, reject) =>
@@ -53,24 +52,14 @@ async function moduleFiles(cwd: string) {
   return files
 }
 
-export async function sendLibrary(editor: TreeEditor) {
-  const base = editor.document.uri.path
-  const folders = workspace.workspaceFolders?.map(f => f.uri.path)
-  if (!folders) {
-    return
+export async function makeLibrary(documentPath: string): Promise<string[]> {
+  const root = rootPath(documentPath)
+  if (!root) {
+    return []
   }
-  for (const cwd of folders) {
-    if (base.startsWith(cwd)) {
-      const paths = [
-        ...(await findFiles(cwd, cwd, true)),
-        ...(await moduleFiles(cwd)),
-      ]
-      paths.sort()
-      editor.send({
-        type: 'library',
-        paths,
-      })
-      return
-    }
-  }
+  const paths = [
+    ...(await findFiles(root, root, true)),
+    ...(await moduleFiles(root)),
+  ]
+  return paths.sort()
 }

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
     "lib": [
@@ -26,8 +26,8 @@
     "strictPropertyInitialization": true,
     "target": "ES2020",
     "paths": {
-      "tuitui": [
-        "pawi"
+      "pawi.types": [
+        "src/pawi.types"
       ]
     },
     "plugins": [

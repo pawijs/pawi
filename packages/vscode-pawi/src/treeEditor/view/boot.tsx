@@ -11,7 +11,7 @@ import { treeEditor } from './index.js'
 const config = build(treeEditor).using(tree).using(treeView).config()
 
 ReactDOM.render(
-  <Provider value={new Overmind(config, { devtools: false })}>
+  <Provider value={new Overmind(config, { devtools: false, logProxies: true })}>
     <App />
   </Provider>,
   document.querySelector('#root')

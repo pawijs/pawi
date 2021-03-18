@@ -146,5 +146,9 @@
         "file": "sliderZ.js"
       }
     }
+  },
+  "selected": {
+    "id": "mesh",
+    "editName": false
   }
 }

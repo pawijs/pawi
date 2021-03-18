@@ -21,7 +21,7 @@ export const onInitialize: AsyncAction = async ctx => {
     // @ts-ignore
     const vscode = acquireVsCodeApi()
     window.addEventListener('message', e => {
-      ctx.actions.pawi.receive(e.data)
+      ctx.actions.treeEditor.receive(e.data)
     })
     ctx.state.treeEditor.send = vscode.postMessage
     vscode.postMessage({ type: 'ready' })

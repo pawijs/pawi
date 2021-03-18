@@ -1,19 +1,12 @@
 // import { Dialog } from '@forten/dialog'
 import { Drag, dropStyles, fileDrop } from '@forten/dragdrop'
-import { Icon } from '@forten/styled'
 import { Library, Tree } from '@forten/tree-view'
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { Comp, styled, useOvermind } from '../app'
+import { Icon } from './Icon'
 
 const Dialog = React.Fragment
-
-const BarsIcon = styled(Icon)`
-  color: #555;
-  &.highlighted {
-    color: #999;
-  }
-`
 
 export interface AppProps {
   className?: string
@@ -21,14 +14,14 @@ export interface AppProps {
 
 const Wrapper = styled.div`
   ${dropStyles};
-  min-width: 100vw;
-  min-height: 100vh;
   padding: 0.5rem;
+  height: 100%;
 `
 
 const TreeWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  height: 100%;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -37,6 +30,15 @@ const GlobalStyle = createGlobalStyle`
     background: #282828;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  #root {
+    height: 100%;
+    width: 100%;
   }
   .Tablet .noTablet {
     display: none;
@@ -53,6 +55,10 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
   }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
 `
 
 export const App: Comp<AppProps> = ({ className }) => {
@@ -66,23 +72,22 @@ export const App: Comp<AppProps> = ({ className }) => {
     ref,
     className,
     accept(item) {
-      console.log('TEST', item)
       return item.kind === 'string'
     },
     onDrop(args) {
-      ctx.actions.pawi.drop(args)
+      ctx.actions.treeEditor.drop(args)
     },
   })
   const { showLibrary } = ctx.state.treeEditor
   return (
-    <Wrapper {...drop}>
+    <Wrapper id="app" {...drop}>
       <GlobalStyle />
       <Drag />
       <Dialog>
         <TreeWrapper>
-          <BarsIcon
+          <Icon
             icon="library"
-            onClick={ctx.actions.pawi.toggleLibrary}
+            onClick={ctx.actions.treeEditor.toggleLibrary}
             highlighted={showLibrary}
           />
           {showLibrary && <Library />}

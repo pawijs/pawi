@@ -1,8 +1,18 @@
-import { send } from '../send'
-import { sendUpdate } from '../send/update'
-import { TreeEditor } from '../types'
+import { makeLibrary } from '../helpers/makeLibrary'
+import { parseSource } from '../helpers/serialize'
+import { ReceiveArgument } from '../types'
+import { ReadyMessage } from '../view/types'
 
-export function receiveReady(editor: TreeEditor) {
-  sendUpdate(editor)
-  send(editor, 'library')
+export async function ready({
+  editor: { document, send },
+}: ReceiveArgument<ReadyMessage>) {
+  send({
+    type: 'updateBranch',
+    path: document.uri.path,
+    branch: parseSource(document.getText()),
+  })
+  send({
+    type: 'library',
+    paths: await makeLibrary(document.uri.path),
+  })
 }

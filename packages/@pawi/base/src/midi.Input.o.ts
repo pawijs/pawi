@@ -1,4 +1,4 @@
-import { Block, Context } from './types'
+import { Block, Context } from 'pawi.types'
 const MIDI_INPUT = 'IAC Driver Bus 1'
 
 const MIDI = {

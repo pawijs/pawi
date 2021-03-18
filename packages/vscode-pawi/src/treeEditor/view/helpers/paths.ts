@@ -23,7 +23,7 @@ export function relativePath(dirname: string, path: string) {
   return ['.', ...ap.map(() => '..'), ...bp].join('/')
 }
 
-function name(file: string) {
+export function nameFromFile(file: string) {
   if (INDEX_RE.test(file)) {
     // Branch
     return file.split('/').slice(-2)[0]
@@ -38,10 +38,10 @@ function name(file: string) {
   }
 }
 
-export function visibleName(file: string) {
+export function libraryName(file: string) {
   return isBare(file)
-    ? name(file)
-    : [...file.split('/').slice(0, -2), name(file)]
+    ? nameFromFile(file)
+    : [...file.split('/').slice(0, -1), nameFromFile(file)]
         .join('/')
         .replace(/^\.\/\.\.\//, '../')
 }
