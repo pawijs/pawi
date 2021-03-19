@@ -1,6 +1,6 @@
 import { FileRenamedMessage } from '../../../message.types.js'
 import { Action } from '../app.js'
-import { libraryName, nameFromFile, relativePath } from '../helpers/paths.js'
+import { libraryName, relativePath } from '../helpers/paths.js'
 
 export const fileRenamed: Action<FileRenamedMessage> = (ctx, arg) => {
   const oldFile = relativePath(ctx.state.treeEditor.dirname, arg.oldPath)
@@ -15,6 +15,8 @@ export const fileRenamed: Action<FileRenamedMessage> = (ctx, arg) => {
   } else {
     console.log('ERROR could not find', oldFile)
   }
+  // tree update happens through fileWatcher => fileChange => notified here
+  /*
   const { tree } = ctx.state.treeEditor
   if (tree) {
     let changed = false
@@ -29,4 +31,5 @@ export const fileRenamed: Action<FileRenamedMessage> = (ctx, arg) => {
       ctx.actions.tree.changed({ tree })
     }
   }
+  */
 }

@@ -41,7 +41,10 @@ export function nameFromFile(file: string) {
 export function libraryName(file: string) {
   return isBare(file)
     ? nameFromFile(file)
-    : [...file.split('/').slice(0, -1), nameFromFile(file)]
+    : [
+        ...file.split('/').slice(0, -1),
+        ...(INDEX_RE.test(file) ? [] : [nameFromFile(file)]),
+      ]
         .join('/')
         .replace(/^\.\/\.\.\//, '../')
 }

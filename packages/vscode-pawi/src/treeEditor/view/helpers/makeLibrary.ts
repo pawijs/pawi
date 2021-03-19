@@ -4,18 +4,14 @@ import { libraryName, relativePath } from './paths'
 
 export function addLibrayBlock(tree: TreeType, file: string) {
   const name = libraryName(file)
-  if (name === './.') {
+  if (name === '.') {
     return
   }
   const id = makeId(tree.blocks)
   tree.blocks[id] = {
     id,
     name,
-    content: {
-      // so that we set proper name in hook
-      name,
-      file,
-    },
+    content: { file },
     children: [],
   }
 }

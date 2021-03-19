@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { Position, Uri, workspace, WorkspaceEdit } from 'vscode'
-import { resolvePath } from '../helpers/paths'
+import { resolvePath } from '../../helpers/paths'
 import { ReceiveArgument } from '../types'
 import { CreateFileMessage } from '../view/types'
 import { openFile } from './openFile'

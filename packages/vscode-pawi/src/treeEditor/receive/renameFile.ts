@@ -1,5 +1,5 @@
 import { Uri, workspace, WorkspaceEdit } from 'vscode'
-import { resolvePath } from '../helpers/paths'
+import { resolvePath } from '../../helpers/paths'
 import { ReceiveArgument } from '../types'
 import { RenameFileMessage } from '../view/types'
 

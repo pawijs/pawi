@@ -1,5 +1,5 @@
 import { commands, Uri, ViewColumn, window, workspace } from 'vscode'
-import { resolvePath } from '../helpers/paths'
+import { resolvePath } from '../../helpers/paths'
 import { ReceiveArgument, TREE_EDITOR_VIEW_TYPE } from '../types'
 import { OpenFileMessage } from '../view/types'
 

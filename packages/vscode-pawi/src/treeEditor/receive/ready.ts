@@ -1,5 +1,5 @@
-import { makeLibrary } from '../helpers/makeLibrary'
-import { parseSource } from '../helpers/serialize'
+import { parseSource } from '../../helpers/serialize'
+import { findAllBranches } from '../helpers/findAllBranches'
 import { ReceiveArgument } from '../types'
 import { ReadyMessage } from '../view/types'
 
@@ -13,6 +13,6 @@ export async function ready({
   })
   send({
     type: 'library',
-    paths: await makeLibrary(document.uri.path),
+    paths: await findAllBranches(document.uri.path),
   })
 }

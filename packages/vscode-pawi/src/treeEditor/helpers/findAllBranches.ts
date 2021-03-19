@@ -1,19 +1,21 @@
 import { existsSync, readFileSync } from 'fs'
 import { glob } from 'glob'
 import { join } from 'path'
-import { rootPath } from './paths'
+import { rootPath } from '../../helpers/paths'
 
 function findFiles(cwd: string, prefix: string, ts = false) {
   return new Promise<string[]>((resolve, reject) =>
     glob(
       `!(node_modules)/**/*.o.${ts ? 'ts' : 'js'}`,
       { cwd, ignore: join(cwd, 'node_modules') },
-      (err, files) => {
+      (err, paths) => {
         if (err) {
           reject(err)
         }
         resolve(
-          files.map(f => `${prefix}/${ts ? f.replace(/\.ts$/, '.js') : f}`)
+          paths.map(
+            path => `${prefix}/${ts ? path.replace(/\.ts$/, '.js') : path}`
+          )
         )
       }
     )
@@ -52,7 +54,7 @@ async function moduleFiles(cwd: string) {
   return files
 }
 
-export async function makeLibrary(documentPath: string): Promise<string[]> {
+export async function findAllBranches(documentPath: string): Promise<string[]> {
   const root = rootPath(documentPath)
   if (!root) {
     return []

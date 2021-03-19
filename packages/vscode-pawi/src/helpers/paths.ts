@@ -1,13 +1,12 @@
 import { resolve } from 'path'
-import { workspace } from 'vscode'
+import { Range, TextDocument, workspace } from 'vscode'
+import { isBare } from '../treeEditor/view/helpers/paths'
+export { isBare, relativePath } from '../treeEditor/view/helpers/paths'
 
-export function isBare(path: string) {
-  return !(
-    path.startsWith('./') ||
-    path.startsWith('../') ||
-    path.startsWith('/') ||
-    path === '.'
-  )
+export function fullRange(document: TextDocument) {
+  const firstLine = document.lineAt(0)
+  const lastLine = document.lineAt(document.lineCount - 1)
+  return new Range(firstLine.range.start, lastLine.range.end)
 }
 
 // Return workspace root for this document
@@ -33,6 +32,8 @@ export function resolvePath(documentPath: string, jsPath: string) {
     if (!root) {
       return undefined
     }
+    // Should make this structure src/dist mandatory for pawi blocks discovery
+    // or only use this temporarily as a hack ?
     return resolve(root, 'node_modules', path.replace(/\/dist\//, '/src/'))
   } else {
     return resolve(documentPath, '..', path)

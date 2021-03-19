@@ -1,5 +1,5 @@
 import { workspace } from 'vscode'
-import { parseSource } from '../helpers/serialize'
+import { parseSource } from '../../helpers/serialize'
 import { TreeEditorProxy } from '../types'
 
 export function registerOnChange(editor: TreeEditorProxy) {
@@ -10,7 +10,7 @@ export function registerOnChange(editor: TreeEditorProxy) {
         editor.send({
           type: 'updateBranch',
           path: document.uri.path,
-          branch: parseSource(document.getText()),
+          branch: parseSource(e.document.getText()),
         })
       }
     })
